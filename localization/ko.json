@@ -168,7 +168,7 @@
   "Enable the alternate Dynamic Island capability.": "대체 Dynamic Island 기능을 활성화합니다.",
   "Always-On Display": "상시표시형 디스플레이",
   "Display behavior depends on the panel. May increase power use and burn-in risk.": "디스플레이 동작은 탑재된 패널 종류에 따라 다릅니다. 전력 소모량이 증가하고 번인 위험이 커질 수 있습니다.",
-  "AOD Vibrancy": "상시표시형 디스플레이 비브런시",
+  "AOD Vibrancy": "상시표시형 디스플레이 색상 선명도",
   "Adjust Always-On rendering capabilities.": "상시표시형 디스플레이 렌더링 세부 기능을 조정합니다.",
   "Liquid Glass Low-Power Rendering": "Liquid Glass 저전력 렌더링",
   "Use the low-performance rendering capability on iOS 26 and later.": "iOS 26 이상에서 저성능 렌더링 기능을 강제로 사용합니다.",
@@ -247,7 +247,7 @@
   "Compatibility": "호환성",
   "Credits": "크레딧",
   "worse_query sandbox escape": "worse_query 샌드박스 탈출",
-  "Original WebKit respring technique": "최초의 WebKit 리스프링 방식 구현",
+  "Original WebKit respring technique": "기존 WebKit 리스프링 방식 구현",
   "Swift implementation of the respring technique": "Swift 언어로 재구현된 리스프링 기술",
   "NeoSpring project and respring research": "NeoSpring 프로젝트 및 리스프링 메커니즘 연구",
   "GPL-licensed respring adaptation": "GPL 라이선스를 기반으로 적용된 리스프링 어댑테이션",
@@ -357,6 +357,6 @@
   "Advertise the photos inpainting (Clean Up) capability.": "사진 앱의 클린업 기능 지원 여부를 시스템에 선언합니다.",
   "Handwriting Synthesis": "손글씨 합성",
   "Advertise the handwriting synthesis model capability.": "손글씨 합성 모델 기능 지원 여부를 시스템에 선언합니다.",
-  "Always-Listening Hey Siri": "항상 'Siri야' 듣기",
-  "Advertise always-listening Hey Siri support.": "항상 'Siri야' 감지 기능 지원 여부를 시스템에 선언합니다."
+  "Always-Listening Hey Siri": "항상 'Siri' 듣기",
+  "Advertise always-listening Hey Siri support.": "항상 'Siri' 감지 기능 지원 여부를 시스템에 선언합니다."
 }
