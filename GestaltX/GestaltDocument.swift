@@ -554,8 +554,11 @@ actor GestaltFileStore {
             try saveBackup(expected.data, source: .local, reason: "Before editing")
             var originals = expected.recordingOriginals(to: edited)
             for key in originallyAbsentKeys { originals.fields[key] = OriginalField(value: nil) }
+            // A backup replaces the imported payload. Its ownership has not been
+            // verified merely because the previously open document was verified.
+            let ownershipVerified = record == nil && expected.ownershipVerified
             return DocumentSnapshot(data: output, document: edited, source: .local, name: expected.name,
-                                    originals: originals.fields, cachedOptionsOriginal: originals.cachedOptions, wapiOriginal: originals.wapi, ownershipVerified: expected.ownershipVerified)
+                                    originals: originals.fields, cachedOptionsOriginal: originals.cachedOptions, wapiOriginal: originals.wapi, ownershipVerified: ownershipVerified)
         }
         if let record {
             guard record.source == .device, record.deviceID == deviceID, edited.matchesIdentity(expected.document) else {
