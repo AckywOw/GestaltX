@@ -282,6 +282,7 @@
   "The original-value record belongs to a different device.": "原值記錄屬於其他裝置。",
   "Original values could not be saved and verified. No system write was started.": "無法儲存並驗證原值記錄，尚未開始寫入系統檔案。",
   "The selected added fields must be removed before applying.": "請先移除選取的新增欄位，再套用變更。",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "不能更改系統 plist 中的裝置身分欄位。如需編輯這些欄位，請開啟本機檔案。",
   "Initial backup": "首次備份",
   "Original values snapshot": "修改前原值快照",
   "Revert": "還原",

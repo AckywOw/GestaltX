@@ -282,6 +282,7 @@
   "The original-value record belongs to a different device.": "Запись исходных значений принадлежит другому устройству.",
   "Original values could not be saved and verified. No system write was started.": "Не удалось сохранить и проверить исходные значения. Запись системного файла не началась.",
   "The selected added fields must be removed before applying.": "Перед применением выбранные добавленные поля должны быть удалены.",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "Поля идентификации устройства нельзя изменять в системном plist. Для их редактирования откройте локальный файл.",
   "Initial backup": "Первоначальная резервная копия",
   "Original values snapshot": "Снимок исходных значений",
   "Revert": "Вернуть",

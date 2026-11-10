@@ -282,6 +282,7 @@
   "The original-value record belongs to a different device.": "سابقهٔ مقادیر اصلی متعلق به دستگاه دیگری است.",
   "Original values could not be saved and verified. No system write was started.": "ذخیره و تأیید مقادیر اصلی ممکن نشد. نوشتن فایل سیستم آغاز نشده است.",
   "The selected added fields must be removed before applying.": "پیش از اعمال، فیلدهای افزوده‌شدهٔ انتخابی باید حذف شوند.",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "فیلدهای هویت دستگاه در plist سیستم قابل تغییر نیستند. برای ویرایش این فیلدها یک فایل محلی باز کنید.",
   "Initial backup": "پشتیبان اولیه",
   "Original values snapshot": "نسخه‌ای از مقادیر اصلی",
   "Revert": "بازگردانی",
