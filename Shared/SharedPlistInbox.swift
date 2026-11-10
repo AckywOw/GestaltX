@@ -4,7 +4,25 @@ import Darwin
 
 struct SharedPlistError: LocalizedError {
     let key: String
+    let retryable: Bool
+    init(key: String, retryable: Bool = false) { self.key = key; self.retryable = retryable }
     var errorDescription: String? { NSLocalizedString(key, comment: "") }
+
+    static func canRetry(_ error: Error, depth: Int = 0) -> Bool {
+        if error is CancellationError { return true }
+        if let error = error as? SharedPlistError { return error.retryable }
+        guard depth < 8 else { return false }
+        let error = error as NSError
+        if error.domain == NSPOSIXErrorDomain,
+           [EACCES, EPERM, EBUSY, EAGAIN, EINTR, EMFILE, ENFILE, ETIMEDOUT].contains(where: { Int($0) == error.code }) { return true }
+        if error.domain == NSCocoaErrorDomain,
+           [CocoaError.fileReadNoPermission.rawValue, CocoaError.fileLocking.rawValue,
+            CocoaError.userCancelled.rawValue].contains(error.code) { return true }
+        if let underlying = error.userInfo[NSUnderlyingErrorKey] as? Error {
+            return canRetry(underlying, depth: depth + 1)
+        }
+        return false
+    }
 }
 
 struct SharedPlistEntry: Codable, Identifiable, Sendable {
@@ -73,7 +91,7 @@ struct SharedPlistInbox: Sendable {
         let descriptor = url.withUnsafeFileSystemRepresentation { path in
             path.map { open($0, O_RDONLY | O_NONBLOCK | O_NOFOLLOW | O_CLOEXEC) } ?? -1
         }
-        guard descriptor >= 0 else { throw invalidQueue }
+        guard descriptor >= 0 else { throw NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
         let handle = FileHandle(fileDescriptor: descriptor, closeOnDealloc: true)
         defer { try? handle.close() }
         var info = stat()
@@ -143,6 +161,16 @@ struct SharedPlistInbox: Sendable {
     func reject(_ entry: SharedPlistEntry) {
         let source = batch(entry.id)
         try? FileManager.default.moveItem(at: source, to: directory.appendingPathComponent("." + entry.id.uuidString + ".rejected"))
+    }
+
+    // Temporary access failures do not prove that a published document is bad.
+    // Keep those bytes for an explicit retry; malformed contents still leave the
+    // automatic queue so they cannot block later documents forever.
+    @discardableResult
+    func reject(_ entry: SharedPlistEntry, after error: Error) -> Bool {
+        guard !SharedPlistError.canRetry(error) else { return false }
+        reject(entry)
+        return true
     }
 
     private func batch(_ id: UUID) -> URL { directory.appendingPathComponent(id.uuidString, isDirectory: true) }

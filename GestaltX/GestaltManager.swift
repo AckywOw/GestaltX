@@ -375,12 +375,11 @@ final class GestaltManager: ObservableObject {
             log("[share] Device ownership verified; waiting for import confirmation")
             return .ready(PlistImportOffer(data: payload, name: entry.name, identity: identity, sharedSource: (inbox, entry)))
         } catch {
-            // A lack of device access may be temporary; keep that entry for retry.
+            // Retry only known access/service failures, not invalid content.
             log("[share] " + error.localizedDescription)
-            if (error as? SharedPlistError)?.key == DevicePlistIdentity.unavailable.key {
+            if !inbox.reject(entry, after: error) {
                 return .deferred(error.localizedDescription)
             }
-            inbox.reject(entry)
             return .rejected(error.localizedDescription)
         }
     }
