@@ -187,7 +187,12 @@ struct GestaltDocument: @unchecked Sendable {
             // int64Value wraps unsigned values above Int64.max (for example,
             // UInt64.max becomes -1), hiding edits and readback corruption.
             return (a as? NSNumber)?.stringValue == (b as? NSNumber)?.stringValue
-        case .real: return (a as? NSNumber)?.doubleValue == (b as? NSNumber)?.doubleValue
+        case .real:
+            guard let left = (a as? NSNumber)?.doubleValue,
+                  let right = (b as? NSNumber)?.doubleValue else { return false }
+            // NaN is a valid plist real. IEEE arithmetic equality is not
+            // reflexive for it, but an unchanged stored value must compare equal.
+            return left == right || (left.isNaN && right.isNaN)
         case .boolean: return (a as? NSNumber)?.boolValue == (b as? NSNumber)?.boolValue
         case .data: return (a as? Data) == (b as? Data)
         case .date: return (a as? Date) == (b as? Date)
