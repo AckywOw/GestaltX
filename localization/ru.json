@@ -287,6 +287,7 @@
   "Revert": "Вернуть",
   "Original values restored.": "Исходные значения восстановлены.",
   "The cache layout or values do not match this preset.": "Структура или значения кэша не соответствуют этой настройке.",
+  "The original value belongs to a different cache layout. A matching backup is needed to restore it.": "Исходное значение относится к другой структуре кэша. Для его восстановления нужна соответствующая резервная копия.",
   "This preset changes unrelated cache bytes.": "Эта настройка изменяет посторонние байты кэша.",
   "Unable to resolve this device's MobileGestalt cache layout.": "Не удалось определить структуру кэша MobileGestalt этого устройства.",
   "Importing Plist…": "Импорт plist…",

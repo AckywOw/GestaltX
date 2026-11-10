@@ -287,6 +287,7 @@
   "Revert": "بازگردانی",
   "Original values restored.": "مقادیر اصلی بازگردانده شدند.",
   "The cache layout or values do not match this preset.": "ساختار یا مقادیر حافظهٔ نهان با این تنظیم مطابقت ندارد.",
+  "The original value belongs to a different cache layout. A matching backup is needed to restore it.": "مقدار اصلی متعلق به چیدمان دیگری از حافظهٔ پنهان است. برای بازیابی آن به نسخهٔ پشتیبان سازگار نیاز است.",
   "This preset changes unrelated cache bytes.": "این تنظیم بایت‌های نامرتبط حافظهٔ نهان را تغییر می‌دهد.",
   "Unable to resolve this device's MobileGestalt cache layout.": "ساختار حافظهٔ نهان MobileGestalt این دستگاه قابل تشخیص نیست.",
   "Importing Plist…": "در حال وارد کردن plist…",

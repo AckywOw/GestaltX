@@ -299,6 +299,7 @@ Refreshing SpringBoard…	正在刷新 SpringBoard…
 This OS build may not support the technique. You can close this screen and try a manual restart later.	当前系统版本可能不支持此方法。你可以关闭此页面，稍后手动重新启动设备。
 Your device may briefly return to the Lock Screen.	设备可能会短暂返回锁定屏幕。
 The cache layout or values do not match this preset.	缓存布局或数值与此预设不符。
+The original value belongs to a different cache layout. A matching backup is needed to restore it.	原值属于不同的缓存布局，需要匹配的备份才能恢复。
 This preset changes unrelated cache bytes.	此预设更改了无关的缓存字节。
 Unable to resolve this device's MobileGestalt cache layout.	无法解析此设备的 MobileGestalt 缓存布局。
 Importing Plist…	正在导入 plist…

@@ -15133,6 +15133,58 @@
         }
       }
     },
+    "The original value belongs to a different cache layout. A matching backup is needed to restore it.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The original value belongs to a different cache layout. A matching backup is needed to restore it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原值属于不同的缓存布局，需要匹配的备份才能恢复。"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مقدار اصلی متعلق به چیدمان دیگری از حافظهٔ پنهان است. برای بازیابی آن به نسخهٔ پشتیبان سازگار نیاز است."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "원래 값이 다른 캐시 레이아웃에 속합니다. 복원하려면 일치하는 백업이 필요합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Исходное значение относится к другой структуре кэша. Для его восстановления нужна соответствующая резервная копия."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giá trị gốc thuộc một bố cục bộ nhớ đệm khác. Cần có bản sao lưu phù hợp để khôi phục."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原值屬於不同的快取配置，需要相符的備份才能還原。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原值屬於不同的快取配置，需要相符的備份才能還原。"
+          }
+        }
+      }
+    },
     "This preset changes unrelated cache bytes.": {
       "localizations": {
         "en": {

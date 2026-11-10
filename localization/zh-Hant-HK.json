@@ -287,6 +287,7 @@
   "Revert": "還原",
   "Original values restored.": "已還原原值。",
   "The cache layout or values do not match this preset.": "快取配置或數值與此預設不符。",
+  "The original value belongs to a different cache layout. A matching backup is needed to restore it.": "原值屬於不同的快取配置，需要相符的備份才能還原。",
   "This preset changes unrelated cache bytes.": "此預設更改了無關的快取位元組。",
   "Unable to resolve this device's MobileGestalt cache layout.": "無法解析此裝置的 MobileGestalt 快取配置。",
   "Importing Plist…": "正在匯入 plist…",
