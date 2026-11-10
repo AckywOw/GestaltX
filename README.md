@@ -63,6 +63,7 @@ GestaltX follows your iOS language settings, with English as the default and fal
 | Русский — Russian | `ru` |
 | فارسی — Persian | `fa` |
 | 한국어 — Korean | `ko` |
+| Español — Spanish | `es` |
 
 ## Credits
 
