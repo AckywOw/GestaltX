@@ -16970,37 +16970,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "高亮度永遠顯示"
+            "value": "نمایش همیشه‌روشن با روشنایی بالا"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "高亮度永遠顯示"
+            "value": "고휘도 상시 표시"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "نمایش همیشه‌روشن با روشنایی بالا"
+            "value": "Always-On Display повышенной яркости"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "고휘도 상시 표시"
+            "value": "Màn hình luôn bật độ sáng cao"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Always-On Display повышенной яркости"
+            "value": "高亮度永遠顯示"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Màn hình luôn bật độ sáng cao"
+            "value": "高亮度永遠顯示"
           }
         }
       }
@@ -17022,37 +17022,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "允許「永遠顯示」達到更高亮度。"
+            "value": "اجازه می‌دهد نمایش همیشه‌روشن به روشنایی بالاتری برسد."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "允許「永遠顯示」達到更高亮度。"
+            "value": "상시 표시가 더 높은 밝기에 도달하도록 허용합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "اجازه می‌دهد نمایش همیشه‌روشن به روشنایی بالاتری برسد."
+            "value": "Разрешает Always-On Display достигать более высокой яркости."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 표시가 더 높은 밝기에 도달하도록 허용합니다."
+            "value": "Cho phép Màn hình luôn bật đạt độ sáng cao hơn."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Разрешает Always-On Display достигать более высокой яркости."
+            "value": "允許「永遠顯示」達到更高亮度。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cho phép Màn hình luôn bật đạt độ sáng cao hơn."
+            "value": "允許「永遠顯示」達到更高亮度。"
           }
         }
       }
@@ -17074,37 +17074,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "永遠顯示翻頁小工具"
+            "value": "فلیپ‌بوک نمایش همیشه‌روشن"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "永遠顯示翻頁小工具"
+            "value": "상시 표시 플립북"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "فلیپ‌بوک نمایش همیشه‌روشن"
+            "value": "Flipbook для Always-On Display"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 표시 플립북"
+            "value": "Flipbook màn hình luôn bật"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Flipbook для Always-On Display"
+            "value": "永遠顯示翻頁小工具"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Flipbook màn hình luôn bật"
+            "value": "永遠顯示翻頁小工具"
           }
         }
       }
@@ -17126,37 +17126,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "在鎖定畫面上啟用 AOD 翻頁小工具。"
+            "value": "ویجت‌های فلیپ‌بوک AOD را در صفحه قفل فعال می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "在鎖定畫面上啟用 AOD 翻頁小工具。"
+            "value": "잠금 화면에서 AOD 플립북 위젯을 활성화합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "ویجت‌های فلیپ‌بوک AOD را در صفحه قفل فعال می‌کند."
+            "value": "Включает виджеты flipbook AOD на экране блокировки."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "잠금 화면에서 AOD 플립북 위젯을 활성화합니다."
+            "value": "Bật tiện ích flipbook AOD trên màn hình khóa."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Включает виджеты flipbook AOD на экране блокировки."
+            "value": "在鎖定畫面上啟用 AOD 翻頁小工具。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bật tiện ích flipbook AOD trên màn hình khóa."
+            "value": "在鎖定畫面上啟用 AOD 翻頁小工具。"
           }
         }
       }
@@ -17178,37 +17178,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 翻頁數量"
+            "value": "تعداد فلیپ‌بوک AOD"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 翻頁數量"
+            "value": "AOD 플립북 개수"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "تعداد فلیپ‌بوک AOD"
+            "value": "Количество flipbook AOD"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 플립북 개수"
+            "value": "Số lượng flipbook AOD"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Количество flipbook AOD"
+            "value": "AOD 翻頁數量"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Số lượng flipbook AOD"
+            "value": "AOD 翻頁數量"
           }
         }
       }
@@ -17230,37 +17230,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定允許的 AOD 翻頁項目數量。實驗性功能，可用範圍因系統版本而異。"
+            "value": "تعداد ورودی‌های مجاز فلیپ‌بوک AOD را تنظیم می‌کند. آزمایشی؛ محدوده مجاز بسته به build متفاوت است."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定允許的 AOD 翻頁項目數量。實驗性功能，可用範圍因系統版本而異。"
+            "value": "허용되는 AOD 플립북 항목 수를 설정합니다. 실험적 기능이며 허용 범위는 빌드에 따라 다릅니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "تعداد ورودی‌های مجاز فلیپ‌بوک AOD را تنظیم می‌کند. آزمایشی؛ محدوده مجاز بسته به build متفاوت است."
+            "value": "Задаёт число записей flipbook AOD. Экспериментально; допустимый диапазон зависит от сборки."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "허용되는 AOD 플립북 항목 수를 설정합니다. 실험적 기능이며 허용 범위는 빌드에 따라 다릅니다."
+            "value": "Đặt số mục flipbook AOD được phép. Thử nghiệm; phạm vi hợp lệ tùy bản dựng."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Задаёт число записей flipbook AOD. Экспериментально; допустимый диапазон зависит от сборки."
+            "value": "設定允許的 AOD 翻頁項目數量。實驗性功能，可用範圍因系統版本而異。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Đặt số mục flipbook AOD được phép. Thử nghiệm; phạm vi hợp lệ tùy bản dựng."
+            "value": "設定允許的 AOD 翻頁項目數量。實驗性功能，可用範圍因系統版本而異。"
           }
         }
       }
@@ -17282,37 +17282,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "關閉桌布視差"
+            "value": "غیرفعال کردن پارالاکس پس‌زمینه"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "關閉桌布視差"
+            "value": "배경화면 시차 효과 끄기"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "غیرفعال کردن پارالاکس پس‌زمینه"
+            "value": "Отключить параллакс обоев"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "배경화면 시차 효과 끄기"
+            "value": "Tắt hiệu ứng thị sai hình nền"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Отключить параллакс обоев"
+            "value": "關閉桌布視差"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tắt hiệu ứng thị sai hình nền"
+            "value": "關閉桌布視差"
           }
         }
       }
@@ -17334,37 +17334,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "停止桌布隨裝置移動產生位移。"
+            "value": "از حرکت پس‌زمینه همراه با حرکت دستگاه جلوگیری می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "停止桌布隨裝置移動產生位移。"
+            "value": "기기 움직임에 따라 배경화면이 움직이지 않게 합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "از حرکت پس‌زمینه همراه با حرکت دستگاه جلوگیری می‌کند."
+            "value": "Останавливает движение обоев при движении устройства."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기 움직임에 따라 배경화면이 움직이지 않게 합니다."
+            "value": "Ngăn hình nền di chuyển theo chuyển động của thiết bị."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Останавливает движение обоев при движении устройства."
+            "value": "停止桌布隨裝置移動產生位移。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ngăn hình nền di chuyển theo chuyển động của thiết bị."
+            "value": "停止桌布隨裝置移動產生位移。"
           }
         }
       }
@@ -17386,37 +17386,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "HDR 照片顯示"
+            "value": "نمایش عکس HDR"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "HDR 照片顯示"
+            "value": "HDR 사진 표시"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "نمایش عکس HDR"
+            "value": "Отображение HDR-фото"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "HDR 사진 표시"
+            "value": "Hiển thị ảnh HDR"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Отображение HDR-фото"
+            "value": "HDR 照片顯示"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiển thị ảnh HDR"
+            "value": "HDR 照片顯示"
           }
         }
       }
@@ -17438,37 +17438,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "為照片啟用真正的 HDR 算繪。"
+            "value": "رندر واقعی HDR را برای عکس‌ها فعال می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "為照片啟用真正的 HDR 算繪。"
+            "value": "사진에 실제 HDR 렌더링을 활성화합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "رندر واقعی HDR را برای عکس‌ها فعال می‌کند."
+            "value": "Включает настоящий HDR-рендеринг фотографий."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진에 실제 HDR 렌더링을 활성화합니다."
+            "value": "Bật kết xuất HDR thực cho ảnh."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Включает настоящий HDR-рендеринг фотографий."
+            "value": "為照片啟用真正的 HDR 算繪。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bật kết xuất HDR thực cho ảnh."
+            "value": "為照片啟用真正的 HDR 算繪。"
           }
         }
       }
@@ -17490,37 +17490,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "脈寬調變 (PWM)"
+            "value": "مدولاسیون عرض پالس (PWM)"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "脈寬調變 (PWM)"
+            "value": "펄스 폭 변조 (PWM)"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "مدولاسیون عرض پالس (PWM)"
+            "value": "Широтно-импульсная модуляция (PWM)"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "펄스 폭 변조 (PWM)"
+            "value": "Điều chế độ rộng xung (PWM)"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Широтно-импульсная модуляция (PWM)"
+            "value": "脈寬調變 (PWM)"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Điều chế độ rộng xung (PWM)"
+            "value": "脈寬調變 (PWM)"
           }
         }
       }
@@ -17542,37 +17542,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援 PWM 調光。實際調光行為取決於螢幕面板。"
+            "value": "پشتیبانی از PWM را اعلام می‌کند. رفتار واقعی تنظیم نور به پنل بستگی دارد."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援 PWM 調光。實際調光行為取決於螢幕面板。"
+            "value": "PWM 디스플레이 지원을 알립니다. 실제 밝기 조절 동작은 패널에 따라 다릅니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "پشتیبانی از PWM را اعلام می‌کند. رفتار واقعی تنظیم نور به پنل بستگی دارد."
+            "value": "Объявляет поддержку PWM. Фактическое поведение затемнения зависит от панели."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "PWM 디스플레이 지원을 알립니다. 실제 밝기 조절 동작은 패널에 따라 다릅니다."
+            "value": "Khai báo hỗ trợ PWM. Hành vi điều chỉnh độ sáng thực tế phụ thuộc vào tấm nền."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет поддержку PWM. Фактическое поведение затемнения зависит от панели."
+            "value": "宣告支援 PWM 調光。實際調光行為取決於螢幕面板。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo hỗ trợ PWM. Hành vi điều chỉnh độ sáng thực tế phụ thuộc vào tấm nền."
+            "value": "宣告支援 PWM 調光。實際調光行為取決於螢幕面板。"
           }
         }
       }
@@ -17594,37 +17594,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "DisplayPort 輸出"
+            "value": "خروجی DisplayPort"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "DisplayPort 輸出"
+            "value": "DisplayPort 출력"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "خروجی DisplayPort"
+            "value": "Вывод DisplayPort"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "DisplayPort 출력"
+            "value": "Xuất DisplayPort"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Вывод DisplayPort"
+            "value": "DisplayPort 輸出"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Xuất DisplayPort"
+            "value": "DisplayPort 輸出"
           }
         }
       }
@@ -17646,37 +17646,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援 DisplayPort 輸出，仍需要相容硬體。"
+            "value": "پشتیبانی از خروجی DisplayPort را اعلام می‌کند. همچنان به سخت‌افزار سازگار نیاز است."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援 DisplayPort 輸出，仍需要相容硬體。"
+            "value": "DisplayPort 출력 지원을 알립니다. 호환 하드웨어는 여전히 필요합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "پشتیبانی از خروجی DisplayPort را اعلام می‌کند. همچنان به سخت‌افزار سازگار نیاز است."
+            "value": "Объявляет поддержку вывода DisplayPort. По-прежнему требуется совместимое оборудование."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "DisplayPort 출력 지원을 알립니다. 호환 하드웨어는 여전히 필요합니다."
+            "value": "Khai báo hỗ trợ xuất DisplayPort. Vẫn cần phần cứng tương thích."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет поддержку вывода DisplayPort. По-прежнему требуется совместимое оборудование."
+            "value": "宣告支援 DisplayPort 輸出，仍需要相容硬體。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo hỗ trợ xuất DisplayPort. Vẫn cần phần cứng tương thích."
+            "value": "宣告支援 DisplayPort 輸出，仍需要相容硬體。"
           }
         }
       }
@@ -17698,37 +17698,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "車禍偵測 SOS"
+            "value": "SOS برخورد"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "車禍偵測 SOS"
+            "value": "충돌 SOS"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "SOS برخورد"
+            "value": "SOS при столкновении"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "충돌 SOS"
+            "value": "SOS va chạm"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "SOS при столкновении"
+            "value": "車禍偵測 SOS"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "SOS va chạm"
+            "value": "車禍偵測 SOS"
           }
         }
       }
@@ -17750,37 +17750,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "在「緊急 SOS」設定中顯示車禍偵測，仍需要硬體支援。"
+            "value": "تشخیص برخورد را در تنظیمات SOS اضطراری نشان می‌دهد. همچنان به پشتیبانی سخت‌افزاری نیاز است."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "在「緊急 SOS」設定中顯示車禍偵測，仍需要硬體支援。"
+            "value": "긴급 구조 요청 설정에 충돌 감지를 표시합니다. 하드웨어 지원은 여전히 필요합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "تشخیص برخورد را در تنظیمات SOS اضطراری نشان می‌دهد. همچنان به پشتیبانی سخت‌افزاری نیاز است."
+            "value": "Показывает обнаружение столкновений в настройках экстренного SOS. По-прежнему требуется аппаратная поддержка."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "긴급 구조 요청 설정에 충돌 감지를 표시합니다. 하드웨어 지원은 여전히 필요합니다."
+            "value": "Hiển thị phát hiện va chạm trong cài đặt SOS khẩn cấp. Vẫn cần hỗ trợ phần cứng."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Показывает обнаружение столкновений в настройках экстренного SOS. По-прежнему требуется аппаратная поддержка."
+            "value": "在「緊急 SOS」設定中顯示車禍偵測，仍需要硬體支援。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiển thị phát hiện va chạm trong cài đặt SOS khẩn cấp. Vẫn cần hỗ trợ phần cứng."
+            "value": "在「緊急 SOS」設定中顯示車禍偵測，仍需要硬體支援。"
           }
         }
       }
@@ -17802,37 +17802,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "音訊混音"
+            "value": "میکس صدا"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "音訊混音"
+            "value": "오디오 믹스"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "میکس صدا"
+            "value": "Аудиомикс"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "오디오 믹스"
+            "value": "Trộn âm thanh"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Аудиомикс"
+            "value": "音訊混音"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trộn âm thanh"
+            "value": "音訊混音"
           }
         }
       }
@@ -17854,37 +17854,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "為支援的媒體啟用音訊混音能力。"
+            "value": "قابلیت میکس صدا را برای رسانه‌های پشتیبانی‌شده فعال می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "為支援的媒體啟用音訊混音能力。"
+            "value": "지원되는 미디어에 오디오 믹스 기능을 활성화합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "قابلیت میکس صدا را برای رسانه‌های پشتیبانی‌شده فعال می‌کند."
+            "value": "Включает функцию аудиомикса для поддерживаемых медиафайлов."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "지원되는 미디어에 오디오 믹스 기능을 활성화합니다."
+            "value": "Bật khả năng trộn âm thanh cho nội dung được hỗ trợ."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Включает функцию аудиомикса для поддерживаемых медиафайлов."
+            "value": "為支援的媒體啟用音訊混音能力。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bật khả năng trộn âm thanh cho nội dung được hỗ trợ."
+            "value": "為支援的媒體啟用音訊混音能力。"
           }
         }
       }
@@ -17906,37 +17906,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime 空間音訊"
+            "value": "صدای فضایی FaceTime"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime 空間音訊"
+            "value": "FaceTime 공간 오디오"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "صدای فضایی FaceTime"
+            "value": "Пространственное аудио FaceTime"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime 공간 오디오"
+            "value": "Âm thanh không gian FaceTime"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Пространственное аудио FaceTime"
+            "value": "FaceTime 空間音訊"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Âm thanh không gian FaceTime"
+            "value": "FaceTime 空間音訊"
           }
         }
       }
@@ -17958,37 +17958,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "為 FaceTime 啟用空間音訊播放。"
+            "value": "پخش صدای فضایی را برای FaceTime فعال می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "為 FaceTime 啟用空間音訊播放。"
+            "value": "FaceTime에 공간 오디오 재생을 활성화합니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "پخش صدای فضایی را برای FaceTime فعال می‌کند."
+            "value": "Включает пространственное воспроизведение звука для FaceTime."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime에 공간 오디오 재생을 활성화합니다."
+            "value": "Bật phát âm thanh không gian cho FaceTime."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Включает пространственное воспроизведение звука для FaceTime."
+            "value": "為 FaceTime 啟用空間音訊播放。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bật phát âm thanh không gian cho FaceTime."
+            "value": "為 FaceTime 啟用空間音訊播放。"
           }
         }
       }
@@ -18010,37 +18010,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "內部設定套件"
+            "value": "بسته تنظیمات داخلی"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "內部設定套件"
+            "value": "내부 설정 번들"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "بسته تنظیمات داخلی"
+            "value": "Пакет внутренних настроек"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "내부 설정 번들"
+            "value": "Gói cài đặt nội bộ"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Пакет внутренних настроек"
+            "value": "內部設定套件"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gói cài đặt nội bộ"
+            "value": "內部設定套件"
           }
         }
       }
@@ -18062,37 +18062,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示 Apple 內部設定套件。部分系統服務可能表現異常。"
+            "value": "بسته تنظیمات داخلی Apple را نمایان می‌کند. برخی سرویس‌های سیستم ممکن است متفاوت رفتار کنند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示 Apple 內部設定套件。部分系統服務可能表現異常。"
+            "value": "Apple 내부 설정 번들을 노출합니다. 일부 시스템 서비스가 다르게 동작할 수 있습니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "بسته تنظیمات داخلی Apple را نمایان می‌کند. برخی سرویس‌های سیستم ممکن است متفاوت رفتار کنند."
+            "value": "Открывает пакет внутренних настроек Apple. Некоторые системные службы могут работать иначе."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple 내부 설정 번들을 노출합니다. 일부 시스템 서비스가 다르게 동작할 수 있습니다."
+            "value": "Hiển thị gói cài đặt nội bộ của Apple. Một số dịch vụ hệ thống có thể hoạt động khác đi."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Открывает пакет внутренних настроек Apple. Некоторые системные службы могут работать иначе."
+            "value": "顯示 Apple 內部設定套件。部分系統服務可能表現異常。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiển thị gói cài đặt nội bộ của Apple. Một số dịch vụ hệ thống có thể hoạt động khác đi."
+            "value": "顯示 Apple 內部設定套件。部分系統服務可能表現異常。"
           }
         }
       }
@@ -18114,37 +18114,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "裝置端 Siri"
+            "value": "Siri روی دستگاه"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "裝置端 Siri"
+            "value": "온디바이스 Siri"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siri روی دستگاه"
+            "value": "Siri на устройстве"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "온디바이스 Siri"
+            "value": "Siri trên thiết bị"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siri на устройстве"
+            "value": "裝置端 Siri"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siri trên thiết bị"
+            "value": "裝置端 Siri"
           }
         }
       }
@@ -18166,37 +18166,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援裝置端 Siri 理解，可用性取決於硬體與地區。"
+            "value": "درک Siri روی دستگاه را اعلام می‌کند. در دسترس بودن به سخت‌افزار و منطقه بستگی دارد."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援裝置端 Siri 理解，可用性取決於硬體與地區。"
+            "value": "온디바이스 Siri 이해 지원을 알립니다. 사용 가능 여부는 하드웨어와 지역에 따라 다릅니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "درک Siri روی دستگاه را اعلام می‌کند. در دسترس بودن به سخت‌افزار و منطقه بستگی دارد."
+            "value": "Объявляет поддержку понимания Siri на устройстве. Доступность зависит от оборудования и региона."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "온디바이스 Siri 이해 지원을 알립니다. 사용 가능 여부는 하드웨어와 지역에 따라 다릅니다."
+            "value": "Khai báo khả năng hiểu Siri trên thiết bị. Tính khả dụng phụ thuộc vào phần cứng và khu vực."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет поддержку понимания Siri на устройстве. Доступность зависит от оборудования и региона."
+            "value": "宣告支援裝置端 Siri 理解，可用性取決於硬體與地區。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo khả năng hiểu Siri trên thiết bị. Tính khả dụng phụ thuộc vào phần cứng và khu vực."
+            "value": "宣告支援裝置端 Siri 理解，可用性取決於硬體與地區。"
           }
         }
       }
@@ -18218,37 +18218,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "音訊智慧"
+            "value": "هوش صوتی"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "音訊智慧"
+            "value": "오디오 인텔리전스"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "هوش صوتی"
+            "value": "Аудиоинтеллект"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "오디오 인텔리전스"
+            "value": "Trí tuệ âm thanh"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Аудиоинтеллект"
+            "value": "音訊智慧"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trí tuệ âm thanh"
+            "value": "音訊智慧"
           }
         }
       }
@@ -18270,37 +18270,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告 iOS 27 音訊智慧能力。"
+            "value": "قابلیت هوش صوتی iOS 27 را اعلام می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告 iOS 27 音訊智慧能力。"
+            "value": "iOS 27 오디오 인텔리전스 기능을 알립니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "قابلیت هوش صوتی iOS 27 را اعلام می‌کند."
+            "value": "Объявляет возможность аудиоинтеллекта iOS 27."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 27 오디오 인텔리전스 기능을 알립니다."
+            "value": "Khai báo khả năng trí tuệ âm thanh của iOS 27."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет возможность аудиоинтеллекта iOS 27."
+            "value": "宣告 iOS 27 音訊智慧能力。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo khả năng trí tuệ âm thanh của iOS 27."
+            "value": "宣告 iOS 27 音訊智慧能力。"
           }
         }
       }
@@ -18322,37 +18322,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "個人翻譯"
+            "value": "مترجم شخصی"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "個人翻譯"
+            "value": "개인 번역기"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "مترجم شخصی"
+            "value": "Личный переводчик"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "개인 번역기"
+            "value": "Trình dịch cá nhân"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Личный переводчик"
+            "value": "個人翻譯"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trình dịch cá nhân"
+            "value": "個人翻譯"
           }
         }
       }
@@ -18374,37 +18374,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告個人翻譯能力。"
+            "value": "قابلیت مترجم شخصی را اعلام می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告個人翻譯能力。"
+            "value": "개인 번역기 기능을 알립니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "قابلیت مترجم شخصی را اعلام می‌کند."
+            "value": "Объявляет возможность личного переводчика."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "개인 번역기 기능을 알립니다."
+            "value": "Khai báo khả năng trình dịch cá nhân."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет возможность личного переводчика."
+            "value": "宣告個人翻譯能力。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo khả năng trình dịch cá nhân."
+            "value": "宣告個人翻譯能力。"
           }
         }
       }
@@ -18426,37 +18426,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "照片 Clean Up"
+            "value": "پاک‌سازی عکس‌ها"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "照片 Clean Up"
+            "value": "사진 정리(Clean Up)"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "پاک‌سازی عکس‌ها"
+            "value": "Очистка фото (Clean Up)"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진 정리(Clean Up)"
+            "value": "Dọn ảnh (Clean Up)"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Очистка фото (Clean Up)"
+            "value": "照片 Clean Up"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dọn ảnh (Clean Up)"
+            "value": "照片 Clean Up"
           }
         }
       }
@@ -18478,37 +18478,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告照片修復（Clean Up）能力。"
+            "value": "قابلیت بازسازی تصویر (Clean Up) را اعلام می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告照片修復（Clean Up）能力。"
+            "value": "사진 인페인팅(Clean Up) 기능을 알립니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "قابلیت بازسازی تصویر (Clean Up) را اعلام می‌کند."
+            "value": "Объявляет возможность восстановления фото (Clean Up)."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진 인페인팅(Clean Up) 기능을 알립니다."
+            "value": "Khai báo khả năng chỉnh sửa ảnh (Clean Up)."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет возможность восстановления фото (Clean Up)."
+            "value": "宣告照片修復（Clean Up）能力。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo khả năng chỉnh sửa ảnh (Clean Up)."
+            "value": "宣告照片修復（Clean Up）能力。"
           }
         }
       }
@@ -18530,37 +18530,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "手寫合成"
+            "value": "سنتز دست‌نویس"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "手寫合成"
+            "value": "필기 합성"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "سنتز دست‌نویس"
+            "value": "Синтез рукописного текста"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "필기 합성"
+            "value": "Tổng hợp chữ viết tay"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Синтез рукописного текста"
+            "value": "手寫合成"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tổng hợp chữ viết tay"
+            "value": "手寫合成"
           }
         }
       }
@@ -18582,37 +18582,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告手寫合成模型能力。"
+            "value": "قابلیت مدل سنتز دست‌نویس را اعلام می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告手寫合成模型能力。"
+            "value": "필기 합성 모델 기능을 알립니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "قابلیت مدل سنتز دست‌نویس را اعلام می‌کند."
+            "value": "Объявляет возможность модели синтеза рукописного текста."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "필기 합성 모델 기능을 알립니다."
+            "value": "Khai báo khả năng mô hình tổng hợp chữ viết tay."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет возможность модели синтеза рукописного текста."
+            "value": "宣告手寫合成模型能力。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo khả năng mô hình tổng hợp chữ viết tay."
+            "value": "宣告手寫合成模型能力。"
           }
         }
       }
@@ -18634,37 +18634,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "常聽 Hey Siri"
+            "value": "Hey Siri همیشه‌شنوا"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "常聽 Hey Siri"
+            "value": "상시 대기 Hey Siri"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hey Siri همیشه‌شنوا"
+            "value": "Постоянно слушающая Hey Siri"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 대기 Hey Siri"
+            "value": "Hey Siri luôn lắng nghe"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Постоянно слушающая Hey Siri"
+            "value": "常聽 Hey Siri"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hey Siri luôn lắng nghe"
+            "value": "常聽 Hey Siri"
           }
         }
       }
@@ -18686,37 +18686,37 @@
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援常聽 Hey Siri。"
+            "value": "پشتیبانی از Hey Siri همیشه‌شنوا را اعلام می‌کند."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告支援常聽 Hey Siri。"
+            "value": "상시 대기 Hey Siri 지원을 알립니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "پشتیبانی از Hey Siri همیشه‌شنوا را اعلام می‌کند."
+            "value": "Объявляет поддержку постоянно слушающей Hey Siri."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 대기 Hey Siri 지원을 알립니다."
+            "value": "Khai báo hỗ trợ Hey Siri luôn lắng nghe."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "Объявляет поддержку постоянно слушающей Hey Siri."
+            "value": "宣告支援常聽 Hey Siri。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "Khai báo hỗ trợ Hey Siri luôn lắng nghe."
+            "value": "宣告支援常聽 Hey Siri。"
           }
         }
       }
