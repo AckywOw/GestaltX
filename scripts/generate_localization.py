@@ -324,7 +324,11 @@ Share this device's plist to GestaltX to edit its keys and values or restore a v
 Canada	加拿大
 Model Number	型号号码
 A device restart may be required after changing the model number.	修改型号号码后可能需要重启设备。
-Listed values apply to iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.	以下号码仅适用于 iPhone 18 Pro 和 iPhone 18 Pro Max。选择与硬件不符的号码，可能导致验机工具报告不匹配。
+Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.	以下号码仅适用于 iPhone Air、iPhone 18 Pro 和 iPhone 18 Pro Max。选择与硬件不符的号码，可能导致验机工具报告不匹配。
+A3260 — Air · United States / Canada	A3260 — Air · 美国／加拿大
+A3516 — Air · Japan	A3516 — Air · 日本
+A3517 — Air · Other regions	A3517 — Air · 其他地区
+A3518 — Air · China mainland	A3518 — Air · 中国大陆
 A3472 — 18 Pro · United States	A3472 — 18 Pro · 美国
 A3713 — 18 Pro · Canada / Japan	A3713 — 18 Pro · 加拿大／日本
 A3714 — 18 Pro · Other regions	A3714 — 18 Pro · 其他地区
