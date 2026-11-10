@@ -510,6 +510,15 @@ actor GestaltFileStore {
         return data
     }
 
+    func backupExportData(_ record: BackupRecord, sealingWith seal: @Sendable (Data) throws -> Data) throws -> Data {
+        let data = try backupData(record)
+        // Local or foreign backups have no ownership proof merely because they
+        // are present in this library. Only this installation's device backups
+        // receive the same proof as a live-device document export.
+        guard record.source == .device, record.deviceID == deviceID else { return data }
+        return try seal(data)
+    }
+
     private func backupDigest(_ data: Data) -> String {
         SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
     }
