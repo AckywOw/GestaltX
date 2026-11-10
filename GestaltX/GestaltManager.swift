@@ -370,10 +370,13 @@ final class GestaltManager: ObservableObject {
         isBusy = true
         defer { isBusy = false }
         do {
-            let bytes = try inbox.read(entry)
+            let bytes = try await inbox.readAsync(entry)
             let (payload, identity) = try await verifyImport(bytes)
+            try Task.checkCancellation()
             log("[share] Device ownership verified; waiting for import confirmation")
             return .ready(PlistImportOffer(data: payload, name: entry.name, identity: identity, sharedSource: (inbox, entry)))
+        } catch is CancellationError {
+            return .deferred(nil)
         } catch {
             // A lack of device access may be temporary; keep that entry for retry.
             log("[share] " + error.localizedDescription)
@@ -390,10 +393,12 @@ final class GestaltManager: ObservableObject {
         isBusy = true
         defer { isBusy = false }
         do {
-            let bytes = try SharedPlistInbox.readDocument(at: url)
+            let bytes = try await SharedPlistInbox.readDocumentAsync(at: url)
             let (payload, identity) = try await verifyImport(bytes)
+            try Task.checkCancellation()
             return PlistImportOffer(data: payload, name: url.lastPathComponent, identity: identity, sharedSource: nil)
-        } catch { failed(error); return nil }
+        } catch is CancellationError { return nil }
+        catch { failed(error); return nil }
     }
 
     func acceptImport(_ offer: PlistImportOffer) async {

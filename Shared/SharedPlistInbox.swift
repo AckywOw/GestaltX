@@ -67,6 +67,17 @@ struct SharedPlistInbox: Sendable {
         return try result.get()
     }
 
+    static func readDocumentAsync(at url: URL, coordinator: NSFileCoordinator = NSFileCoordinator()) async throws -> Data {
+        try Task.checkCancellation()
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer { if scoped { url.stopAccessingSecurityScopedResource() } }
+        return try await SharedPlistReadJob(coordinator).run { try readDocument(at: url, coordinator: $0) }
+    }
+
+    func readAsync(_ entry: SharedPlistEntry) async throws -> Data {
+        try await SharedPlistReadJob(NSFileCoordinator()).run { try read(entry, coordinator: $0) }
+    }
+
     private static func readLimited(_ url: URL, limit: Int) throws -> Data {
         // Open without waiting for a writer and check the opened descriptor, not
         // just the path: a FIFO must not block the app while scanning its inbox.
@@ -124,14 +135,14 @@ struct SharedPlistInbox: Sendable {
             }.sorted { $0.created == $1.created ? $0.id.uuidString < $1.id.uuidString : $0.created < $1.created }
     }
 
-    func read(_ entry: SharedPlistEntry) throws -> Data {
+    func read(_ entry: SharedPlistEntry, coordinator: NSFileCoordinator = NSFileCoordinator()) throws -> Data {
         let url = batch(entry.id)
         let values = try url.resourceValues(forKeys: [.isDirectoryKey, .isSymbolicLinkKey])
         let file = url.appendingPathComponent("document.plist")
         let fileValues = try file.resourceValues(forKeys: [.isRegularFileKey, .isSymbolicLinkKey])
         guard values.isDirectory == true, values.isSymbolicLink != true,
               fileValues.isRegularFile == true, fileValues.isSymbolicLink != true else { throw Self.invalidQueue }
-        let bytes = try Self.readDocument(at: file)
+        let bytes = try Self.readDocument(at: file, coordinator: coordinator)
         guard bytes.count == entry.byteCount else { throw Self.invalidQueue }
         return bytes
     }
@@ -146,6 +157,36 @@ struct SharedPlistInbox: Sendable {
     }
 
     private func batch(_ id: UUID) -> URL { directory.appendingPathComponent(id.uuidString, isDirectory: true) }
+}
+
+// Each coordinator is used by one worker. Foundation explicitly permits cancel
+// from another thread; no other coordinator operation crosses that boundary.
+private final class SharedPlistReadJob: @unchecked Sendable {
+    private let coordinator: NSFileCoordinator
+    init(_ coordinator: NSFileCoordinator) { self.coordinator = coordinator }
+
+    func run(_ read: @escaping @Sendable (NSFileCoordinator) throws -> Data) async throws -> Data {
+        try Task.checkCancellation()
+        let worker = Task.detached(priority: .userInitiated) {
+            try Task.checkCancellation()
+            do {
+                let bytes = try read(self.coordinator)
+                try Task.checkCancellation()
+                return bytes
+            } catch {
+                try Task.checkCancellation()
+                throw error
+            }
+        }
+        return try await withTaskCancellationHandler {
+            let bytes = try await worker.value
+            try Task.checkCancellation()
+            return bytes
+        } onCancel: {
+            worker.cancel()
+            self.coordinator.cancel()
+        }
+    }
 }
 
 private extension Character {
