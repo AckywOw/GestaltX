@@ -213,6 +213,7 @@
   "Local changes saved. Export the plist to keep a copy.": "本地更改已保存，請導出 plist 以保留副本。",
   "Backup saved": "備份已保存",
   "Backup restored and verified.": "備份已恢復並通過驗證。",
+  "This backup already matches the device. No changes were made.": "此備份已與裝置一致，未作任何更改。",
   "Backup opened as a local document.": "已將備份打開為本地文稿。",
   "Manual backup": "手動備份",
   "Before editing": "編輯前備份",

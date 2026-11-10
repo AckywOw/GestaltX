@@ -213,6 +213,7 @@
   "Local changes saved. Export the plist to keep a copy.": "Đã lưu thay đổi cục bộ. Xuất tệp plist để giữ một bản sao.",
   "Backup saved": "Đã lưu bản sao lưu",
   "Backup restored and verified.": "Đã khôi phục và xác minh bản sao lưu.",
+  "This backup already matches the device. No changes were made.": "Bản sao lưu này đã khớp với thiết bị. Không có thay đổi nào được thực hiện.",
   "Backup opened as a local document.": "Đã mở bản sao lưu dưới dạng tài liệu cục bộ.",
   "Manual backup": "Sao lưu thủ công",
   "Before editing": "Trước khi chỉnh sửa",
