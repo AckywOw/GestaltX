@@ -50,7 +50,8 @@ int main(void) {
         require([files createDirectoryAtURL:caches withIntermediateDirectories:NO attributes:nil error:nil], @"Create cache for failed setup");
         require([sentinel writeToURL:[caches URLByAppendingPathComponent:@"value"] atomically:YES], @"Write setup-failure sentinel");
         __block BOOL invoked = NO;
-        require(!GXWithTemporaryCacheLink(caches, @"", ^int64_t { invoked = YES; return 3; }, &result, &error), @"Empty link destination fails setup");
+        NSString *oversizedTarget = [@"x" stringByPaddingToLength:16384 withString:@"x" startingAtIndex:0];
+        require(!GXWithTemporaryCacheLink(caches, oversizedTarget, ^int64_t { invoked = YES; return 3; }, &result, &error), @"Oversized link destination fails setup");
         require(!invoked && [[NSData dataWithContentsOfURL:[caches URLByAppendingPathComponent:@"value"]] isEqual:sentinel], @"Setup failure restores saved contents without invoking query");
 
         error = nil;
