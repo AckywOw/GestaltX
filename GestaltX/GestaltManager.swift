@@ -420,9 +420,11 @@ final class GestaltManager: ObservableObject {
         do {
             let live = try await files.loadDevice()
             let restored = try await files.restoreVerifiedImport(imported, expected: live)
-            accept(restored); needsRespring = true
+            let changed = !restored.document.matches(live.document)
+            accept(restored); needsRespring = needsRespring || changed
             status = "Changes verified on device"
-            message = L("Backup restored and verified.") + " " + L("Some changes require a device restart.")
+            message = changed ? L("Backup restored and verified.") + " " + L("Some changes require a device restart.")
+                : L("This backup already matches the device. No changes were made.")
             log("[restore] Verified imported document restored")
             await reloadBackups()
         } catch { failed(error); await reloadBackups() }
@@ -504,8 +506,11 @@ final class GestaltManager: ObservableObject {
             log("[restore] \(record.filename) · \(record.byteCount) bytes · reason=\(record.reason)")
             logChanges(from: snapshot.document, to: restored, prefix: "[restore-diff] ")
             let result = try await files.commit(restored, expected: snapshot, restoring: record)
-            accept(result); needsRespring = result.source == .device
-            message = L(result.source == .device ? "Backup restored and verified." : "Backup opened as a local document.")
+            let changed = !result.document.matches(snapshot.document)
+            accept(result); needsRespring = result.source == .device && (needsRespring || changed)
+            message = L(result.source == .device
+                        ? (changed ? "Backup restored and verified." : "This backup already matches the device. No changes were made.")
+                        : "Backup opened as a local document.")
             log(message ?? ""); await reloadBackups()
         } catch { failed(error); await reloadBackups() }
     }

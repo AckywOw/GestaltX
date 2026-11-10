@@ -18720,6 +18720,34 @@
           }
         }
       }
+    },
+    "This backup already matches the device. No changes were made.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This backup already matches the device. No changes were made."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此备份已与设备一致，未作任何更改。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此備份已與裝置一致，未作任何更改。"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此備份已與裝置一致，未作任何更改。"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

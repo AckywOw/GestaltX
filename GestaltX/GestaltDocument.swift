@@ -539,8 +539,21 @@ actor GestaltFileStore {
             throw GestaltFailure("This plist's device proof could not be verified on this device.")
         }
         try validateRestoreLayout(imported.document, against: expected.document)
+        if imported.document.matches(expected.document) {
+            return try withAccess {
+                _ = try currentData(matching: expected)
+                eventSink("Restore: the device already matches this plist")
+                return expected
+            }
+        }
         let record = try saveBackup(imported.data, source: .device, reason: "Verified import")
         return try commit(imported.document, expected: expected, restoring: record)
+    }
+
+    private func currentData(matching expected: DocumentSnapshot) throws -> Data {
+        let current = try Data(contentsOf: deviceURL)
+        guard current == expected.data else { throw GestaltFailure("MobileGestalt changed since it was loaded. Refresh before applying your edits.") }
+        return current
     }
 
     func commit(_ edited: GestaltDocument, expected: DocumentSnapshot, restoring record: BackupRecord? = nil,
@@ -566,8 +579,13 @@ actor GestaltFileStore {
             try validateRestoreLayout(edited, against: expected.document)
         }
         return try withAccess {
-            let current = try Data(contentsOf: deviceURL)
-            guard current == expected.data else { throw GestaltFailure("MobileGestalt changed since it was loaded. Refresh before applying your edits.") }
+            let current = try currentData(matching: expected)
+            // A restore can be semantically identical even when the source uses
+            // a different plist encoding. Validate freshness before skipping it.
+            if record != nil, originallyAbsentKeys.isEmpty, edited.matches(expected.document) {
+                eventSink("Restore: the device already matches this plist")
+                return expected
+            }
             try saveBackup(current, source: .device, reason: record == nil ? "Before applying" : "Before restoring")
             var baseline = expected
             let saved = try loadOriginals(for: expected.document)
