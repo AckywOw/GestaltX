@@ -412,10 +412,6 @@ actor GestaltFileStore {
             }
             audio = decoded
         }
-        // Older v1 journals have no cache entry. Recover it from owned backups
-        // without replacing their already-recorded CacheExtra originals.
-        let recoveredAudio = audio == nil ? try recoverOriginals(from: document).cachedOptions : nil
-        if let recoveredAudio { audio = recoveredAudio }
         var wapi: WAPIOriginal?
         if let entry = plist["wapi"] {
             guard let bytes = entry as? Data,
@@ -424,10 +420,19 @@ actor GestaltFileStore {
             }
             wapi = decoded
         }
-        let recoveredWAPI = wapi == nil ? try recoverOriginals(from: document).wapi : nil
-        if let recoveredWAPI { wapi = recoveredWAPI }
+        // In a current journal, an absent cache entry means that flag was never
+        // changed. Only older journals need backup-based migration, and both
+        // optional entries are recovered in the same pass.
+        let needsMigration = plist["cacheHistoryRecovered"] as? Bool != true
+        if needsMigration && (audio == nil || wapi == nil) {
+            let recovered = try recoverOriginals(from: document)
+            audio = audio ?? recovered.cachedOptions
+            wapi = wapi ?? recovered.wapi
+        }
         let state = OriginalValues(fields: originals, cachedOptions: audio, wapi: wapi)
-        if recoveredAudio != nil || recoveredWAPI != nil { try saveOriginals(state, for: document) }
+        // Persist completion even when neither flag has any history. Otherwise
+        // every reopen would depend on old, user-deletable backup payloads.
+        if needsMigration { try saveOriginals(state, for: document) }
         return state
     }
 
@@ -440,6 +445,7 @@ actor GestaltFileStore {
         var previous: GestaltDocument?
         var originals = OriginalValues()
         for record in records {
+            eventSink("Original values: reading backup " + record.id.uuidString)
             let document = try GestaltDocument(data: backupData(record))
             guard document.matchesIdentity(current) else { continue }
             if let previous {
@@ -461,7 +467,8 @@ actor GestaltFileStore {
     }
 
     private func saveOriginals(_ originals: OriginalValues, for document: GestaltDocument) throws {
-        var plist: [String: Any] = ["version": 1, "deviceID": deviceID, "identity": identity(of: document),
+        var plist: [String: Any] = ["version": 1, "cacheHistoryRecovered": true,
+                                   "deviceID": deviceID, "identity": identity(of: document),
                                    "values": originals.fields.mapValues(\.plist)]
         do {
             if let audio = originals.cachedOptions { plist["faceTimeAudio"] = try PropertyListEncoder().encode(audio) }
