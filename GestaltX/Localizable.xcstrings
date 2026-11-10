@@ -18720,6 +18720,214 @@
           }
         }
       }
+    },
+    "Internal Build": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Internal Build"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内部构建"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بیلد داخلی"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내부 빌드"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Внутренняя сборка"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bản dựng nội bộ"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "內部構建"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "內部組建"
+          }
+        }
+      }
+    },
+    "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修改系统全局的 InternalBuild 标记，并非仅调整存储信息。系统服务的行为可能发生变化。“还原”会恢复已记录的原始值。"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پرچم سراسری InternalBuild را تغییر می‌دهد، نه فقط اطلاعات فضای ذخیره‌سازی را. رفتار سرویس‌های سیستم ممکن است تغییر کند. بازگردانی، مقدار اصلی ثبت‌شده را بازیابی می‌کند."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장 공간 정보뿐 아니라 시스템 전체의 InternalBuild 플래그를 변경합니다. 시스템 서비스의 동작이 달라질 수 있습니다. 되돌리면 기록된 원래 값이 복원됩니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изменяет системный флаг InternalBuild, а не только сведения о хранилище. Поведение системных служб может измениться. Возврат восстанавливает записанное исходное значение."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thay đổi cờ InternalBuild trên toàn hệ thống, không chỉ thông tin bộ nhớ. Hoạt động của các dịch vụ hệ thống có thể thay đổi. Hoàn nguyên sẽ khôi phục giá trị gốc đã ghi lại."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修改系統全域的 InternalBuild 標記，並非只調整儲存空間資訊。系統服務的行為可能改變。「還原」會恢復已記錄的原始值。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修改系統全域的 InternalBuild 旗標，並非僅調整儲存空間資訊。系統服務的行為可能改變。「還原」會恢復已記錄的原始值。"
+          }
+        }
+      }
+    },
+    "Enable Internal Build?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enable Internal Build?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用内部构建？"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بیلد داخلی فعال شود؟"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내부 빌드를 활성화할까요?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Включить внутреннюю сборку?"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bật bản dựng nội bộ?"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "啟用內部構建？"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "啟用內部組建？"
+          }
+        }
+      }
+    },
+    "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这会暂存系统全局的 InternalBuild 标记变更。它可能影响存储页面以外的系统服务。你可以在应用前检查这项变更。"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "این کار تغییر پرچم سراسری InternalBuild را آماده می‌کند. اثر آن بر سرویس‌های سیستم ممکن است فراتر از صفحهٔ فضای ذخیره‌سازی باشد. پیش از اعمال، می‌توانید تغییر را بررسی کنید."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 전체의 InternalBuild 플래그 변경을 준비합니다. 저장 공간 화면 이외의 시스템 서비스에도 영향을 줄 수 있습니다. 적용하기 전에 변경 사항을 검토할 수 있습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изменение системного флага InternalBuild будет подготовлено. Оно может затронуть службы за пределами экрана хранилища. Перед применением можно проверить изменение."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thao tác này đưa thay đổi cờ InternalBuild toàn hệ thống vào danh sách chờ. Nó có thể ảnh hưởng đến các dịch vụ ngoài màn hình bộ nhớ. Bạn có thể xem lại thay đổi trước khi áp dụng."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "這會暫存系統全域的 InternalBuild 標記變更。它可能影響儲存空間畫面以外的系統服務。你可以在套用前檢查這項變更。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "這會暫存系統全域的 InternalBuild 旗標變更。它可能影響儲存空間畫面以外的系統服務。你可以在套用前檢查這項變更。"
+          }
+        }
+      }
     }
   },
   "version": "1.0"
