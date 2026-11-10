@@ -520,7 +520,11 @@ actor GestaltFileStore {
     func deleteBackup(_ record: BackupRecord) throws {
         // Keep the listing metadata until the payload is gone. If removal is
         // denied, the complete backup must remain visible and recoverable.
-        try removeBackupItem(backupDirectory.appendingPathComponent(record.filename))
+        do { try removeBackupItem(backupDirectory.appendingPathComponent(record.filename)) }
+        catch let error as CocoaError where error.code == .fileNoSuchFile {
+            // A previous attempt may have removed the payload but failed to
+            // remove metadata. Only this exact absence permits cleanup to resume.
+        }
         try removeBackupItem(backupDirectory.appendingPathComponent(record.id.uuidString + ".json"))
     }
 
