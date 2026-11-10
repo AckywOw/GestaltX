@@ -129,10 +129,33 @@ import Foundation
         try expectUnavailable(reopened)
         try expect(reopened.cachedOptionsOriginal?.layoutUUID == "previous-layout", "Later edits must not replace unavailable history with the already-modified current flags")
         let metadata = try PropertyListSerialization.propertyList(from: Data(contentsOf: journal), format: nil) as! [String: Any]
-        let unavailable = metadata["unavailableCacheOriginals"] as? [String: String]
-        try expect(unavailable?["faceTimeAudio"] == layout.uuid && unavailable?["wapi"] == layout.uuid, "The unavailable baseline survives subsequent journal writes")
+        let unavailable = metadata["unavailableCacheOriginals"] as? [String: [String]]
+        try expect(unavailable?["faceTimeAudio"] == [layout.uuid] && unavailable?["wapi"] == [layout.uuid], "The unavailable baseline survives subsequent journal writes")
         let archives = try fm.contentsOfDirectory(at: backups, includingPropertiesForKeys: nil).filter { $0.lastPathComponent.hasPrefix("OriginalValues-") }
         try expect(archives.count == 1 && (try Data(contentsOf: archives[0])) == legacy, "The original evidence is retained without creating a new archive on every edit")
+
+        // Exercise the old on-disk single-UUID marker as well as a layout cycle.
+        // B's pre-write backups were made after its origin became unknown.
+        var singleUUID = metadata
+        singleUUID["unavailableCacheOriginals"] = ["faceTimeAudio": layout.uuid, "wapi": layout.uuid]
+        try bytes(singleUUID).write(to: journal)
+        let beforeCycle = try Data(contentsOf: device)
+        var thirdLayout = reopened.document.root
+        thirdLayout["CacheUUID"] = "third-layout"
+        try bytes(thirdLayout).write(to: device)
+        let third = try await makeStore(device: device, backups: backups).loadDevice()
+        try expect(third.cachedOptionsOriginal?.layoutUUID == "previous-layout" && third.wapiOriginal?.layoutUUID == "previous-layout",
+                   "An unknown third layout does not invent original cache entries")
+        try beforeCycle.write(to: device)
+        let returned = try await makeStore(device: device, backups: backups).loadDevice()
+        try expectUnavailable(returned)
+        try expect(returned.cachedOptionsOriginal?.layoutUUID == "previous-layout" && returned.wapiOriginal?.layoutUUID == "previous-layout",
+                   "Returning to an unknown layout must not use backups created after its failed recovery as originals")
+        let cycled = try PropertyListSerialization.propertyList(from: Data(contentsOf: journal), format: nil) as! [String: Any]
+        let remembered = cycled["unavailableCacheOriginals"] as? [String: [String]]
+        for key in ["faceTimeAudio", "wapi"] {
+            try expect(Set(remembered?[key] ?? []) == Set([layout.uuid, "third-layout"]), "All unknown layouts remain recorded across a layout cycle")
+        }
     }
 
     static func main() async throws {

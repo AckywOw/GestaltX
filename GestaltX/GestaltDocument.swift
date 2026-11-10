@@ -288,7 +288,7 @@ struct OriginalValues {
     var wapi: WAPIOriginal?
     // A failed legacy migration must not later use backups created after the
     // failure as evidence of the original values for this layout.
-    var unavailableCacheOriginals: [String: String] = [:]
+    var unavailableCacheOriginals: [String: Set<String>] = [:]
 }
 
 struct BackupRecord: Identifiable, Codable, Sendable {
@@ -429,19 +429,27 @@ actor GestaltFileStore {
         }
         let recoveredWAPI = wapi == nil ? try recoverOriginals(from: document).wapi : nil
         if let recoveredWAPI { wapi = recoveredWAPI }
-        var unavailable = plist["unavailableCacheOriginals"] as? [String: String] ?? [:]
+        var unavailable: [String: Set<String>] = [:]
+        if let stored = plist["unavailableCacheOriginals"] as? [String: Any] {
+            for (key, value) in stored {
+                // Read the earlier single-UUID representation as a one-item set.
+                if let uuid = value as? String { unavailable[key] = [uuid] }
+                else if let uuids = value as? [String] { unavailable[key] = Set(uuids) }
+                else { throw GestaltFailure("Original values could not be read. No system changes were made.") }
+            }
+        }
         let currentUUID = document.root["CacheUUID"] as? String ?? ""
-        let migrateAudio = audio.map { $0.layoutUUID != currentUUID } == true && unavailable["faceTimeAudio"] != currentUUID
-        let migrateWAPI = wapi.map { $0.layoutUUID != currentUUID } == true && unavailable["wapi"] != currentUUID
+        let migrateAudio = audio.map { $0.layoutUUID != currentUUID } == true && !(unavailable["faceTimeAudio"]?.contains(currentUUID) ?? false)
+        let migrateWAPI = wapi.map { $0.layoutUUID != currentUUID } == true && !(unavailable["wapi"]?.contains(currentUUID) ?? false)
         if migrateAudio || migrateWAPI {
             let baseline = try recoverCacheBaseline(from: document)
             if migrateAudio {
-                if let recovered = baseline.cachedOptions { audio = recovered; unavailable.removeValue(forKey: "faceTimeAudio") }
-                else { unavailable["faceTimeAudio"] = currentUUID }
+                if let recovered = baseline.cachedOptions { audio = recovered }
+                else { unavailable["faceTimeAudio", default: []].insert(currentUUID) }
             }
             if migrateWAPI {
-                if let recovered = baseline.wapi { wapi = recovered; unavailable.removeValue(forKey: "wapi") }
-                else { unavailable["wapi"] = currentUUID }
+                if let recovered = baseline.wapi { wapi = recovered }
+                else { unavailable["wapi", default: []].insert(currentUUID) }
             }
             // Preserve the complete legacy record before updating either its
             // cache values or the fact that their original state is unavailable.
@@ -523,7 +531,9 @@ actor GestaltFileStore {
         var plist: [String: Any] = ["version": 1, "deviceID": deviceID, "identity": identity(of: document),
                                    "values": originals.fields.mapValues(\.plist)]
         do {
-            if !originals.unavailableCacheOriginals.isEmpty { plist["unavailableCacheOriginals"] = originals.unavailableCacheOriginals }
+            if !originals.unavailableCacheOriginals.isEmpty {
+                plist["unavailableCacheOriginals"] = originals.unavailableCacheOriginals.mapValues { $0.sorted() }
+            }
             if let audio = originals.cachedOptions { plist["faceTimeAudio"] = try PropertyListEncoder().encode(audio) }
             if let wapi = originals.wapi { plist["wapi"] = try PropertyListEncoder().encode(wapi) }
             let data = try PropertyListSerialization.data(fromPropertyList: plist, format: .binary, options: 0)
