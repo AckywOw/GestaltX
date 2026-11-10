@@ -61,6 +61,19 @@ struct Capability: Identifiable {
             case .removeAdded: document.set(nil, for: key)
             }
         }
+        if id == "dynamicIsland", choice == .disable || choice == .removeAdded {
+            restoreDynamicIslandLayout(in: &document, from: snapshot)
+        }
+    }
+
+    func restoreDynamicIslandLayout(in document: inout GestaltDocument, from snapshot: DocumentSnapshot) {
+        guard id == "dynamicIsland", var artwork = document.extra[GestaltKeys.artwork] as? [String: Any] else { return }
+        let original = snapshot.originalValue(for: GestaltKeys.artwork)
+        let originalArtwork = original as? [String: Any]
+        // Layout and model-name presets share this dictionary. Restore only the
+        // layout member so unrelated artwork edits keep their current values.
+        artwork["ArtworkDeviceSubType"] = originalArtwork?["ArtworkDeviceSubType"]
+        document.set(artwork.isEmpty && original == nil ? nil : artwork, for: GestaltKeys.artwork)
     }
     static let all: [Self] = [
         .init(id: "dynamicIsland", category: .display, title: "Dynamic Island", detail: "Enable the alternate Dynamic Island capability.", keys: ["YlEtTtHlNesRBMal1CqRaA"]),
