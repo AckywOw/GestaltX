@@ -415,10 +415,6 @@ actor GestaltFileStore {
             }
             audio = decoded
         }
-        // Older v1 journals have no cache entry. Recover it from owned backups
-        // without replacing their already-recorded CacheExtra originals.
-        let recoveredAudio = audio == nil ? try recoverOriginals(from: document).cachedOptions : nil
-        if let recoveredAudio { audio = recoveredAudio }
         var wapi: WAPIOriginal?
         if let entry = plist["wapi"] {
             guard let bytes = entry as? Data,
@@ -427,8 +423,14 @@ actor GestaltFileStore {
             }
             wapi = decoded
         }
-        let recoveredWAPI = wapi == nil ? try recoverOriginals(from: document).wapi : nil
-        if let recoveredWAPI { wapi = recoveredWAPI }
+        // Recover absent entries once for legacy journals, then migrate any
+        // saved cache values that belong to a different system generation.
+        let needsMigration = plist["cacheHistoryRecovered"] as? Bool != true
+        if needsMigration && (audio == nil || wapi == nil) {
+            let recovered = try recoverOriginals(from: document)
+            audio = audio ?? recovered.cachedOptions
+            wapi = wapi ?? recovered.wapi
+        }
         var unavailable: [String: Set<String>] = [:]
         if let stored = plist["unavailableCacheOriginals"] as? [String: Any] {
             for (key, value) in stored {
@@ -456,7 +458,7 @@ actor GestaltFileStore {
             try archiveOriginals(data)
         }
         let state = OriginalValues(fields: originals, cachedOptions: audio, wapi: wapi, unavailableCacheOriginals: unavailable)
-        if recoveredAudio != nil || recoveredWAPI != nil || migrateAudio || migrateWAPI { try saveOriginals(state, for: document) }
+        if needsMigration || migrateAudio || migrateWAPI { try saveOriginals(state, for: document) }
         return state
     }
 
@@ -507,6 +509,7 @@ actor GestaltFileStore {
         var previous: GestaltDocument?
         var originals = OriginalValues()
         for record in records {
+            eventSink("Original values: reading backup " + record.id.uuidString)
             let document = try GestaltDocument(data: backupData(record))
             guard document.matchesIdentity(current), matchesCacheGeneration(document, current) else { continue }
             if let previous {
@@ -528,7 +531,8 @@ actor GestaltFileStore {
     }
 
     private func saveOriginals(_ originals: OriginalValues, for document: GestaltDocument) throws {
-        var plist: [String: Any] = ["version": 1, "deviceID": deviceID, "identity": identity(of: document),
+        var plist: [String: Any] = ["version": 1, "cacheHistoryRecovered": true,
+                                   "deviceID": deviceID, "identity": identity(of: document),
                                    "values": originals.fields.mapValues(\.plist)]
         do {
             if !originals.unavailableCacheOriginals.isEmpty {
