@@ -133,6 +133,7 @@ struct SharedPlistInbox: Sendable {
         try Self.validate(data)
         guard let parent = try openDirectory(create: true) else { throw Self.invalidQueue }
         defer { close(parent) }
+        cleanupStaleEntries()
         let id = UUID()
         let entry = SharedPlistEntry(id: id, name: Self.displayName(name),
                                     created: Date(), byteCount: data.count)
@@ -143,6 +144,8 @@ struct SharedPlistInbox: Sendable {
             guard mkdirat(parent, staging, 0o700) == 0 else { throw Self.fileError() }
             let stagingDirectory = try Self.openChild(staging, in: parent)
             defer { close(stagingDirectory) }
+            let lease = try SharedInboxHousekeeping.writerLock(in: stagingDirectory)
+            defer { close(lease) }
             try Self.write(data, named: "document.plist", in: stagingDirectory)
             try Self.write(metadata, named: "entry.json", in: stagingDirectory)
             // Publish only complete pairs. The main app ignores hidden staging folders.
@@ -157,6 +160,7 @@ struct SharedPlistInbox: Sendable {
     func entries() throws -> [SharedPlistEntry] {
         guard let parent = try openDirectory(create: false) else { return [] }
         defer { close(parent) }
+        cleanupStaleEntries()
         return try Self.names(in: parent).compactMap { name -> SharedPlistEntry? in
                 guard let id = UUID(uuidString: name),
                       let child = try? Self.openChild(name, in: parent) else { return nil }
@@ -191,7 +195,16 @@ struct SharedPlistInbox: Sendable {
     func reject(_ entry: SharedPlistEntry) {
         guard let parent = try? openDirectory(create: false) else { return }
         defer { close(parent) }
-        _ = renameat(parent, entry.id.uuidString, parent, "." + entry.id.uuidString + ".rejected")
+        guard let child = try? Self.openChild(entry.id.uuidString, in: parent) else { return }
+        defer { close(child) }
+        if renameat(parent, entry.id.uuidString, parent, "." + entry.id.uuidString + ".rejected") == 0 {
+            _ = futimens(child, nil)
+        }
+    }
+
+    @discardableResult
+    func cleanupStaleEntries(now: Date = Date()) -> Int {
+        SharedInboxHousekeeping.clean(container: container, namespace: namespace, now: now)
     }
 
     private static func fileError() -> NSError { NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
@@ -327,6 +340,111 @@ private final class SharedPlistReadJob: @unchecked Sendable {
             self.coordinator.cancel()
         }
     }
+}
+
+private enum SharedInboxHousekeeping {
+    private static let lockName = ".writer.lock"
+
+    static func writerLock(in directory: Int32) throws -> Int32 {
+        let descriptor = openat(directory, lockName, O_RDWR | O_CREAT | O_EXCL | O_NOFOLLOW | O_CLOEXEC, 0o600)
+        guard descriptor >= 0 else { throw error() }
+        guard flock(descriptor, LOCK_EX | LOCK_NB) == 0 else { let failure = error(); close(descriptor); throw failure }
+        return descriptor
+    }
+
+    static func clean(container: URL, namespace: String, now: Date) -> Int {
+        // Housekeeping is best effort. A failed scan must never prevent normal
+        // enqueue/read operations, and an active producer is never waited on.
+        guard let parent = try? openDirectory(container: container, namespace: namespace) else { return 0 }
+        defer { close(parent) }
+        guard let names = try? names(in: parent) else { return 0 }
+        var removed = 0
+        for name in names {
+            guard removed < 32, let retention = retention(for: name) else { continue }
+            let child = openat(parent, name, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC)
+            guard child >= 0 else { continue }
+            defer { close(child) }
+            var info = stat()
+            guard fstat(child, &info) == 0,
+                  now.timeIntervalSince1970 - Double(info.st_mtimespec.tv_sec) >= retention else { continue }
+            let lease = openat(child, lockName, O_RDWR | O_CREAT | O_NONBLOCK | O_NOFOLLOW | O_CLOEXEC, 0o600)
+            guard lease >= 0 else { continue }
+            defer { close(lease) }
+            var lockInfo = stat()
+            guard fstat(lease, &lockInfo) == 0, (lockInfo.st_mode & S_IFMT) == S_IFREG,
+                  flock(lease, LOCK_EX | LOCK_NB) == 0 else { continue }
+            var current = stat()
+            guard fstatat(parent, name, &current, AT_SYMLINK_NOFOLLOW) == 0,
+                  current.st_dev == info.st_dev, current.st_ino == info.st_ino else { continue }
+            do { try removeContents(in: child); guard unlinkat(parent, name, AT_REMOVEDIR) == 0 else { continue }; removed += 1 }
+            catch { continue }
+        }
+        return removed
+    }
+
+    private static func retention(for name: String) -> TimeInterval? {
+        let suffix: String
+        let age: TimeInterval
+        if name.hasSuffix(".pending") { suffix = ".pending"; age = 24 * 60 * 60 }
+        else if name.hasSuffix(".rejected") { suffix = ".rejected"; age = 7 * 24 * 60 * 60 }
+        else { return nil }
+        guard name.hasPrefix(".") else { return nil }
+        let identifier = String(name.dropFirst().dropLast(suffix.count))
+        guard let id = UUID(uuidString: identifier), id.uuidString == identifier else { return nil }
+        return age
+    }
+
+    private static func openDirectory(container: URL, namespace: String) throws -> Int32 {
+        var descriptor = container.withUnsafeFileSystemRepresentation { path in
+            path.map { open($0, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC) } ?? -1
+        }
+        guard descriptor >= 0 else { throw error() }
+        for component in ["GestaltX", "ShareInbox", namespace] {
+            let next = openat(descriptor, component, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC)
+            let failure = error()
+            close(descriptor)
+            guard next >= 0 else { throw failure }
+            descriptor = next
+        }
+        return descriptor
+    }
+
+    private static func names(in directory: Int32) throws -> [String] {
+        let duplicate = dup(directory)
+        guard duplicate >= 0 else { throw error() }
+        guard let stream = fdopendir(duplicate) else { let failure = error(); close(duplicate); throw failure }
+        defer { closedir(stream) }
+        rewinddir(stream)
+        var result: [String] = []
+        errno = 0
+        while let entry = readdir(stream) {
+            let capacity = MemoryLayout.size(ofValue: entry.pointee.d_name)
+            let name = withUnsafePointer(to: &entry.pointee.d_name) { pointer in
+                pointer.withMemoryRebound(to: CChar.self, capacity: capacity) { String(cString: $0) }
+            }
+            if name != ".", name != ".." { result.append(name) }
+            errno = 0
+        }
+        guard errno == 0 else { throw error() }
+        return result
+    }
+
+    private static func removeContents(in directory: Int32, depth: Int = 0) throws {
+        guard depth < 64 else { throw SharedPlistError(key: "The shared plist could not be read. Share it again.") }
+        for name in try names(in: directory) {
+            var info = stat()
+            guard fstatat(directory, name, &info, AT_SYMLINK_NOFOLLOW) == 0 else { throw error() }
+            if (info.st_mode & S_IFMT) == S_IFDIR {
+                let child = openat(directory, name, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC)
+                guard child >= 0 else { throw error() }
+                defer { close(child) }
+                try removeContents(in: child, depth: depth + 1)
+                guard unlinkat(directory, name, AT_REMOVEDIR) == 0 else { throw error() }
+            } else if unlinkat(directory, name, 0) != 0 { throw error() }
+        }
+    }
+
+    private static func error() -> NSError { NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
 }
 
 private extension Character {
