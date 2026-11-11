@@ -17,11 +17,15 @@ struct SharedPlistEntry: Codable, Identifiable, Sendable {
 struct SharedPlistInbox: Sendable {
     static let maximumByteCount = 16 * 1024 * 1024
     let directory: URL
+    private let container: URL
+    private let namespace: String
 
     init(container: URL, namespace: String) throws {
         guard !namespace.isEmpty, namespace.utf8.allSatisfy({
             (65...90).contains($0) || (97...122).contains($0) || (48...57).contains($0) || [45, 46, 95].contains($0)
         }), namespace != ".", namespace != ".." else { throw Self.invalidQueue }
+        self.container = container
+        self.namespace = namespace
         directory = container.appendingPathComponent("GestaltX/ShareInbox", isDirectory: true)
             .appendingPathComponent(namespace, isDirectory: true)
     }
@@ -73,7 +77,15 @@ struct SharedPlistInbox: Sendable {
         let descriptor = url.withUnsafeFileSystemRepresentation { path in
             path.map { open($0, O_RDONLY | O_NONBLOCK | O_NOFOLLOW | O_CLOEXEC) } ?? -1
         }
-        guard descriptor >= 0 else { throw invalidQueue }
+        return try readLimited(descriptor: descriptor, limit: limit)
+    }
+
+    private static func readLimited(_ name: String, in directory: Int32, limit: Int) throws -> Data {
+        try readLimited(descriptor: openat(directory, name, O_RDONLY | O_NONBLOCK | O_NOFOLLOW | O_CLOEXEC), limit: limit)
+    }
+
+    private static func readLimited(descriptor: Int32, limit: Int) throws -> Data {
+        guard descriptor >= 0 else { throw fileError() }
         let handle = FileHandle(fileDescriptor: descriptor, closeOnDealloc: true)
         defer { try? handle.close() }
         var info = stat()
@@ -89,35 +101,36 @@ struct SharedPlistInbox: Sendable {
 
     func enqueue(_ data: Data, name: String) throws -> SharedPlistEntry {
         try Self.validate(data)
-        let fm = FileManager.default
-        try fm.createDirectory(at: directory, withIntermediateDirectories: true)
+        guard let parent = try openDirectory(create: true) else { throw Self.invalidQueue }
+        defer { close(parent) }
         let id = UUID()
         let leaf = (name as NSString).lastPathComponent.filter { !$0.isNewline && !$0.isASCIIControl }
         let entry = SharedPlistEntry(id: id, name: leaf.isEmpty ? "MobileGestalt.plist" : String(leaf.prefix(200)),
                                     created: Date(), byteCount: data.count)
-        let staging = directory.appendingPathComponent("." + id.uuidString + ".pending", isDirectory: true)
+        let staging = "." + id.uuidString + ".pending"
         do {
-            try fm.createDirectory(at: staging, withIntermediateDirectories: false)
-            try data.write(to: staging.appendingPathComponent("document.plist"), options: .atomic)
-            try JSONEncoder().encode(entry).write(to: staging.appendingPathComponent("entry.json"), options: .atomic)
+            guard mkdirat(parent, staging, 0o700) == 0 else { throw Self.fileError() }
+            let stagingDirectory = try Self.openChild(staging, in: parent)
+            defer { close(stagingDirectory) }
+            try Self.write(data, named: "document.plist", in: stagingDirectory)
+            try Self.write(JSONEncoder().encode(entry), named: "entry.json", in: stagingDirectory)
             // Publish only complete pairs. The main app ignores hidden staging folders.
-            try fm.moveItem(at: staging, to: batch(id))
+            guard renameat(parent, staging, parent, id.uuidString) == 0 else { throw Self.fileError() }
         } catch {
-            try? fm.removeItem(at: staging)
+            try? Self.removeDirectory(staging, in: parent)
             throw error
         }
         return entry
     }
 
     func entries() throws -> [SharedPlistEntry] {
-        let fm = FileManager.default
-        guard fm.fileExists(atPath: directory.path) else { return [] }
-        return try fm.contentsOfDirectory(at: directory, includingPropertiesForKeys: [.isDirectoryKey, .isSymbolicLinkKey], options: .skipsHiddenFiles)
-            .compactMap { url in
-                guard let id = UUID(uuidString: url.lastPathComponent),
-                      let values = try? url.resourceValues(forKeys: [.isDirectoryKey, .isSymbolicLinkKey]),
-                      values.isDirectory == true, values.isSymbolicLink != true,
-                      let bytes = try? Self.readLimited(url.appendingPathComponent("entry.json"), limit: 4096),
+        guard let parent = try openDirectory(create: false) else { return [] }
+        defer { close(parent) }
+        return try Self.names(in: parent).compactMap { name -> SharedPlistEntry? in
+                guard let id = UUID(uuidString: name),
+                      let child = try? Self.openChild(name, in: parent) else { return nil }
+                defer { close(child) }
+                guard let bytes = try? Self.readLimited("entry.json", in: child, limit: 4096),
                       let entry = try? JSONDecoder().decode(SharedPlistEntry.self, from: bytes), entry.id == id,
                       (0...Self.maximumByteCount).contains(entry.byteCount) else { return nil }
                 return entry
@@ -125,27 +138,108 @@ struct SharedPlistInbox: Sendable {
     }
 
     func read(_ entry: SharedPlistEntry) throws -> Data {
-        let url = batch(entry.id)
-        let values = try url.resourceValues(forKeys: [.isDirectoryKey, .isSymbolicLinkKey])
-        let file = url.appendingPathComponent("document.plist")
-        let fileValues = try file.resourceValues(forKeys: [.isRegularFileKey, .isSymbolicLinkKey])
-        guard values.isDirectory == true, values.isSymbolicLink != true,
-              fileValues.isRegularFile == true, fileValues.isSymbolicLink != true else { throw Self.invalidQueue }
-        let bytes = try Self.readDocument(at: file)
+        guard let parent = try openDirectory(create: false) else { throw Self.invalidQueue }
+        defer { close(parent) }
+        let child = try Self.openChild(entry.id.uuidString, in: parent)
+        defer { close(child) }
+        // Published inbox files are local copies, not File Provider URLs. Open
+        // relative to the pinned directory so replacing a path cannot redirect
+        // a read into a different namespace while it is in progress.
+        let bytes = try Self.readLimited("document.plist", in: child, limit: Self.maximumByteCount)
+        try Self.validate(bytes)
         guard bytes.count == entry.byteCount else { throw Self.invalidQueue }
         return bytes
     }
 
     func acknowledge(_ entry: SharedPlistEntry) throws {
-        try FileManager.default.removeItem(at: batch(entry.id))
+        guard let parent = try openDirectory(create: false) else { throw Self.invalidQueue }
+        defer { close(parent) }
+        try Self.removeDirectory(entry.id.uuidString, in: parent)
     }
 
     func reject(_ entry: SharedPlistEntry) {
-        let source = batch(entry.id)
-        try? FileManager.default.moveItem(at: source, to: directory.appendingPathComponent("." + entry.id.uuidString + ".rejected"))
+        guard let parent = try? openDirectory(create: false) else { return }
+        defer { close(parent) }
+        _ = renameat(parent, entry.id.uuidString, parent, "." + entry.id.uuidString + ".rejected")
     }
 
-    private func batch(_ id: UUID) -> URL { directory.appendingPathComponent(id.uuidString, isDirectory: true) }
+    private static func fileError() -> NSError { NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
+
+    private static func openChild(_ name: String, in parent: Int32) throws -> Int32 {
+        let descriptor = openat(parent, name, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC)
+        guard descriptor >= 0 else { throw fileError() }
+        return descriptor
+    }
+
+    private func openDirectory(create: Bool) throws -> Int32? {
+        if create { try FileManager.default.createDirectory(at: container, withIntermediateDirectories: true) }
+        var descriptor = container.withUnsafeFileSystemRepresentation { path in
+            path.map { open($0, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC) } ?? -1
+        }
+        if descriptor < 0 {
+            if !create && errno == ENOENT { return nil }
+            throw Self.fileError()
+        }
+        do {
+            // Check every component below the trusted App Group container. The
+            // descriptor walk also survives concurrent renaming of an ancestor.
+            for name in ["GestaltX", "ShareInbox", namespace] {
+                if create && mkdirat(descriptor, name, 0o700) != 0 && errno != EEXIST { throw Self.fileError() }
+                let next: Int32
+                do { next = try Self.openChild(name, in: descriptor) }
+                catch {
+                    if !create && (error as NSError).code == Int(ENOENT) { close(descriptor); return nil }
+                    throw error
+                }
+                close(descriptor)
+                descriptor = next
+            }
+            return descriptor
+        } catch { close(descriptor); throw error }
+    }
+
+    private static func names(in directory: Int32) throws -> [String] {
+        let duplicate = dup(directory)
+        guard duplicate >= 0 else { throw fileError() }
+        guard let stream = fdopendir(duplicate) else { let error = fileError(); close(duplicate); throw error }
+        defer { closedir(stream) }
+        rewinddir(stream)
+        var result: [String] = []
+        errno = 0
+        while let entry = readdir(stream) {
+            let capacity = MemoryLayout.size(ofValue: entry.pointee.d_name)
+            let name = withUnsafePointer(to: &entry.pointee.d_name) { pointer in
+                pointer.withMemoryRebound(to: CChar.self, capacity: capacity) {
+                    String(cString: $0)
+                }
+            }
+            if name != ".", name != ".." { result.append(name) }
+            errno = 0
+        }
+        guard errno == 0 else { throw fileError() }
+        return result
+    }
+
+    private static func write(_ data: Data, named name: String, in directory: Int32) throws {
+        let descriptor = openat(directory, name, O_WRONLY | O_CREAT | O_EXCL | O_NOFOLLOW | O_CLOEXEC, 0o600)
+        guard descriptor >= 0 else { throw fileError() }
+        let handle = FileHandle(fileDescriptor: descriptor, closeOnDealloc: true)
+        defer { try? handle.close() }
+        try handle.write(contentsOf: data)
+    }
+
+    private static func removeDirectory(_ name: String, in parent: Int32, depth: Int = 0) throws {
+        guard depth < 64 else { throw invalidQueue }
+        let directory = try openChild(name, in: parent)
+        defer { close(directory) }
+        for child in try names(in: directory) {
+            var info = stat()
+            guard fstatat(directory, child, &info, AT_SYMLINK_NOFOLLOW) == 0 else { throw fileError() }
+            if (info.st_mode & S_IFMT) == S_IFDIR { try removeDirectory(child, in: directory, depth: depth + 1) }
+            else if unlinkat(directory, child, 0) != 0 { throw fileError() }
+        }
+        guard unlinkat(parent, name, AT_REMOVEDIR) == 0 else { throw fileError() }
+    }
 }
 
 private extension Character {
