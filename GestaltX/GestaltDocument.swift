@@ -203,6 +203,22 @@ struct GestaltDocument: @unchecked Sendable {
         }
         return true
     }
+
+    func preservesDeviceIdentity(of original: Self) -> Bool {
+        // Keep each actual field and its plist type unchanged. Normalizing an
+        // identifier here would also permit edits that invalidate saved history.
+        let keys = ["UniqueDeviceID", "re6Zb+zwFKJNlkQTUeT+/w",
+                    "SerialNumber", "VasUgeSzVyHdB27g2XpN0g",
+                    "UniqueChipID", "TF31PAB6aO8KAbPyNKSxKA"]
+        for key in keys {
+            switch (original.extra[key], extra[key]) {
+            case (nil, nil): continue
+            case (let before?, let after?) where Self.valuesEqual(before, after): continue
+            default: return false
+            }
+        }
+        return true
+    }
 }
 
 enum DocumentSource: String, Codable, Sendable { case device, local }
@@ -628,6 +644,9 @@ actor GestaltFileStore {
 
     func commit(_ edited: GestaltDocument, expected: DocumentSnapshot, restoring record: BackupRecord? = nil,
                 originallyAbsentKeys: Set<String> = []) throws -> DocumentSnapshot {
+        guard expected.source != .device || edited.preservesDeviceIdentity(of: expected.document) else {
+            throw GestaltFailure("Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.")
+        }
         if record == nil { try DeviceCacheOptions.validateEdit(from: expected.document, to: edited) }
         guard originallyAbsentKeys.allSatisfy({ edited.extra[$0] == nil }) else {
             throw GestaltFailure("The selected added fields must be removed before applying.")

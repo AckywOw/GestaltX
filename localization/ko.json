@@ -282,6 +282,7 @@
   "The original-value record belongs to a different device.": "원본 값 기록이 다른 기기의 것입니다.",
   "Original values could not be saved and verified. No system write was started.": "원본 값을 저장하고 검증할 수 없습니다. 시스템 쓰기 작업이 시작되지 않았습니다.",
   "The selected added fields must be removed before applying.": "적용하기 전에 선택한 추가 필드를 제거해야 합니다.",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "시스템 plist의 기기 식별 필드는 변경할 수 없습니다. 이 필드를 편집하려면 로컬 파일을 여세요.",
   "Initial backup": "초기 백업",
   "Original values snapshot": "원본 값 스냅샷",
   "Revert": "되돌리기",

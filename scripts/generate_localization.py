@@ -77,6 +77,7 @@ Original values could not be read. No system changes were made.	无法读取原�
 The original-value record belongs to a different device.	原值记录属于其他设备。
 Original values could not be saved and verified. No system write was started.	无法保存并验证原值记录，未开始写入系统文件。
 The selected added fields must be removed before applying.	请先移除选中的新增字段，再应用更改。
+Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.	不能更改系统 plist 中的设备身份字段。如需编辑这些字段，请打开本地文件。
 Keep Current	保持当前值
 Display	显示
 Device	设备

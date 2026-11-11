@@ -282,6 +282,7 @@
   "The original-value record belongs to a different device.": "Bản ghi giá trị gốc thuộc về thiết bị khác.",
   "Original values could not be saved and verified. No system write was started.": "Không thể lưu và xác minh các giá trị gốc. Chưa bắt đầu ghi tệp hệ thống.",
   "The selected added fields must be removed before applying.": "Phải xóa các trường đã thêm được chọn trước khi áp dụng.",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "Không thể thay đổi các trường nhận dạng thiết bị trong plist hệ thống. Hãy mở tệp cục bộ để chỉnh sửa các trường này.",
   "Initial backup": "Bản sao lưu đầu tiên",
   "Original values snapshot": "Ảnh chụp các giá trị gốc",
   "Revert": "Hoàn nguyên",

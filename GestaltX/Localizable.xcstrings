@@ -3589,6 +3589,58 @@
         }
       }
     },
+    "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不能更改系统 plist 中的设备身份字段。如需编辑这些字段，请打开本地文件。"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فیلدهای هویت دستگاه در plist سیستم قابل تغییر نیستند. برای ویرایش این فیلدها یک فایل محلی باز کنید."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 plist의 기기 식별 필드는 변경할 수 없습니다. 이 필드를 편집하려면 로컬 파일을 여세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поля идентификации устройства нельзя изменять в системном plist. Для их редактирования откройте локальный файл."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không thể thay đổi các trường nhận dạng thiết bị trong plist hệ thống. Hãy mở tệp cục bộ để chỉnh sửa các trường này."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不能更改系統 plist 中的裝置身分欄位。如需編輯這些欄位，請開啟本機檔案。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不能更改系統 plist 中的裝置身分欄位。如需編輯這些欄位，請開啟本機檔案。"
+          }
+        }
+      }
+    },
     "Keep Current": {
       "localizations": {
         "en": {
