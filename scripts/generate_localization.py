@@ -271,7 +271,7 @@ That key already exists. Edit the existing field instead.	此键名已存在，�
 Enter a model name before applying.	请先输入机型名称再应用。
 A little more possibility.	多一点可能。
 More Projects by huamidev	huamidev 的更多项目
-Minimum OS	最低系统版本
+Supported OS	支持系统
 Languages	语言
 Compatibility	兼容性
 Credits	鸣谢

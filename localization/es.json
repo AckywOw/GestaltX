@@ -260,7 +260,6 @@
   "Enter a model name before applying.": "Ingresa un nombre de modelo antes de aplicar.",
   "A little more possibility.": "Un poco más de posibilidades.",
   "More Projects by huamidev": "Más proyectos de huamidev",
-  "Minimum OS": "Versión mínima de SO",
   "Languages": "Idiomas",
   "Compatibility": "Compatibilidad",
   "Credits": "Créditos",
@@ -370,5 +369,6 @@
   "A3260 — Air · United States / Canada": "A3260 — Air · Estados Unidos / Canadá",
   "A3516 — Air · Japan": "A3516 — Air · Japón",
   "A3517 — Air · Other regions": "A3517 — Air · Otras regiones",
-  "A3518 — Air · China mainland": "A3518 — Air · China continental"
+  "A3518 — Air · China mainland": "A3518 — Air · China continental",
+  "Supported OS": "Sistemas compatibles"
 }

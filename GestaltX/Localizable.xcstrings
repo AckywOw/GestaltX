@@ -15255,60 +15255,60 @@
         }
       }
     },
-    "Minimum OS": {
+    "Supported OS": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Minimum OS"
+            "value": "Supported OS"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最低系统版本"
+            "value": "支持系统"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Versión mínima de SO"
+            "value": "Sistemas compatibles"
           }
         },
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "حداقل نسخهٔ سیستم‌عامل"
+            "value": "سیستم‌عامل‌های پشتیبانی‌شده"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "최소 OS 요구사항"
+            "value": "지원 OS"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Минимальная версия ОС"
+            "value": "Поддерживаемые ОС"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hệ điều hành tối thiểu"
+            "value": "Hệ điều hành được hỗ trợ"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "最低系統版本"
+            "value": "支援系統"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "最低系統版本"
+            "value": "支援系統"
           }
         }
       }

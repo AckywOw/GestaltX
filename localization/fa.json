@@ -243,7 +243,6 @@
   "Enter a model name before applying.": "پیش از اعمال، نام مدل را وارد کنید.",
   "A little more possibility.": "اندکی امکانات بیشتر.",
   "More Projects by huamidev": "پروژه‌های دیگر huamidev",
-  "Minimum OS": "حداقل نسخهٔ سیستم‌عامل",
   "Languages": "زبان‌ها",
   "Compatibility": "سازگاری",
   "Credits": "سپاسگزاری",
@@ -370,5 +369,6 @@
   "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "پرچم سراسری InternalBuild را تغییر می‌دهد، نه فقط اطلاعات فضای ذخیره‌سازی را. رفتار سرویس‌های سیستم ممکن است تغییر کند. بازگردانی، مقدار اصلی ثبت‌شده را بازیابی می‌کند.",
   "Enable Internal Build?": "بیلد داخلی فعال شود؟",
   "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "این کار تغییر پرچم سراسری InternalBuild را آماده می‌کند. اثر آن بر سرویس‌های سیستم ممکن است فراتر از صفحهٔ فضای ذخیره‌سازی باشد. پیش از اعمال، می‌توانید تغییر را بررسی کنید.",
-  "The device proof is temporarily unavailable. Unlock this device and try again.": "گواه دستگاه موقتاً در دسترس نیست. قفل این دستگاه را باز کنید و دوباره تلاش کنید."
+  "The device proof is temporarily unavailable. Unlock this device and try again.": "گواه دستگاه موقتاً در دسترس نیست. قفل این دستگاه را باز کنید و دوباره تلاش کنید.",
+  "Supported OS": "سیستم‌عامل‌های پشتیبانی‌شده"
 }

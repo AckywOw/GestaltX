@@ -243,7 +243,6 @@
   "Enter a model name before applying.": "기기에 적용하기 전에 모델명을 입력하십시오.",
   "A little more possibility.": "가능성을 확장하다.",
   "More Projects by huamidev": "huamidev의 다른 프로젝트",
-  "Minimum OS": "최소 OS 요구사항",
   "Languages": "언어",
   "Compatibility": "호환성",
   "Credits": "크레딧",
@@ -370,5 +369,6 @@
   "Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.": "표시된 번호는 iPhone Air, iPhone 18 Pro 및 iPhone 18 Pro Max에만 해당합니다. 하드웨어와 다른 번호를 선택하면 기기 검사 도구에서 불일치가 보고될 수 있습니다.",
   "A3260 — Air · United States / Canada": "A3260 — Air · 미국 / 캐나다",
   "A3518 — Air · China mainland": "A3518 — Air · 중국 본토",
-  "A3516 — Air · Japan": "A3516 — Air · 일본"
+  "A3516 — Air · Japan": "A3516 — Air · 일본",
+  "Supported OS": "지원 OS"
 }
