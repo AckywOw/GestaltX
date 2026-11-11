@@ -354,7 +354,7 @@
   "Internal Settings Bundle": "Gói cài đặt nội bộ",
   "Expose Apple's internal settings bundle. Some system services may behave differently.": "Hiển thị gói cài đặt nội bộ của Apple. Một số dịch vụ hệ thống có thể hoạt động khác đi.",
   "On-Device Siri": "Siri trên thiết bị",
-  "Advertise on-device Siri understanding. Availability depends on hardware and region.": "Khai báo khả năng hiểu Siri trên thiết bị. Tính khả dụng phụ thuộc vào phần cứng và khu vực.",
+  "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.": "Siri sử dụng loại khả năng riêng cho từng thiết bị. Thay đổi giá trị này có thể ảnh hưởng đến giao diện Siri của Apple Intelligence. Hãy giữ giá trị hiện tại hoặc khôi phục giá trị gốc đã lưu.",
   "Audio Intelligence": "Trí tuệ âm thanh",
   "Advertise the iOS 27 audio intelligence capability.": "Khai báo khả năng trí tuệ âm thanh của iOS 27.",
   "Personal Translator": "Trình dịch cá nhân",

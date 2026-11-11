@@ -354,7 +354,7 @@
   "Internal Settings Bundle": "Пакет внутренних настроек",
   "Expose Apple's internal settings bundle. Some system services may behave differently.": "Открывает пакет внутренних настроек Apple. Некоторые системные службы могут работать иначе.",
   "On-Device Siri": "Siri на устройстве",
-  "Advertise on-device Siri understanding. Availability depends on hardware and region.": "Объявляет поддержку понимания Siri на устройстве. Доступность зависит от оборудования и региона.",
+  "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.": "Siri использует тип возможностей, зависящий от устройства. Его изменение может повлиять на интерфейс Siri в Apple Intelligence. Сохраните текущее значение или восстановите записанное исходное.",
   "Audio Intelligence": "Аудиоинтеллект",
   "Advertise the iOS 27 audio intelligence capability.": "Объявляет возможность аудиоинтеллекта iOS 27.",
   "Personal Translator": "Личный переводчик",

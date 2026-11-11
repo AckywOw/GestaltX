@@ -354,7 +354,7 @@
   "Internal Settings Bundle": "內部設定套件",
   "Expose Apple's internal settings bundle. Some system services may behave differently.": "顯示 Apple 內部設定套件。部分系統服務可能表現異常。",
   "On-Device Siri": "裝置端 Siri",
-  "Advertise on-device Siri understanding. Availability depends on hardware and region.": "宣告支援裝置端 Siri 理解，可用性取決於硬體與地區。",
+  "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.": "Siri 使用機型相關的能力類型。修改此類型可能影響 Apple 智慧 Siri 介面。請保持目前值或還原已記錄的原始值。",
   "Audio Intelligence": "音訊智慧",
   "Advertise the iOS 27 audio intelligence capability.": "宣告 iOS 27 音訊智慧能力。",
   "Personal Translator": "個人翻譯",

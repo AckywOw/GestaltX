@@ -354,7 +354,7 @@
   "Internal Settings Bundle": "بسته تنظیمات داخلی",
   "Expose Apple's internal settings bundle. Some system services may behave differently.": "بسته تنظیمات داخلی Apple را نمایان می‌کند. برخی سرویس‌های سیستم ممکن است متفاوت رفتار کنند.",
   "On-Device Siri": "Siri روی دستگاه",
-  "Advertise on-device Siri understanding. Availability depends on hardware and region.": "درک Siri روی دستگاه را اعلام می‌کند. در دسترس بودن به سخت‌افزار و منطقه بستگی دارد.",
+  "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.": "Siri از نوع قابلیتی ویژهٔ دستگاه استفاده می‌کند. تغییر آن ممکن است بر رابط Siri در Apple Intelligence تأثیر بگذارد. مقدار فعلی را حفظ کنید یا مقدار اصلی ثبت‌شده را بازگردانید.",
   "Audio Intelligence": "هوش صوتی",
   "Advertise the iOS 27 audio intelligence capability.": "قابلیت هوش صوتی iOS 27 را اعلام می‌کند.",
   "Personal Translator": "مترجم شخصی",

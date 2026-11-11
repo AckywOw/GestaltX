@@ -365,7 +365,7 @@ Enable spatial audio playback for FaceTime.	为 FaceTime 启用空间音频播�
 Internal Settings Bundle	内部设置包
 Expose Apple's internal settings bundle. Some system services may behave differently.	显示 Apple 内部设置包。部分系统服务可能表现异常。
 On-Device Siri	端侧 Siri
-Advertise on-device Siri understanding. Availability depends on hardware and region.	声明支持端侧 Siri 理解，可用性取决于硬件与地区。
+Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.	Siri 使用机型相关的能力类型。修改此类型可能影响 Apple 智能 Siri 界面。请选择保持当前值或还原已记录的原始值。
 Audio Intelligence	音频智能
 Advertise the iOS 27 audio intelligence capability.	声明 iOS 27 音频智能能力。
 Personal Translator	个人翻译
