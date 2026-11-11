@@ -533,14 +533,14 @@ final class GestaltManager: ObservableObject {
         isBusy = true; defer { isBusy = false }
         do { try await files.deleteBackup(record); await reloadBackups() } catch { failed(error) }
     }
-    func exportBackup(_ record: BackupRecord) async -> URL? {
+    func exportBackup(_ record: BackupRecord) async -> TemporaryExport? {
         do {
             let data = try await files.backupExportData(record, sealingWith: { try DeviceBoundPlist.seal($0) })
             return try exportData(data, name: record.filename)
         }
         catch { failed(error); return nil }
     }
-    func exportDocument() -> URL? {
+    func exportDocument() -> TemporaryExport? {
         guard let doc = preview, let snapshot else { return nil }
         do {
             let plain = try doc.encoded()
@@ -549,10 +549,7 @@ final class GestaltManager: ObservableObject {
         }
         catch { failed(error); return nil }
     }
-    private func exportData(_ data: Data, name: String) throws -> URL {
-        let folder = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
-        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        let url = folder.appendingPathComponent(name); try data.write(to: url, options: .atomic)
-        return url
+    private func exportData(_ data: Data, name: String) throws -> TemporaryExport {
+        try TemporaryExport(data: data, name: name)
     }
 }

@@ -2,8 +2,6 @@
 // Copyright (C) 2026 huamidev
 import SwiftUI
 
-struct SharedFile: Identifiable { let id = UUID(); let url: URL }
-
 struct ContentView: View {
     @StateObject private var model = GestaltManager()
     @Environment(\.scenePhase) private var scenePhase
@@ -11,7 +9,8 @@ struct ContentView: View {
     @State private var showsImportConfirmation = false
     @State private var isCheckingSharedImport = false
     @State private var pendingSharedImport = false
-    @State private var sharesFile: SharedFile?
+    @State private var sharesFile: TemporaryExport?
+    @State private var activeExport: TemporaryExport?
     @State private var showsChanges = false
     @State private var asksRespring = false
     @State private var asksImportedRestore = false
@@ -31,7 +30,7 @@ struct ContentView: View {
                 .tabItem { Label(L("Tools"), systemImage: "square.grid.2x2") }.tag(0)
             NavigationStack { FieldsView() }
                 .tabItem { Label(L("MG Control"), systemImage: "slider.horizontal.3") }.tag(1)
-            NavigationStack { BackupsView(share: { sharesFile = SharedFile(url: $0) }) }
+            NavigationStack { BackupsView(share: presentShare) }
                 .tabItem { Label(L("Backups"), systemImage: "clock.arrow.circlepath") }.tag(2)
             NavigationStack { AboutView() }
                 .tabItem { Label(L("About"), systemImage: "info.circle") }.tag(3)
@@ -46,7 +45,10 @@ struct ContentView: View {
         .sheet(isPresented: Binding(get: { !acceptedWelcome && !isPreviewSession }, set: { _ in })) {
             WelcomeView { acceptedWelcome = true }
         }
-        .sheet(item: $sharesFile) { ShareSheet(url: $0.url) }
+        .sheet(item: $sharesFile, onDismiss: {
+            activeExport?.cleanUp()
+            activeExport = nil
+        }) { ShareSheet(export: $0) }
         .sheet(isPresented: $showsChanges) { ChangeReviewView().environmentObject(model) }
         .fullScreenCover(isPresented: $model.isRespringing) { NeoSpringView() }
         .alert(L("GestaltX"), isPresented: Binding(get: { model.message != nil && !showsChanges }, set: { if !$0 { model.message = nil } })) {
@@ -246,6 +248,12 @@ struct ContentView: View {
         showsShareNotice = true
     }
 
+    private func presentShare(_ export: TemporaryExport) {
+        guard sharesFile == nil, activeExport == nil else { export.cleanUp(); return }
+        activeExport = export
+        sharesFile = export
+    }
+
     private var tools: some View {
         Form {
             Section(L("Device")) {
@@ -286,7 +294,7 @@ struct ContentView: View {
                 Button { Task { await model.backup() } } label: { Label(L("Create Backup"), systemImage: "externaldrive.badge.plus") }
                     .disabled(!model.hasDocument || model.isBusy)
                 Button {
-                    if let url = model.exportDocument() { sharesFile = SharedFile(url: url) }
+                    if let export = model.exportDocument() { presentShare(export) }
                 } label: { Label(L("Export Plist"), systemImage: "square.and.arrow.up") }
                     .disabled(!model.hasDocument || model.isBusy)
                 Button { asksRespring = true } label: { Label(L("Respring"), systemImage: "arrow.trianglehead.2.clockwise.rotate.90") }
@@ -661,7 +669,7 @@ struct ChangeReviewView: View {
 }
 
 struct BackupsView: View {
-    let share: (URL) -> Void
+    let share: (TemporaryExport) -> Void
     @EnvironmentObject private var model: GestaltManager
     @State private var restores: BackupRecord?
     @State private var deletes: BackupRecord?
@@ -740,7 +748,11 @@ struct BrandMark: View {
 }
 extension Color { static let gestaltAccent = Color.blue }
 struct ShareSheet: UIViewControllerRepresentable {
-    let url: URL
-    func makeUIViewController(context: Context) -> UIActivityViewController { UIActivityViewController(activityItems: [url], applicationActivities: nil) }
+    let export: TemporaryExport
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let controller = UIActivityViewController(activityItems: [export.url], applicationActivities: nil)
+        controller.completionWithItemsHandler = { _, _, _, _ in export.cleanUp() }
+        return controller
+    }
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
