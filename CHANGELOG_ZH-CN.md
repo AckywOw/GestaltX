@@ -8,32 +8,33 @@
 
 ### 新增
 
-- 新增西班牙语，应用现支持 9 种语言与地区设置。
-- 新增 iPhone Air 机型预设和日文 README。
+- 新增西班牙语，应用现支持 9 种语言与地区设置（[#97](https://github.com/huamidev/GestaltX/pull/97)）。
+- 新增 iPhone Air 机型预设（[#92](https://github.com/huamidev/GestaltX/pull/92)）和日文 README（[#83](https://github.com/huamidev/GestaltX/pull/83)）。
 
 ### 调整
 
 - 关于页面的支持系统改为 iOS / iPadOS 27.x。仍可在 26.x 上安装，
   但会提示不支持本机 MobileGestalt 访问。
-- 更新韩语翻译，修复繁体中文等语言中混入其他语言的问题，
-  中文的 Photos Clean Up 预设统一改为“照片消除”。
-- 修正 Internal Build 名称，开启该系统全局标记前增加确认。
+- 更新韩语翻译（[#84](https://github.com/huamidev/GestaltX/pull/84)），修复繁体中文等语言中混入其他语言的问题（[#61](https://github.com/huamidev/GestaltX/pull/61)）。
+- 中文的 Photos Clean Up 预设统一改为“照片消除”。
+- 修正 Internal Build 名称，开启该系统全局标记前增加确认（[#60](https://github.com/huamidev/GestaltX/pull/60)）。
 
 ### 修复
 
-- 访问设备时保留 App Group 原有缓存，避免影响共享同一组的其他应用。
-- 还原灵动岛时同时恢复布局和功能标记，并保留其他已暂存的外观修改。
+- 访问设备时保留 App Group 原有缓存，避免影响共享同一组的其他应用（[#55](https://github.com/huamidev/GestaltX/pull/55)）。
+- 还原灵动岛时同时恢复布局和功能标记，并保留其他已暂存的外观修改（[#58](https://github.com/huamidev/GestaltX/pull/58)）。
 - 恢复原值时校验系统缓存代次和布局，区分无法取得的原值与原本不存在的字段，
-  避免反复读取旧备份历史。
-- 恢复未发生变化的备份时不再重复写入设备；备份删除失败后可重试，
-  本地备份替换后清除继承的设备归属状态。
-- 已核验的设备备份在导出时携带本机校验凭证；分享完成或取消后清理临时导出文件。
-- 直接打开的文件会先保存再等待导入确认，文件协调读取移至后台。
-  临时访问失败或单个 App Group 无法访问时，不再阻塞其他排队文件。
+  避免反复读取旧备份历史（[#65](https://github.com/huamidev/GestaltX/pull/65)、[#66](https://github.com/huamidev/GestaltX/pull/66)）。
+- 恢复未发生变化的备份时不再重复写入设备（[#69](https://github.com/huamidev/GestaltX/pull/69)）；备份删除失败后可重试（[#70](https://github.com/huamidev/GestaltX/pull/70)），
+  本地备份替换后清除继承的设备归属状态（[#64](https://github.com/huamidev/GestaltX/pull/64)）。
+- 已核验的设备备份在导出时携带本机校验凭证（[#59](https://github.com/huamidev/GestaltX/pull/59)）；
+  分享完成或取消后清理临时导出文件（[#62](https://github.com/huamidev/GestaltX/pull/62)）。
+- 直接打开的文件会先保存再等待导入确认（[#63](https://github.com/huamidev/GestaltX/pull/63)），文件协调读取移至后台（[#75](https://github.com/huamidev/GestaltX/pull/75)）。
+  临时访问失败（[#74](https://github.com/huamidev/GestaltX/pull/74)）或单个 App Group 无法访问（[#71](https://github.com/huamidev/GestaltX/pull/71)）时，不再阻塞其他排队文件。
 - 加强共享导入的容器边界和符号链接检查，限制文件名元数据大小，
-  清理遗留文件时避开正在写入的内容。
-- 写入系统前拒绝设备身份字段变更，校验重复的缓存描述项，
-  修复未修改的 NaN 值被误判为发生变化的问题。
+  清理遗留文件时避开正在写入的内容（[#72](https://github.com/huamidev/GestaltX/pull/72)、[#73](https://github.com/huamidev/GestaltX/pull/73)、[#76](https://github.com/huamidev/GestaltX/pull/76)）。
+- 写入系统前拒绝设备身份字段变更（[#67](https://github.com/huamidev/GestaltX/pull/67)），校验重复的缓存描述项（[#56](https://github.com/huamidev/GestaltX/pull/56)），
+  修复未修改的 NaN 值被误判为发生变化的问题（[#68](https://github.com/huamidev/GestaltX/pull/68)）。
 
 ### 下载与签名
 
