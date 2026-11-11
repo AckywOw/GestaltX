@@ -358,5 +358,9 @@
   "Handwriting Synthesis": "필기 합성",
   "Advertise the handwriting synthesis model capability.": "필기 합성 모델 기능을 알립니다.",
   "Always-Listening Hey Siri": "상시 대기 Hey Siri",
-  "Advertise always-listening Hey Siri support.": "상시 대기 Hey Siri 지원을 알립니다."
+  "Advertise always-listening Hey Siri support.": "상시 대기 Hey Siri 지원을 알립니다.",
+  "Internal Build": "Bản dựng nội bộ",
+  "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "Thay đổi cờ InternalBuild trên toàn hệ thống, không chỉ thông tin bộ nhớ. Hoạt động của các dịch vụ hệ thống có thể thay đổi. Hoàn nguyên sẽ khôi phục giá trị gốc đã ghi lại.",
+  "Enable Internal Build?": "Bật bản dựng nội bộ?",
+  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Thao tác này đưa thay đổi cờ InternalBuild toàn hệ thống vào danh sách chờ. Nó có thể ảnh hưởng đến các dịch vụ ngoài màn hình bộ nhớ. Bạn có thể xem lại thay đổi trước khi áp dụng."
 }

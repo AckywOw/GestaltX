@@ -368,6 +368,10 @@ Handwriting Synthesis	手写合成
 Advertise the handwriting synthesis model capability.	声明手写合成模型能力。
 Always-Listening Hey Siri	常听 Hey Siri
 Advertise always-listening Hey Siri support.	声明支持常听 Hey Siri。
+Internal Build	内部构建
+Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.	修改系统全局的 InternalBuild 标记，并非仅调整存储信息。系统服务的行为可能发生变化。“还原”会恢复已记录的原始值。
+Enable Internal Build?	启用内部构建？
+This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.	这会暂存系统全局的 InternalBuild 标记变更。它可能影响存储页面以外的系统服务。你可以在应用前检查这项变更。
 '''
 entries = {}
 for line in TRANSLATIONS.strip().splitlines():

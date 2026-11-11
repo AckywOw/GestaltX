@@ -305,6 +305,7 @@ struct ContentView: View {
 struct CategoryView: View {
     let category: CapabilityCategory
     @EnvironmentObject private var model: GestaltManager
+    @State private var asksInternalBuild = false
     var body: some View {
         Form {
             if category == .display {
@@ -377,6 +378,11 @@ struct CategoryView: View {
                     Picker(selection: Binding(
                         get: { model.choices[capability.id] ?? .keep },
                         set: {
+                            if capability.requiresEnableConfirmation, $0 == .enable,
+                               model.choices[capability.id] != .enable {
+                                asksInternalBuild = true
+                                return
+                            }
                             model.choices[capability.id] = $0
                             if capability.id == "dynamicIsland" && $0 != .keep { model.subtype = 0 }
                         }
@@ -391,6 +397,9 @@ struct CategoryView: View {
                             }
                         }
                     }.pickerStyle(.menu)
+                    if capability.requiresEnableConfirmation {
+                        Text(L(capability.detail)).font(.caption).foregroundStyle(.secondary)
+                    }
                     HStack(alignment: .firstTextBaseline) {
                         if (model.choices[capability.id] ?? .keep) != .keep {
                             Text(L(capability.effectHint)).font(.caption).foregroundStyle(.secondary)
@@ -417,6 +426,15 @@ struct CategoryView: View {
             }
         }
         .navigationTitle(L(category.rawValue)).disabled(model.isBusy)
+        .alert(L("Enable Internal Build?"), isPresented: $asksInternalBuild) {
+            Button(L("Cancel"), role: .cancel) {}
+            Button(L("Enable"), role: .destructive) {
+                guard !model.isBusy, model.hasDocument else { return }
+                model.choices["storage"] = .enable
+            }
+        } message: {
+            Text(L("This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it."))
+        }
     }
 }
 

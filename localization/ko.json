@@ -358,5 +358,9 @@
   "Handwriting Synthesis": "手寫合成",
   "Advertise the handwriting synthesis model capability.": "宣告手寫合成模型能力。",
   "Always-Listening Hey Siri": "常聽 Hey Siri",
-  "Advertise always-listening Hey Siri support.": "宣告支援常聽 Hey Siri。"
+  "Advertise always-listening Hey Siri support.": "宣告支援常聽 Hey Siri。",
+  "Internal Build": "내부 빌드",
+  "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "저장 공간 정보뿐 아니라 시스템 전체의 InternalBuild 플래그를 변경합니다. 시스템 서비스의 동작이 달라질 수 있습니다. 되돌리면 기록된 원래 값이 복원됩니다.",
+  "Enable Internal Build?": "내부 빌드를 활성화할까요?",
+  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "시스템 전체의 InternalBuild 플래그 변경을 준비합니다. 저장 공간 화면 이외의 시스템 서비스에도 영향을 줄 수 있습니다. 적용하기 전에 변경 사항을 검토할 수 있습니다."
 }
