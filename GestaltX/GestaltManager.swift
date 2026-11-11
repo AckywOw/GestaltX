@@ -534,7 +534,10 @@ final class GestaltManager: ObservableObject {
         do { try await files.deleteBackup(record); await reloadBackups() } catch { failed(error) }
     }
     func exportBackup(_ record: BackupRecord) async -> URL? {
-        do { return try exportData(await files.backupData(record), name: record.filename) }
+        do {
+            let data = try await files.backupExportData(record, sealingWith: { try DeviceBoundPlist.seal($0) })
+            return try exportData(data, name: record.filename)
+        }
         catch { failed(error); return nil }
     }
     func exportDocument() -> URL? {
