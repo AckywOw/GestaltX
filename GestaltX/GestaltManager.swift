@@ -212,6 +212,11 @@ final class GestaltManager: ObservableObject {
         guard !isBusy, let snapshot, let working else { return false }
         if (choices[capability.id] ?? .keep) != .keep { return true }
         if capability.id == "dynamicIsland" && subtype != 0 { return true }
+        if capability.id == "dynamicIsland" {
+            var restored = working
+            capability.restoreDynamicIslandLayout(in: &restored, from: snapshot)
+            if !restored.matches(working) { return true }
+        }
         if capability.id == ModelPreset.restoration.id && modelID != "keep" { return true }
         return capability.keys.contains { key in
             switch (snapshot.originalValue(for: key), working.extra[key]) {
@@ -241,7 +246,9 @@ final class GestaltManager: ObservableObject {
                 message = L(result.source == .device ? "Original values restored." : "Local changes saved. Export the plist to keep a copy.")
             }
             snapshot = result
-            working = before.rebasingPendingEdits(pending, onto: result.document, excluding: Set(capability.keys))
+            var rebased = before.rebasingPendingEdits(pending, onto: result.document, excluding: Set(capability.keys))
+            capability.restoreDynamicIslandLayout(in: &rebased, from: before)
+            working = rebased
             choices[capability.id] = .keep
             if capability.id == "dynamicIsland" { subtype = 0 }
             if capability.id == ModelPreset.restoration.id { modelID = "keep" }
