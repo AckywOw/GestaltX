@@ -326,6 +326,7 @@ struct CategoryView: View {
                         Text(L("Keep Current")).tag(0)
                         Text("iPhone 14 Pro · 2556").tag(2556)
                         Text("iPhone 14 Pro Max · 2796").tag(2796)
+                        Text("iPhone Air · 2736").tag(2736)
                         Text("iPhone 16 Pro · 2622").tag(2622)
                         Text("iPhone 16 Pro Max · 2868").tag(2868)
                     }

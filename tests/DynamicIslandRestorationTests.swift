@@ -28,7 +28,7 @@ import Foundation
                 let original = try document(extra)
                 var changed = original
                 changed.set(NSNumber(value: true), for: flag)
-                changed.setArtwork(NSNumber(value: 2796), for: subtype)
+                changed.setArtwork(NSNumber(value: 2736), for: subtype)
                 let saved = try snapshot(original, edited: changed)
                 for choice in [PresetChoice.disable, .removeAdded] {
                     var restored = changed
