@@ -381,7 +381,7 @@ struct CategoryView: View {
                             .disabled(!model.canRestore(ModelPreset.restoration))
                     }
                 } footer: {
-                    Text(L("Listed values apply to iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch."))
+                    Text(L("Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch."))
                 }
             }
             Section {

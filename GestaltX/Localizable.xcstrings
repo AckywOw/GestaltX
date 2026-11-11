@@ -16641,54 +16641,262 @@
         }
       }
     },
-    "Listed values apply to iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.": {
+    "Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Listed values apply to iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch."
+            "value": "Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "以下号码仅适用于 iPhone 18 Pro 和 iPhone 18 Pro Max。选择与硬件不符的号码，可能导致验机工具报告不匹配。"
+            "value": "以下号码仅适用于 iPhone Air、iPhone 18 Pro 和 iPhone 18 Pro Max。选择与硬件不符的号码，可能导致验机工具报告不匹配。"
           }
         },
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "این شماره‌ها فقط برای iPhone 18 Pro و iPhone 18 Pro Max هستند. انتخاب شماره‌ای ناسازگار با سخت‌افزار ممکن است باعث گزارش عدم تطابق در ابزارهای بررسی شود."
+            "value": "این شماره‌ها فقط برای iPhone Air، iPhone 18 Pro و iPhone 18 Pro Max هستند. انتخاب شماره‌ای ناسازگار با سخت‌افزار ممکن است باعث گزارش عدم تطابق در ابزارهای بررسی شود."
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "표시된 번호는 iPhone 18 Pro 및 iPhone 18 Pro Max에만 해당합니다. 하드웨어와 다른 번호를 선택하면 기기 검사 도구에서 불일치가 보고될 수 있습니다."
+            "value": "표시된 번호는 iPhone Air, iPhone 18 Pro 및 iPhone 18 Pro Max에만 해당합니다. 하드웨어와 다른 번호를 선택하면 기기 검사 도구에서 불일치가 보고될 수 있습니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Эти номера предназначены только для iPhone 18 Pro и iPhone 18 Pro Max. Номер, не соответствующий оборудованию, может вызвать предупреждение в программах проверки."
+            "value": "Эти номера предназначены только для iPhone Air, iPhone 18 Pro и iPhone 18 Pro Max. Номер, не соответствующий оборудованию, может вызвать предупреждение в программах проверки."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Các số này chỉ dành cho iPhone 18 Pro và iPhone 18 Pro Max. Chọn số không khớp phần cứng có thể khiến công cụ kiểm tra báo không khớp."
+            "value": "Các số này chỉ dành cho iPhone Air, iPhone 18 Pro và iPhone 18 Pro Max. Chọn số không khớp phần cứng có thể khiến công cụ kiểm tra báo không khớp."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "以下號碼僅適用於 iPhone 18 Pro 和 iPhone 18 Pro Max。選擇與硬件不符的號碼，可能導致驗機工具顯示不符。"
+            "value": "以下號碼僅適用於 iPhone Air、iPhone 18 Pro 和 iPhone 18 Pro Max。選擇與硬件不符的號碼，可能導致驗機工具顯示不符。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "以下號碼僅適用於 iPhone 18 Pro 和 iPhone 18 Pro Max。選擇與硬體不符的號碼，可能導致驗機工具回報不符。"
+            "value": "以下號碼僅適用於 iPhone Air、iPhone 18 Pro 和 iPhone 18 Pro Max。選擇與硬體不符的號碼，可能導致驗機工具回報不符。"
+          }
+        }
+      }
+    },
+    "A3260 — Air · United States / Canada": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · United States / Canada"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · 美国／加拿大"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · ایالات متحده / کانادا"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · 미국 / 캐나다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · США / Канада"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · Hoa Kỳ / Canada"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · 美國／加拿大"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · 美國／加拿大"
+          }
+        }
+      }
+    },
+    "A3516 — Air · Japan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · Japan"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · 日本"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · ژاپن"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · 일본"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · Япония"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · Nhật Bản"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · 日本"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · 日本"
+          }
+        }
+      }
+    },
+    "A3517 — Air · Other regions": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · Other regions"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · 其他地区"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · سایر مناطق"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · 기타 지역"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · Другие регионы"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · Khu vực khác"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · 其他地區"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · 其他地區"
+          }
+        }
+      }
+    },
+    "A3518 — Air · China mainland": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · China mainland"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · 中国大陆"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · سرزمین اصلی چین"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · 중국 본토"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · Материковый Китай"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · Trung Quốc đại lục"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · 中國大陸"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · 中國大陸"
           }
         }
       }
