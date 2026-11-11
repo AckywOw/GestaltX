@@ -90,6 +90,17 @@ struct SharedPlistInbox: Sendable {
         return try result.get()
     }
 
+    static func readDocumentAsync(at url: URL, coordinator: NSFileCoordinator = NSFileCoordinator()) async throws -> Data {
+        try Task.checkCancellation()
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer { if scoped { url.stopAccessingSecurityScopedResource() } }
+        return try await SharedPlistReadJob(coordinator).run { try readDocument(at: url, coordinator: $0) }
+    }
+
+    func readAsync(_ entry: SharedPlistEntry) async throws -> Data {
+        try await SharedPlistReadJob(NSFileCoordinator()).run { _ in try read(entry) }
+    }
+
     private static func readLimited(_ url: URL, limit: Int) throws -> Data {
         // Open without waiting for a writer and check the opened descriptor, not
         // just the path: a FIFO must not block the app while scanning its inbox.
@@ -285,6 +296,36 @@ struct SharedPlistInbox: Sendable {
         guard !SharedPlistError.canRetry(error) else { return false }
         reject(entry)
         return true
+    }
+}
+
+// Each coordinator is used by one worker. Foundation explicitly permits cancel
+// from another thread; no other coordinator operation crosses that boundary.
+private final class SharedPlistReadJob: @unchecked Sendable {
+    private let coordinator: NSFileCoordinator
+    init(_ coordinator: NSFileCoordinator) { self.coordinator = coordinator }
+
+    func run(_ read: @escaping @Sendable (NSFileCoordinator) throws -> Data) async throws -> Data {
+        try Task.checkCancellation()
+        let worker = Task.detached(priority: .userInitiated) {
+            try Task.checkCancellation()
+            do {
+                let bytes = try read(self.coordinator)
+                try Task.checkCancellation()
+                return bytes
+            } catch {
+                try Task.checkCancellation()
+                throw error
+            }
+        }
+        return try await withTaskCancellationHandler {
+            let bytes = try await worker.value
+            try Task.checkCancellation()
+            return bytes
+        } onCancel: {
+            worker.cancel()
+            self.coordinator.cancel()
+        }
     }
 }
 
