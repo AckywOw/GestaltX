@@ -15,6 +15,12 @@
             "value": "WAPI"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WAPI"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -65,6 +71,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "关闭 WAPI"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivar WAPI"
           }
         },
         "fa": {
@@ -119,6 +131,12 @@
             "value": "恢复原值"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar original"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -169,6 +187,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "特别鸣谢"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agradecimientos especiales"
           }
         },
         "fa": {
@@ -223,6 +247,12 @@
             "value": "支持"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compatible"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -273,6 +303,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "不支持"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No compatible"
           }
         },
         "fa": {
@@ -327,6 +363,12 @@
             "value": "欢迎"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -377,6 +419,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "欢迎使用 GestaltX"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido a GestaltX"
           }
         },
         "fa": {
@@ -431,6 +479,12 @@
             "value": "MobileGestalt 编辑工具"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editor de MobileGestalt"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -481,6 +535,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "免责说明"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargo de responsabilidad"
           }
         },
         "fa": {
@@ -535,6 +595,12 @@
             "value": "我已了解，继续"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entiendo, continuar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -585,6 +651,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "系统文件访问和功能可用性因系统版本、设备与签名而异。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso al sistema y las funciones disponibles varían según la versión del SO, el dispositivo y la firma."
           }
         },
         "fa": {
@@ -639,6 +711,12 @@
             "value": "修改 MobileGestalt 可能导致系统不稳定、功能异常或无法开机，严重时可能需要恢复设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modificar MobileGestalt puede causar inestabilidad en el sistema, pérdida de funciones o un bucle de reinicio. Recuperar el dispositivo puede requerir una restauración completa."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -689,6 +767,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "修改前请备份设备，并导出一份原始 plist，请谨慎操作。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz un respaldo de tu dispositivo antes de realizar cambios y exporta una copia del plist original."
           }
         },
         "fa": {
@@ -743,6 +827,12 @@
             "value": "功能标记无法增加设备缺少的硬件，部分更改需要重新启动设备才能生效。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las banderas de funciones no pueden agregar hardware faltante. Algunos cambios requieren reiniciar el dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -793,6 +883,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "仅在你拥有或获授权管理的设备上使用，并自行承担所选修改带来的风险。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Úsalo solo en dispositivos que poseas o estés autorizado a administrar. Eres responsable de los cambios que decidas aplicar."
           }
         },
         "fa": {
@@ -847,6 +943,12 @@
             "value": "本软件不提供任何担保，使用前请阅读随附的开源许可证。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este software se proporciona sin garantía. Lee la licencia incluida antes de usarlo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -897,6 +999,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "GitHub 仓库"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositorio de GitHub"
           }
         },
         "fa": {
@@ -951,6 +1059,12 @@
             "value": "鸣谢与许可"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créditos y licencias"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1001,6 +1115,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "许可证"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Licencia"
           }
         },
         "fa": {
@@ -1055,6 +1175,12 @@
             "value": "注销方法"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Técnica de respring"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1105,6 +1231,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重新读取"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leer de nuevo"
           }
         },
         "fa": {
@@ -1159,6 +1291,12 @@
             "value": "可能需要重新启动设备才能生效。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es posible que se requiera reiniciar el dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1209,6 +1347,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更改地区后需要重新启动设备。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicia el dispositivo después de cambiar la región."
           }
         },
         "fa": {
@@ -1263,6 +1407,12 @@
             "value": "部分更改需要重新启动设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algunos cambios requieren reiniciar el dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1313,6 +1463,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "需要重新启动设备。Apple 智能还取决于机型与地区。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicio requerido. Apple Intelligence también depende del dispositivo y de la región."
           }
         },
         "fa": {
@@ -1367,6 +1523,12 @@
             "value": "重新启动设备后再打开“设置”，仍需要 Apple Pencil 硬件支持。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicia el dispositivo y luego vuelve a abrir Configuración. Aún se requiere compatibilidad de hardware con Apple Pencil."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1417,6 +1579,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "先执行注销，若未生效则重新启动设备。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz un respring primero. Reinicia el dispositivo si el cambio no aparece."
           }
         },
         "fa": {
@@ -1471,6 +1639,12 @@
             "value": "写入已验证。部分功能需要重新启动设备才能生效。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escritura verificada. Algunas funciones requieren reiniciar el dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1521,6 +1695,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "机型"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelo"
           }
         },
         "fa": {
@@ -1575,6 +1755,12 @@
             "value": "状态"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1625,6 +1811,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已连接"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectado"
           }
         },
         "fa": {
@@ -1679,6 +1871,12 @@
             "value": "本地文件"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivo local"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1729,6 +1927,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未读取"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No cargado"
           }
         },
         "fa": {
@@ -1783,6 +1987,12 @@
             "value": "正在读取…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leyendo…"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1833,6 +2043,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "读取 MobileGestalt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leer MobileGestalt"
           }
         },
         "fa": {
@@ -1887,6 +2103,12 @@
             "value": "导入 plist"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar plist"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -1937,6 +2159,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "操作"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acciones"
           }
         },
         "fa": {
@@ -1991,6 +2219,12 @@
             "value": "应用更改"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicar cambios"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2041,6 +2275,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "需要注销"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se requiere respring"
           }
         },
         "fa": {
@@ -2095,6 +2335,12 @@
             "value": "日志"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registro"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2145,6 +2391,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "实验性设置，请在应用前备份。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes experimentales. Haz un respaldo antes de aplicar."
           }
         },
         "fa": {
@@ -2199,6 +2451,12 @@
             "value": "暂无备份"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin respaldos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2249,6 +2507,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每次写入前会自动备份。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se crea un respaldo antes de cada escritura."
           }
         },
         "fa": {
@@ -2303,6 +2567,12 @@
             "value": "将通过 NeoSpring 尝试重新启动 SpringBoard。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto intentará reiniciar SpringBoard mediante NeoSpring."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2355,6 +2625,12 @@
             "value": "GitHub 项目"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proyectos de GitHub"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2402,6 +2678,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GNU GPL v3"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "GNU GPL v3"
@@ -2459,6 +2741,12 @@
             "value": "日期"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2509,6 +2797,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入 ISO 8601 日期，例如 2026-11-09T12:00:00Z。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa una fecha en formato ISO 8601, como 2026-11-09T12:00:00Z."
           }
         },
         "fa": {
@@ -2563,6 +2857,12 @@
             "value": "工具"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herramientas"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2613,6 +2913,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldos"
           }
         },
         "fa": {
@@ -2667,6 +2973,12 @@
             "value": "关于"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2714,6 +3026,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GestaltX"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "GestaltX"
@@ -2771,6 +3089,12 @@
             "value": "好"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aceptar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2821,6 +3145,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "取消"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
         "fa": {
@@ -2875,6 +3205,12 @@
             "value": "应用"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -2925,6 +3261,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "完成"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
           }
         },
         "fa": {
@@ -2979,6 +3321,12 @@
             "value": "关闭"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3029,6 +3377,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更多"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más"
           }
         },
         "fa": {
@@ -3083,6 +3437,12 @@
             "value": "就绪"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3133,6 +3493,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar"
           }
         },
         "fa": {
@@ -3187,6 +3553,12 @@
             "value": "停用"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3237,6 +3609,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "停用（恢复原值）"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivar (restaurar original)"
           }
         },
         "fa": {
@@ -3291,6 +3669,12 @@
             "value": "移除新增字段"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar campos agregados"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3341,6 +3725,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "停用会恢复已记录的原值。确认原本不存在的字段，才使用“移除新增字段”。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivar restaura los valores originales registrados. Usa 'Eliminar campos agregados' solo para campos que sepas que originalmente no existían."
           }
         },
         "fa": {
@@ -3395,6 +3785,12 @@
             "value": "无法读取原值记录，未修改系统文件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron leer los valores originales. No se realizaron cambios en el sistema."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3445,6 +3841,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "原值记录属于其他设备。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El registro de valores originales pertenece a un dispositivo diferente."
           }
         },
         "fa": {
@@ -3499,6 +3901,12 @@
             "value": "无法保存并验证原值记录，未开始写入系统文件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los valores originales no se pudieron guardar ni verificar. No se inició la escritura en el sistema."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3549,6 +3957,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请先移除选中的新增字段，再应用更改。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los campos agregados seleccionados deben eliminarse antes de aplicar."
           }
         },
         "fa": {
@@ -3655,6 +4069,12 @@
             "value": "保持当前值"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantener actual"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3705,6 +4125,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla"
           }
         },
         "fa": {
@@ -3759,6 +4185,12 @@
             "value": "设备"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3806,6 +4238,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPad"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "iPad"
@@ -3863,6 +4301,12 @@
             "value": "智能"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inteligencia"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -3913,6 +4357,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "高级"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avanzado"
           }
         },
         "fa": {
@@ -3967,6 +4417,12 @@
             "value": "字符串"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cadena de texto"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4017,6 +4473,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "整数"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entero"
           }
         },
         "fa": {
@@ -4071,6 +4533,12 @@
             "value": "浮点数"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Real"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4121,6 +4589,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "布尔值"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Booleano"
           }
         },
         "fa": {
@@ -4175,6 +4649,12 @@
             "value": "数据"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4225,6 +4705,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "数组"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Matriz"
           }
         },
         "fa": {
@@ -4279,6 +4765,12 @@
             "value": "字典"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diccionario"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4329,6 +4821,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "让设备更合你意。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz que tu dispositivo sea verdaderamente tuyo."
           }
         },
         "fa": {
@@ -4383,6 +4881,12 @@
             "value": "功能设置"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funciones"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4433,6 +4937,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "选择你想调整的功能。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige lo que deseas cambiar."
           }
         },
         "fa": {
@@ -4487,6 +4997,12 @@
             "value": "连接设备或打开 plist，开始编辑。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta o abre un plist para comenzar a editar."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4537,6 +5053,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "快捷操作"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acciones rápidas"
           }
         },
         "fa": {
@@ -4591,6 +5113,12 @@
             "value": "先留一份备份，准备好后再刷新。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conserva una copia. Actualiza cuando estés listo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4641,6 +5169,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldar"
           }
         },
         "fa": {
@@ -4695,6 +5229,12 @@
             "value": "导出 plist"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar plist"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4745,6 +5285,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "注销"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respring"
           }
         },
         "fa": {
@@ -4799,6 +5345,12 @@
             "value": "更改已验证，准备好后可执行注销。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los cambios están verificados. Haz respring cuando estés listo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4849,6 +5401,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "操作日志"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registro de sesión"
           }
         },
         "fa": {
@@ -4903,6 +5461,12 @@
             "value": "打开 plist…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir plist…"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -4953,6 +5517,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "连接设备"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectar al dispositivo"
           }
         },
         "fa": {
@@ -5007,6 +5577,12 @@
             "value": "待应用更改"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios pendientes"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5057,6 +5633,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已更改 %lld 个字段"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld campos modificados"
           }
         },
         "fa": {
@@ -5111,6 +5693,12 @@
             "value": "查看更改"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5161,6 +5749,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "本机模式"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En dispositivo"
           }
         },
         "fa": {
@@ -5215,6 +5809,12 @@
             "value": "本地文稿"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documento local"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5265,6 +5865,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "你的设备"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu dispositivo"
           }
         },
         "fa": {
@@ -5319,6 +5925,12 @@
             "value": "未连接"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No conectado"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5369,6 +5981,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld 个字段"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld campos"
           }
         },
         "fa": {
@@ -5423,6 +6041,12 @@
             "value": "当前快照"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captura en vivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5473,6 +6097,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "读取系统缓存，或编辑“文件”中的 plist。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre la caché del sistema o trabaja con un plist desde Archivos."
           }
         },
         "fa": {
@@ -5527,6 +6157,12 @@
             "value": "正在连接…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectando…"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5577,6 +6213,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "连接"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectar"
           }
         },
         "fa": {
@@ -5631,6 +6273,12 @@
             "value": "打开文件"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir archivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5681,6 +6329,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "刷新"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualizar"
           }
         },
         "fa": {
@@ -5735,6 +6389,12 @@
             "value": "系统缓存的访问取决于系统版本与签名。上游仅列明 iOS 27 可访问 SystemGroup；iOS 26 可编辑本地文件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso a la caché del sistema depende del SO y de la firma. Upstream indica acceso a SystemGroup para iOS 27; iOS 26 puede usar archivos locales."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5785,6 +6445,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "灵动岛布局"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diseño de Dynamic Island"
           }
         },
         "fa": {
@@ -5839,6 +6505,12 @@
             "value": "更改布局可能影响状态栏与键盘，请保留备份。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un diseño diferente puede afectar la barra de estado y el teclado. Conserva un respaldo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5889,6 +6561,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设备标识"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identidad del dispositivo"
           }
         },
         "fa": {
@@ -5943,6 +6621,12 @@
             "value": "更改机型名称"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar nombre de modelo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -5993,6 +6677,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "机型名称"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre de modelo"
           }
         },
         "fa": {
@@ -6047,6 +6737,12 @@
             "value": "销售地区"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Región de venta"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6097,6 +6793,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "地区代码"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código de región"
           }
         },
         "fa": {
@@ -6151,6 +6853,12 @@
             "value": "通常只需修改地区代码，无需更改销售地区。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por lo general, cambiar el código de región es suficiente. No es necesario cambiar la región de venta."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6201,6 +6909,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "* 之前修改过销售地区的用户，请先改回设备原本的销售地区并应用。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "* Si cambiaste previamente la región de venta, restaura la región original de tu dispositivo y aplícala primero."
           }
         },
         "fa": {
@@ -6255,6 +6969,12 @@
             "value": "更改销售地区后缀可能导致验机工具提示与出厂信息不匹配。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar el sufijo de la región de venta puede provocar que las herramientas de verificación indiquen discrepancias con la información de fábrica."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6305,6 +7025,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更改地区标记并不保证可用 Apple 智能或受地区限制的服务。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar un ajuste de región no garantiza el acceso a Apple Intelligence ni a servicios con restricción geográfica."
           }
         },
         "fa": {
@@ -6359,6 +7085,12 @@
             "value": "实验性"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimental"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6409,6 +7141,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "预设"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preajustes"
           }
         },
         "fa": {
@@ -6463,6 +7201,12 @@
             "value": "所选更改会先暂存，查看后再统一应用。功能标记无法增加设备缺少的硬件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las selecciones quedan preparadas hasta que las revises y apliques. Las banderas de funciones no agregan hardware faltante."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6513,6 +7257,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "这些系统版本尚未开放 iPadOS CacheData 转换。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La conversión de CacheData de iPadOS no está habilitada para estas compilaciones del SO."
           }
         },
         "fa": {
@@ -6567,6 +7317,12 @@
             "value": "未接入未经验证的偏移补丁。你可以使用已有预设或查看具体字段。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se excluyen parches de desplazamiento de bytes no verificados. Usa ajustes predefinidos compatibles o inspecciona campos individuales."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6617,6 +7373,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "查看更改"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisar cambios"
           }
         },
         "fa": {
@@ -6671,6 +7433,12 @@
             "value": "尚未打开文稿"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún documento abierto"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6721,6 +7489,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在“工具”中连接设备或打开 plist，即可查看字段。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conéctate o abre un plist en Herramientas para explorar sus campos."
           }
         },
         "fa": {
@@ -6775,6 +7549,12 @@
             "value": "%lld 字节"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld bytes"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6825,6 +7605,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "这里是原始系统字段，保存前请核对键名与类型。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Campos sin procesar del sistema. Revisa la clave y el tipo antes de guardar."
           }
         },
         "fa": {
@@ -6879,6 +7665,12 @@
             "value": "搜索键名与值"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar claves y valores"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -6929,6 +7721,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加字段"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar campo"
           }
         },
         "fa": {
@@ -6983,6 +7781,12 @@
             "value": "删除"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7033,6 +7837,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除这个字段？"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar este campo?"
           }
         },
         "fa": {
@@ -7087,6 +7897,12 @@
             "value": "删除操作会先暂存，应用后才会修改设备文件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La eliminación queda en espera. El archivo del dispositivo solo cambiará tras aplicar."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7137,6 +7953,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "键名"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave"
           }
         },
         "fa": {
@@ -7191,6 +8013,12 @@
             "value": "字段键名"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave de campo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7241,6 +8069,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "值"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valor"
           }
         },
         "fa": {
@@ -7295,6 +8129,12 @@
             "value": "类型"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7345,6 +8185,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入包含 array 或 dict 标签的 XML plist 片段。嵌套的数据与数字类型会被保留。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa un fragmento XML de plist, incluyendo las etiquetas array o dict. Se conservan los datos anidados y los tipos numéricos."
           }
         },
         "fa": {
@@ -7399,6 +8245,12 @@
             "value": "数据值使用 Base64 编码。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los valores de datos usan codificación Base64."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7449,6 +8301,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "编辑字段"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar campo"
           }
         },
         "fa": {
@@ -7503,6 +8361,12 @@
             "value": "暂存"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7553,6 +8417,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "写入本机"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribir en este dispositivo"
           }
         },
         "fa": {
@@ -7607,6 +8477,12 @@
             "value": "保存本地文稿"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar documento local"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7657,6 +8533,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "写入前会创建备份，写入后会回读并比较内容。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se crea un respaldo antes de escribir. El resultado se vuelve a leer y se compara."
           }
         },
         "fa": {
@@ -7711,6 +8593,12 @@
             "value": "仅编辑 GestaltX 中打开的文件。请导出以保存副本，系统文件不会被修改。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto edita el archivo abierto en GestaltX. Expórtalo para guardar una copia; el archivo del sistema no se modificará."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7761,6 +8649,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "应用到设备"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicar al dispositivo"
           }
         },
         "fa": {
@@ -7815,6 +8709,12 @@
             "value": "保存本地更改"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar cambios locales"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7865,6 +8765,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "放弃更改"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descartar cambios"
           }
         },
         "fa": {
@@ -7919,6 +8825,12 @@
             "value": "应用这些更改？"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Aplicar estos cambios?"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -7969,6 +8881,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "错误的系统值可能影响设备运行。应用会保留经过验证的备份，且不会自动执行注销。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los valores incorrectos del sistema pueden afectar el comportamiento del dispositivo. Se conservará un respaldo verificado. No se ejecutará respring automáticamente."
           }
         },
         "fa": {
@@ -8023,6 +8941,12 @@
             "value": "保存更改前会先备份当前本地文稿。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se creará un respaldo del documento local actual antes de guardar los cambios."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8073,6 +8997,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更改前"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes"
           }
         },
         "fa": {
@@ -8127,6 +9057,12 @@
             "value": "更改后"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Después"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8177,6 +9113,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "不存在"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No presente"
           }
         },
         "fa": {
@@ -8231,6 +9173,12 @@
             "value": "创建备份"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crear respaldo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8281,6 +9229,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "本机备份与本次安装关联，导入文件的备份会单独保存。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los respaldos del dispositivo permanecen vinculados a esta instalación. Los archivos importados se mantienen separados."
           }
         },
         "fa": {
@@ -8335,6 +9289,12 @@
             "value": "多一份保障"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu red de seguridad"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8385,6 +9345,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每次写入前会自动备份，你也可以随时手动备份。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los respaldos aparecen aquí antes de cada escritura. También puedes crear uno en cualquier momento."
           }
         },
         "fa": {
@@ -8439,6 +9405,12 @@
             "value": "本机备份"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo del dispositivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8489,6 +9461,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "本地文件备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo de archivo local"
           }
         },
         "fa": {
@@ -8543,6 +9521,12 @@
             "value": "打开"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8593,6 +9577,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "导出"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar"
           }
         },
         "fa": {
@@ -8647,6 +9637,12 @@
             "value": "恢复"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8697,6 +9693,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "首次备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo inicial"
           }
         },
         "fa": {
@@ -8751,6 +9753,12 @@
             "value": "修改前原值快照"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captura de valores originales"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8801,6 +9809,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "还原"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revertir"
           }
         },
         "fa": {
@@ -8855,6 +9869,12 @@
             "value": "已还原原值。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valores originales restaurados."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -8905,6 +9925,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "恢复这个备份？"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Restaurar este respaldo?"
           }
         },
         "fa": {
@@ -8959,6 +9985,12 @@
             "value": "会先备份当前文稿。本机恢复会在写入后进行验证。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Primero se respalda el documento actual. Las restauraciones del dispositivo se verifican después de escribir."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9009,6 +10041,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除这个备份？"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar este respaldo?"
           }
         },
         "fa": {
@@ -9063,6 +10101,12 @@
             "value": "本地备份将被永久删除，设备文件不会被修改。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto elimina el respaldo local de forma permanente. No modifica el archivo del dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9113,6 +10157,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "暂无操作记录。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay actividad."
           }
         },
         "fa": {
@@ -9167,6 +10217,12 @@
             "value": "清空"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9217,6 +10273,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "立即注销？"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Hacer respring ahora?"
           }
         },
         "fa": {
@@ -9271,6 +10333,12 @@
             "value": "NeoSpring 将尝试重新启动 SpringBoard，请先保存其他应用中的工作。部分系统版本可能不适用。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NeoSpring intentará reiniciar SpringBoard. Guarda tu trabajo primero. Podría no funcionar en todas las versiones del SO."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9321,6 +10389,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "灵动岛、全天候显示与液态玻璃"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dynamic Island, pantalla siempre activa y Liquid Glass"
           }
         },
         "fa": {
@@ -9375,6 +10449,12 @@
             "value": "充电、按键与设备标识"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carga, botones e identidad del dispositivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9425,6 +10505,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "台前调度与应用兼容性"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizador visual y compatibilidad de apps"
           }
         },
         "fa": {
@@ -9479,6 +10565,12 @@
             "value": "地区与生成式模型功能"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Región y funciones de modelos generativos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9529,6 +10621,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "内部功能与研究设置"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funciones internas y ajustes de investigación"
           }
         },
         "fa": {
@@ -9583,6 +10681,12 @@
             "value": "灵动岛"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dynamic Island"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9633,6 +10737,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用备用灵动岛功能标记。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar la función alternativa de Dynamic Island."
           }
         },
         "fa": {
@@ -9687,6 +10797,12 @@
             "value": "全天候显示"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla siempre activa"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9737,6 +10853,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示效果取决于屏幕硬件，可能增加耗电与烧屏风险。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El comportamiento de la pantalla depende del panel. Puede aumentar el consumo de batería y el riesgo de retención de imagen."
           }
         },
         "fa": {
@@ -9791,6 +10913,12 @@
             "value": "全天候显示色彩"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intensidad de pantalla siempre activa"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9841,6 +10969,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "调整全天候显示的渲染功能标记。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustar las funciones de renderizado de la pantalla siempre activa."
           }
         },
         "fa": {
@@ -9895,6 +11029,12 @@
             "value": "液态玻璃低性能渲染"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renderizado de bajo consumo de Liquid Glass"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -9945,6 +11085,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在 iOS 26 及以后版本启用低性能渲染标记。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar la capacidad de renderizado de bajo rendimiento en iOS 26 y posterior."
           }
         },
         "fa": {
@@ -9999,6 +11145,12 @@
             "value": "开关机提示音"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonido de encendido y apagado"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10049,6 +11201,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示开关机提示音功能。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar la función de sonido de encendido y apagado."
           }
         },
         "fa": {
@@ -10103,6 +11261,12 @@
             "value": "充电上限"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Límite de carga"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10153,6 +11317,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示充电上限设置，实际充电控制仍取决于硬件。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar ajustes de límite de carga. El control real de carga depende del hardware."
           }
         },
         "fa": {
@@ -10207,6 +11377,12 @@
             "value": "轻点唤醒"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocar para activar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10257,6 +11433,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在隐藏此功能的设备上显示轻点唤醒选项。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar 'Tocar para activar' en dispositivos donde esté oculto."
           }
         },
         "fa": {
@@ -10311,6 +11493,12 @@
             "value": "相机控制"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Control de cámara"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10361,6 +11549,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示相机控制设置，不会为设备增加实体按钮。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar ajustes de Control de cámara. No agrega un botón físico."
           }
         },
         "fa": {
@@ -10415,6 +11609,12 @@
             "value": "操作按钮"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Botón de acción"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10467,6 +11667,12 @@
             "value": "显示操作按钮设置页面。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar la página de ajustes del Botón de acción."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10514,6 +11720,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pencil"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "Apple Pencil"
@@ -10571,6 +11783,12 @@
             "value": "显示 Apple Pencil 设置，仍需要硬件支持。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar ajustes de Apple Pencil. Aún se requiere soporte por hardware."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10621,6 +11839,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "台前调度"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizador visual"
           }
         },
         "fa": {
@@ -10675,6 +11899,12 @@
             "value": "显示台前调度功能，布局效果因设备而异。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar compatibilidad con Organizador visual. El diseño varía según el dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10725,6 +11955,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "iPad 应用兼容性"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compatibilidad con apps de iPad"
           }
         },
         "fa": {
@@ -10779,6 +12015,12 @@
             "value": "允许 iPhone 使用 iPad 应用兼容类型。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permitir tipos de compatibilidad con apps de iPad en iPhone."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10829,6 +12071,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple 智能功能标记"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capacidad de Apple Intelligence"
           }
         },
         "fa": {
@@ -10883,6 +12131,12 @@
             "value": "设置生成式模型功能标记，可用性仍取决于硬件、地区与 Apple 服务。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurar la función de modelos generativos. La disponibilidad también depende del hardware, la región y los servicios de Apple."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -10933,6 +12187,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple 内部功能"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funciones internas de Apple"
           }
         },
         "fa": {
@@ -10987,6 +12247,12 @@
             "value": "显示内部菜单，部分系统服务的行为可能发生变化。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar menús internos. Algunos servicios del sistema podrían comportarse de manera diferente."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11037,6 +12303,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "内部存储视图"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vista de almacenamiento interno"
           }
         },
         "fa": {
@@ -11091,6 +12363,12 @@
             "value": "显示内部存储分类，在 iPad 上属于实验性功能。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar categorías de almacenamiento interno. Experimental en iPad."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11141,6 +12419,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "安全研究设备"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo para investigación de seguridad"
           }
         },
         "fa": {
@@ -11195,6 +12479,12 @@
             "value": "更改 SRD 功能标记，不会将设备变成 Apple 官方安全研究设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar la bandera de función SRD. Esto no convierte el dispositivo en un Apple SRD."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11245,6 +12535,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "美国"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estados Unidos"
           }
         },
         "fa": {
@@ -11299,6 +12595,12 @@
             "value": "中国香港"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hong Kong"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11349,6 +12651,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "日本"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Japón"
           }
         },
         "fa": {
@@ -11403,6 +12711,12 @@
             "value": "中国大陆"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "China (continental)"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11453,6 +12767,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "中国台湾"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taiwán"
           }
         },
         "fa": {
@@ -11507,6 +12827,12 @@
             "value": "英国"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reino Unido"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11557,6 +12883,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "连接设备或打开 plist。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conéctate a tu dispositivo o abre un plist."
           }
         },
         "fa": {
@@ -11611,6 +12943,12 @@
             "value": "正在检查设备访问权限…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprobando acceso al dispositivo…"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11661,6 +12999,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设备已连接"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo conectado"
           }
         },
         "fa": {
@@ -11715,6 +13059,12 @@
             "value": "无法访问设备"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acceso al dispositivo no disponible"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11765,6 +13115,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已打开本地文件"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivo local abierto"
           }
         },
         "fa": {
@@ -11819,6 +13175,12 @@
             "value": "本机更改已验证"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios verificados en el dispositivo"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11869,6 +13231,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "本地更改已保存"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios locales guardados"
           }
         },
         "fa": {
@@ -11923,6 +13291,12 @@
             "value": "本机更改已验证，可执行注销以刷新受支持的功能。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios verificados en el dispositivo. Haz respring para actualizar las funciones compatibles."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -11973,6 +13347,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "本地更改已保存，请导出 plist 以保留副本。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios locales guardados. Exporta el plist para conservar una copia."
           }
         },
         "fa": {
@@ -12027,6 +13407,12 @@
             "value": "备份已保存"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo guardado"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12077,6 +13463,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "备份已恢复并通过验证。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo restaurado y verificado."
           }
         },
         "fa": {
@@ -12183,6 +13575,12 @@
             "value": "已将备份打开为本地文稿。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo abierto como documento local."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12233,6 +13631,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "手动备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respaldo manual"
           }
         },
         "fa": {
@@ -12287,6 +13691,12 @@
             "value": "编辑前备份"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes de editar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12337,6 +13747,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "应用前备份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes de aplicar"
           }
         },
         "fa": {
@@ -12391,6 +13807,12 @@
             "value": "恢复前备份"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes de restaurar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12441,6 +13863,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入有效的整数。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa un número entero válido."
           }
         },
         "fa": {
@@ -12495,6 +13923,12 @@
             "value": "请输入有限的十进制数。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa un número decimal finito."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12545,6 +13979,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "布尔值请输入 true 或 false。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa true o false para un valor booleano."
           }
         },
         "fa": {
@@ -12599,6 +14039,12 @@
             "value": "请输入有效的 Base64 数据。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa datos en Base64 válidos."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12649,6 +14095,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入有效的 XML plist 数组或字典片段。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa un fragmento XML de plist con array o dictionary."
           }
         },
         "fa": {
@@ -12703,6 +14155,12 @@
             "value": "请选择包含 CacheExtra 字典的 MobileGestalt plist。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un plist de MobileGestalt con un diccionario CacheExtra."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12753,6 +14211,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "编辑后的文稿不是有效的属性列表。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El documento editado no es una lista de propiedades (plist) válida."
           }
         },
         "fa": {
@@ -12807,6 +14271,12 @@
             "value": "MobileGestalt 访问被拒绝，请检查系统版本与 App Group 签名。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acceso a MobileGestalt denegado. Comprueba la versión del SO y la firma de App Group."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12857,6 +14327,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "备份验证失败，未开始写入系统文件。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo verificar el respaldo. No se inició la escritura en el sistema."
           }
         },
         "fa": {
@@ -12911,6 +14387,12 @@
             "value": "此备份不属于当前设备，请将其作为本地文件打开。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este respaldo no pertenece a este dispositivo. Ábrelo como archivo local."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -12961,6 +14443,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "MobileGestalt 已在加载后发生变化，请刷新后再应用更改。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt cambió desde que fue cargado. Actualiza antes de aplicar tus cambios."
           }
         },
         "fa": {
@@ -13015,6 +14503,12 @@
             "value": "写入内容与回读结果不一致。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La escritura no coincidió con la relectura."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13065,6 +14559,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法恢复原始文件。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo restaurar el archivo original."
           }
         },
         "fa": {
@@ -13119,6 +14619,12 @@
             "value": "写入验证与恢复均失败。请保留备份，恢复设备文件后再尝试。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La verificación de escritura y la recuperación fallaron. Conserva el respaldo y recupera el archivo del dispositivo antes de volver a intentarlo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13169,6 +14675,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "写入失败，之前的文件已恢复并通过验证。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falló la escritura. El archivo anterior fue restaurado y verificado."
           }
         },
         "fa": {
@@ -13223,6 +14735,12 @@
             "value": "模拟器无法访问设备文件，你可以打开 plist 体验 GestaltX。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso al dispositivo no está disponible en el Simulador. Abre un plist para explorar GestaltX."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13273,6 +14791,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "当前签名没有可用的 App Group，请启用对应能力后重新签名。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app firmada no tiene ningún App Group utilizable. Activa su capacidad App Group y fírmala de nuevo."
           }
         },
         "fa": {
@@ -13327,6 +14851,12 @@
             "value": "请选择小于 16 MB 的 plist。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un plist menor a 16 MB."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13377,6 +14907,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入字段键名。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa una clave de campo."
           }
         },
         "fa": {
@@ -13431,6 +14967,12 @@
             "value": "请先加载文稿。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carga un documento primero."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13481,6 +15023,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "此键名已存在，请直接编辑已有字段。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esa clave ya existe. Edita el campo existente en su lugar."
           }
         },
         "fa": {
@@ -13535,6 +15083,12 @@
             "value": "请先输入机型名称再应用。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa un nombre de modelo antes de aplicar."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13585,6 +15139,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "多一点可能。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un poco más de posibilidades."
           }
         },
         "fa": {
@@ -13639,6 +15199,12 @@
             "value": "huamidev 的更多项目"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más proyectos de huamidev"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13689,6 +15255,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "最低系统版本"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión mínima de SO"
           }
         },
         "fa": {
@@ -13743,6 +15315,12 @@
             "value": "语言"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idiomas"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13793,6 +15371,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "兼容性"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compatibilidad"
           }
         },
         "fa": {
@@ -13847,6 +15431,12 @@
             "value": "鸣谢"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créditos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -13897,6 +15487,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "worse_query 沙盒逃逸原语"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escape de sandbox worse_query"
           }
         },
         "fa": {
@@ -13951,6 +15547,12 @@
             "value": "原始 WebKit 注销方法"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Técnica original de respring con WebKit"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14001,6 +15603,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "注销方法的 Swift 实现"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Implementación en Swift de la técnica de respring"
           }
         },
         "fa": {
@@ -14055,6 +15663,12 @@
             "value": "NeoSpring 项目与注销研究"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proyecto NeoSpring e investigación de respring"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14105,6 +15719,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "采用 GPL 许可的注销适配实现"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adaptación de respring bajo licencia GPL"
           }
         },
         "fa": {
@@ -14159,6 +15779,12 @@
             "value": "MobileGestalt 键名研究"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Investigación de claves de MobileGestalt"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14209,6 +15835,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "MobileGestalt 预设研究"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Investigación de preajustes de MobileGestalt"
           }
         },
         "fa": {
@@ -14263,6 +15895,12 @@
             "value": "MobileGestalt 工作流参考"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Referencia de flujo de trabajo de MobileGestalt"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14313,6 +15951,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "开源许可"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código abierto"
           }
         },
         "fa": {
@@ -14367,6 +16011,12 @@
             "value": "第三方声明"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos de terceros"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14419,6 +16069,12 @@
             "value": "GestaltX 是独立软件，与 Apple 及鸣谢项目没有隶属关系。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GestaltX es un software independiente. No está afiliado a Apple ni a los proyectos reconocidos."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14466,6 +16122,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "worse_query"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "worse_query"
@@ -14523,6 +16185,12 @@
             "value": "可访问的路径及 MobileGestalt 预设因设备与系统版本而异。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las rutas y preajustes de MobileGestalt disponibles varían según el dispositivo y la versión del SO."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14573,6 +16241,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "查看上游兼容性说明"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leer compatibilidad upstream"
           }
         },
         "fa": {
@@ -14627,6 +16301,12 @@
             "value": "MobileGestalt 访问"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acceso a MobileGestalt"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14677,6 +16357,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "iOS 27：通过本机实际探测访问权限。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS 27: el acceso se comprueba directamente en el dispositivo."
           }
         },
         "fa": {
@@ -14731,6 +16417,12 @@
             "value": "iOS 26：上游未声明支持 SystemGroup 访问，可编辑本地 plist。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS 26: el acceso a SystemGroup no está declarado por upstream. La edición local de plist está disponible."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14783,6 +16475,12 @@
             "value": "需要正确配置并签名 App Group。能够打开的文稿均可导出与备份。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se requiere un App Group correctamente aprovisionado. La exportación y el respaldo están disponibles para cualquier documento que puedas abrir."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14830,6 +16528,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NeoSpring"
+          }
+        },
+        "es": {
           "stringUnit": {
             "state": "translated",
             "value": "NeoSpring"
@@ -14887,6 +16591,12 @@
             "value": "NeoSpring 使用 WebKit 尝试刷新 SpringBoard，效果因系统版本而异。部分 MobileGestalt 更改仍可能需要手动重新启动设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NeoSpring intenta refrescar SpringBoard usando WebKit. Su efectividad varía según la compilación del SO. Algunos cambios de MobileGestalt pueden requerir un reinicio manual del dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -14937,6 +16647,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法加载许可文本。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo cargar el texto de la licencia."
           }
         },
         "fa": {
@@ -14991,6 +16707,12 @@
             "value": "注销未完成。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El respring no finalizó."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15041,6 +16763,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在刷新 SpringBoard…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reiniciando SpringBoard…"
           }
         },
         "fa": {
@@ -15095,6 +16823,12 @@
             "value": "当前系统版本可能不支持此方法。你可以关闭此页面，稍后手动重新启动设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta compilación del SO puede no admitir esta técnica. Puedes cerrar esta pantalla e intentar un reinicio manual más tarde."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15147,6 +16881,12 @@
             "value": "设备可能会短暂返回锁定屏幕。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu dispositivo podría regresar brevemente a la pantalla bloqueada."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15197,6 +16937,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "缓存布局或数值与此预设不符。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La estructura o los valores de la caché no coinciden con este preajuste."
           }
         },
         "fa": {
@@ -15303,6 +17049,12 @@
             "value": "此预设更改了无关的缓存字节。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este preajuste cambia bytes de caché no relacionados."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15353,6 +17105,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法解析此设备的 MobileGestalt 缓存布局。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se puede resolver la estructura de caché de MobileGestalt de este dispositivo."
           }
         },
         "fa": {
@@ -15407,6 +17165,12 @@
             "value": "正在导入 plist…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importando plist…"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15457,6 +17221,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请每次分享一个 MobileGestalt plist 文件。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comparte un solo archivo plist de MobileGestalt a la vez."
           }
         },
         "fa": {
@@ -15511,6 +17281,12 @@
             "value": "请为 GestaltX 和分享扩展签入同一个 App Group 后重试。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firma GestaltX y su extensión de compartir con el mismo App Group e inténtalo de nuevo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15561,6 +17337,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法读取分享的 plist，请重新分享。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo leer el plist compartido. Compártelo de nuevo."
           }
         },
         "fa": {
@@ -15615,6 +17397,12 @@
             "value": "有分享的 plist 等待导入，请先保存或放弃当前更改。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hay un plist compartido en espera. Guarda o descarta tus cambios actuales antes de importarlo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15665,6 +17453,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请先保存或放弃当前更改，再打开另一个 plist。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guarda o descarta tus cambios actuales antes de abrir otro plist."
           }
         },
         "fa": {
@@ -15719,6 +17513,12 @@
             "value": "导入"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15769,6 +17569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请打开 GestaltX 确认导入 plist。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre GestaltX para confirmar la importación del plist."
           }
         },
         "fa": {
@@ -15823,6 +17629,12 @@
             "value": "无法核验本机身份，请先读取本机 MobileGestalt 后重新分享。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo verificar la identidad de este dispositivo. Lee MobileGestalt en este dispositivo e intenta compartir de nuevo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15873,6 +17685,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "此 plist 的设备标识与本机不符，无法导入。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este plist pertenece a otro dispositivo y no se puede importar."
           }
         },
         "fa": {
@@ -15927,6 +17745,12 @@
             "value": "此 plist 缺少足够的设备标识，无法确认属于本机。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este plist no contiene suficientes identificadores de dispositivo para verificar su pertenencia."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -15977,6 +17801,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "附加选项"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opciones adicionales"
           }
         },
         "fa": {
@@ -16031,6 +17861,12 @@
             "value": "MG 控制"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Control de MG"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16081,6 +17917,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在工具中读取 MobileGestalt，或将本机 plist 分享到 GestaltX。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lee MobileGestalt en Herramientas o comparte el plist de este dispositivo con GestaltX."
           }
         },
         "fa": {
@@ -16135,6 +17977,12 @@
             "value": "已核验此 plist 属于本机，是否导入？"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este plist ha sido verificado para este dispositivo. ¿Deseas importarlo?"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16185,6 +18033,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法在本机验证此 plist 的设备凭证。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La prueba de dispositivo de este plist no se pudo verificar en este dispositivo."
           }
         },
         "fa": {
@@ -16291,6 +18145,12 @@
             "value": "此 plist 的系统缓存布局与本机不符，无法恢复。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este plist usa una estructura de caché del sistema diferente y no se puede restaurar."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16341,6 +18201,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "恢复导入的 plist"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar plist importado"
           }
         },
         "fa": {
@@ -16395,6 +18261,12 @@
             "value": "恢复前会备份当前设备文件，完成后请重启设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se creará un respaldo del archivo actual del dispositivo antes de restaurar. Reinicia el dispositivo después."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16445,6 +18317,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "现在可将本机 plist 分享到 GestaltX，核验后导入、增删改键值并恢复。建议先从 GestaltX 导出一份带本机校验凭证的备份。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comparte el plist de este dispositivo con GestaltX para editar sus claves y valores o restaurar un respaldo verificado. Exporta una copia desde GestaltX primero para conservar una prueba vinculada al dispositivo."
           }
         },
         "fa": {
@@ -16499,6 +18377,12 @@
             "value": "加拿大"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canadá"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16549,6 +18433,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "型号号码"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Número de modelo"
           }
         },
         "fa": {
@@ -16603,6 +18493,12 @@
             "value": "修改型号号码后可能需要重启设备。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puede ser necesario reiniciar el dispositivo después de cambiar el número de modelo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16653,6 +18549,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "以下号码仅适用于 iPhone Air、iPhone 18 Pro 和 iPhone 18 Pro Max。选择与硬件不符的号码，可能导致验机工具报告不匹配。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los valores indicados solo aplican a iPhone 18 Pro y iPhone 18 Pro Max. Elegir un número de modelo que no coincida con tu hardware puede hacer que las herramientas de verificación reporten una discrepancia."
           }
         },
         "fa": {
@@ -16915,6 +18817,12 @@
             "value": "A3472 — 18 Pro · 美国"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3472 — 18 Pro · Estados Unidos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -16965,6 +18873,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3713 — 18 Pro · 加拿大／日本"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3713 — 18 Pro · Canadá / Japón"
           }
         },
         "fa": {
@@ -17019,6 +18933,12 @@
             "value": "A3714 — 18 Pro · 其他地区"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3714 — 18 Pro · Otras regiones"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17069,6 +18989,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3715 — 18 Pro · 中国大陆"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3715 — 18 Pro · China continental"
           }
         },
         "fa": {
@@ -17123,6 +19049,12 @@
             "value": "A3473 — 18 Pro Max · 美国"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3473 — 18 Pro Max · Estados Unidos"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17173,6 +19105,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3716 — 18 Pro Max · 加拿大／日本"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3716 — 18 Pro Max · Canadá / Japón"
           }
         },
         "fa": {
@@ -17227,6 +19165,12 @@
             "value": "A3717 — 18 Pro Max · 其他地区"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3717 — 18 Pro Max · Otras regiones"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17277,6 +19221,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3718 — 18 Pro Max · 中国大陆"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3718 — 18 Pro Max · China continental"
           }
         },
         "fa": {
@@ -17331,6 +19281,12 @@
             "value": "artwork 字段不是字典，请先在 MG 控制中编辑此字段，再使用这些预设。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El campo artwork no es un diccionario. Edítalo en Control de MG antes de usar estos preajustes."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17381,6 +19337,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "高亮度始终显示"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla siempre activa de alta luminancia"
           }
         },
         "fa": {
@@ -17435,6 +19397,12 @@
             "value": "允许“始终显示”达到更高亮度。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permite que la pantalla siempre activa alcance un mayor nivel de brillo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17485,6 +19453,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "始终显示翻页组件"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flipbook de pantalla siempre activa"
           }
         },
         "fa": {
@@ -17539,6 +19513,12 @@
             "value": "在锁屏上启用 AOD 翻页小组件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar widgets tipo flipbook de pantalla siempre activa en la pantalla bloqueada."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17589,6 +19569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "AOD 翻页数量"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cantidad de flipbooks AOD"
           }
         },
         "fa": {
@@ -17643,6 +19629,12 @@
             "value": "设置允许的 AOD 翻页条目数量。实验性功能，可用范围因系统版本而异。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Establece cuántas entradas de flipbook AOD están permitidas. Experimental; el rango admitido varía según la compilación."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17693,6 +19685,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "关闭壁纸视差"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivar paralaje del fondo de pantalla"
           }
         },
         "fa": {
@@ -17747,6 +19745,12 @@
             "value": "停止壁纸随设备移动产生位移。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evita que el fondo de pantalla se mueva con el movimiento del dispositivo."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17797,6 +19801,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "HDR 照片显示"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visualización de fotos en HDR"
           }
         },
         "fa": {
@@ -17851,6 +19861,12 @@
             "value": "为照片启用真正的 HDR 渲染。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar renderizado HDR real para fotos."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -17901,6 +19917,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "脉宽调制 (PWM)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modulación por ancho de pulsos (PWM)"
           }
         },
         "fa": {
@@ -17955,6 +19977,12 @@
             "value": "声明支持 PWM 调光。实际调光行为取决于屏幕面板。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar soporte de pantalla PWM. La atenuación real depende del panel."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18005,6 +20033,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "DisplayPort 输出"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salida DisplayPort"
           }
         },
         "fa": {
@@ -18059,6 +20093,12 @@
             "value": "声明支持 DisplayPort 输出，仍需要兼容硬件。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar compatibilidad con salida DisplayPort. Aún se requiere hardware compatible."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18109,6 +20149,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "车祸检测 SOS"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detección de choques SOS"
           }
         },
         "fa": {
@@ -18163,6 +20209,12 @@
             "value": "在“紧急 SOS”设置中显示车祸检测，仍需要硬件支持。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar detección de choques en los ajustes de Emergencia SOS. Aún se requiere compatibilidad de hardware."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18213,6 +20265,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "音频混音"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mezcla de audio"
           }
         },
         "fa": {
@@ -18267,6 +20325,12 @@
             "value": "为支持的媒体启用音频混音能力。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar la función de mezcla de audio para contenidos compatibles."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18317,6 +20381,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "FaceTime 空间音频"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Audio espacial en FaceTime"
           }
         },
         "fa": {
@@ -18371,6 +20441,12 @@
             "value": "为 FaceTime 启用空间音频播放。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activar reproducción de audio espacial para FaceTime."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18421,6 +20497,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "内部设置包"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paquete de ajustes internos"
           }
         },
         "fa": {
@@ -18475,6 +20557,12 @@
             "value": "显示 Apple 内部设置包。部分系统服务可能表现异常。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exponer el paquete de ajustes internos de Apple. Algunos servicios del sistema pueden comportarse de manera diferente."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18525,6 +20613,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "端侧 Siri"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri en el dispositivo"
           }
         },
         "fa": {
@@ -18579,6 +20673,12 @@
             "value": "声明支持端侧 Siri 理解，可用性取决于硬件与地区。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar procesamiento de Siri en el dispositivo. La disponibilidad depende del hardware y la región."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18629,6 +20729,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "音频智能"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inteligencia de audio"
           }
         },
         "fa": {
@@ -18683,6 +20789,12 @@
             "value": "声明 iOS 27 音频智能能力。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar la función de inteligencia de audio de iOS 27."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18733,6 +20845,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "个人翻译"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traductor personal"
           }
         },
         "fa": {
@@ -18787,6 +20905,12 @@
             "value": "声明个人翻译能力。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar la función de traductor personal."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18837,6 +20961,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "照片 Clean Up"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrado de fotos (Clean Up)"
           }
         },
         "fa": {
@@ -18891,6 +21021,12 @@
             "value": "声明照片修复（Clean Up）能力。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar la función de retoque fotográfico (Clean Up)."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18941,6 +21077,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "手写合成"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Síntesis de escritura a mano"
           }
         },
         "fa": {
@@ -18995,6 +21137,12 @@
             "value": "声明手写合成模型能力。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar la función del modelo de síntesis de escritura a mano."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -19047,6 +21195,12 @@
             "value": "常听 Hey Siri"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escucha continua 'Oye Siri'"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -19097,6 +21251,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "声明支持常听 Hey Siri。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anunciar soporte para escucha continua de 'Oye Siri'."
           }
         },
         "fa": {
