@@ -335,15 +335,18 @@ actor GestaltFileStore {
     private let acquire: @Sendable () throws -> Int64
     private let release: @Sendable (Int64) -> Void
     private let writeData: @Sendable (Data, URL) throws -> Void
+    private let removeBackupItem: @Sendable (URL) throws -> Void
     private let eventSink: @Sendable (String) -> Void
 
     init(deviceURL: URL, backupDirectory: URL, deviceID: String,
          acquire: @escaping @Sendable () throws -> Int64,
          release: @escaping @Sendable (Int64) -> Void,
          writeData: @escaping @Sendable (Data, URL) throws -> Void = { try $0.write(to: $1) },
+         removeBackupItem: @escaping @Sendable (URL) throws -> Void = { try FileManager.default.removeItem(at: $0) },
          eventSink: @escaping @Sendable (String) -> Void = { _ in }) {
         self.deviceURL = deviceURL; self.backupDirectory = backupDirectory; self.deviceID = deviceID
         self.acquire = acquire; self.release = release; self.writeData = writeData; self.eventSink = eventSink
+        self.removeBackupItem = removeBackupItem
     }
 
     private func withAccess<T>(_ operation: () throws -> T) throws -> T {
@@ -619,8 +622,14 @@ actor GestaltFileStore {
     }
 
     func deleteBackup(_ record: BackupRecord) throws {
-        try FileManager.default.removeItem(at: backupDirectory.appendingPathComponent(record.id.uuidString + ".json"))
-        try FileManager.default.removeItem(at: backupDirectory.appendingPathComponent(record.filename))
+        // Keep the listing metadata until the payload is gone. If removal is
+        // denied, the complete backup must remain visible and recoverable.
+        do { try removeBackupItem(backupDirectory.appendingPathComponent(record.filename)) }
+        catch let error as CocoaError where error.code == .fileNoSuchFile {
+            // A previous attempt may have removed the payload but failed to
+            // remove metadata. Only this exact absence permits cleanup to resume.
+        }
+        try removeBackupItem(backupDirectory.appendingPathComponent(record.id.uuidString + ".json"))
     }
 
     private func validateRestoreLayout(_ document: GestaltDocument, against current: GestaltDocument) throws {
