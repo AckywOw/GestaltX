@@ -9,6 +9,7 @@ struct ContentView: View {
     @State private var showsImportConfirmation = false
     @State private var isCheckingSharedImport = false
     @State private var pendingSharedImport = false
+    @State private var capturingDirectImports = 0
     @State private var sharesFile: TemporaryExport?
     @State private var activeExport: TemporaryExport?
     @State private var showsChanges = false
@@ -93,24 +94,26 @@ struct ContentView: View {
             if url.scheme?.lowercased() == "gestaltx", url.host == "share" {
                 Task { await checkSharedImport() }
             } else if url.isFileURL {
-                // Keep the currently displayed confirmation and its immutable
-                // payload until the user has accepted or cancelled it.
-                guard importOffer == nil, !showsImportConfirmation else { return }
-                guard !isCheckingSharedImport, !model.isBusy, model.changeCount == 0 else {
-                    if model.message == nil {
-                        model.message = L("Save or discard your current changes before opening another plist.")
+                do {
+                    // Own the bytes before deferring presentation. The same
+                    // durable confirmation queue handles Files and share events.
+                    let capture = DirectFileImports.capture(url, in: try DirectFileImports.inbox())
+                    capturingDirectImports += 1
+                    pendingSharedImport = true
+                    Task {
+                        do {
+                            _ = try await withTaskCancellationHandler {
+                                try await capture.value
+                            } onCancel: { capture.cancel() }
+                            capturingDirectImports -= 1
+                            guard !Task.isCancelled else { return }
+                            await resumeSharedImports()
+                        } catch {
+                            capturingDirectImports -= 1
+                            if !Task.isCancelled && !(error is CancellationError) { model.message = error.localizedDescription }
+                        }
                     }
-                    return
-                }
-                guard canPresentSharedImport else { return }
-                isCheckingSharedImport = true
-                Task {
-                    defer { isCheckingSharedImport = false }
-                    let prepared = await model.prepareFileImport(url)
-                    guard canPresentSharedImport else { return }
-                    importOffer = prepared
-                    if importOffer != nil { selectedTab = 0; showsImportConfirmation = true }
-                }
+                } catch { model.message = error.localizedDescription }
             }
         }
         .onChange(of: scenePhase) { _, phase in
@@ -190,10 +193,11 @@ struct ContentView: View {
         guard acceptedWelcome else { return false }
         guard !isCheckingSharedImport, importOffer == nil else { return true }
         do {
-            let entries = try SharedImportQueue.snapshot(in: SharedAppGroups.inboxes)
+            let inboxes = [try DirectFileImports.inbox()] + SharedAppGroups.inboxes
+            let entries = try SharedImportQueue.snapshot(in: inboxes)
             guard !entries.isEmpty else {
-                pendingSharedImport = false
-                return false
+                pendingSharedImport = capturingDirectImports > 0
+                return pendingSharedImport
             }
             guard canPresentSharedImport else {
                 let firstNotice = !pendingSharedImport
