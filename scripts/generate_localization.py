@@ -370,8 +370,8 @@ Audio Intelligence	音频智能
 Advertise the iOS 27 audio intelligence capability.	声明 iOS 27 音频智能能力。
 Personal Translator	个人翻译
 Advertise the personal translator capability.	声明个人翻译能力。
-Photos Clean Up	照片 Clean Up
-Advertise the photos inpainting (Clean Up) capability.	声明照片修复（Clean Up）能力。
+Photos Clean Up	照片消除
+Advertise the photos inpainting (Clean Up) capability.	声明照片物体清除与修复功能。
 Handwriting Synthesis	手写合成
 Advertise the handwriting synthesis model capability.	声明手写合成模型能力。
 Always-Listening Hey Siri	常听 Hey Siri

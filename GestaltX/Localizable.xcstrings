@@ -21008,7 +21008,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "照片 Clean Up"
+            "value": "照片消除"
           }
         },
         "es": {
@@ -21044,13 +21044,13 @@
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "照片 Clean Up"
+            "value": "照片消除"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "照片 Clean Up"
+            "value": "照片消除"
           }
         }
       }
@@ -21066,7 +21066,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "声明照片修复（Clean Up）能力。"
+            "value": "声明照片物体清除与修复功能。"
           }
         },
         "es": {
@@ -21102,13 +21102,13 @@
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告照片修復（Clean Up）能力。"
+            "value": "宣告照片物件清除與修復功能。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "宣告照片修復（Clean Up）能力。"
+            "value": "宣告照片物件清除與修復功能。"
           }
         }
       }
