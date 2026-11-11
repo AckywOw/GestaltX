@@ -213,6 +213,7 @@
   "Local changes saved. Export the plist to keep a copy.": "تغییرات محلی ذخیره شدند. برای نگه‌داشتن یک کپی، plist را صادر کنید.",
   "Backup saved": "نسخهٔ پشتیبان ذخیره شد",
   "Backup restored and verified.": "نسخهٔ پشتیبان بازیابی و تأیید شد.",
+  "This backup already matches the device. No changes were made.": "این نسخهٔ پشتیبان از قبل با دستگاه مطابقت دارد. هیچ تغییری انجام نشد.",
   "Backup opened as a local document.": "نسخهٔ پشتیبان به‌عنوان سند محلی باز شد.",
   "Manual backup": "پشتیبان‌گیری دستی",
   "Before editing": "پیش از ویرایش",

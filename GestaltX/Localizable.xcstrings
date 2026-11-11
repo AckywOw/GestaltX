@@ -12117,6 +12117,58 @@
         }
       }
     },
+    "This backup already matches the device. No changes were made.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This backup already matches the device. No changes were made."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此备份已与设备一致，未作任何更改。"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "این نسخهٔ پشتیبان از قبل با دستگاه مطابقت دارد. هیچ تغییری انجام نشد."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 백업은 이미 기기와 일치합니다. 변경 사항이 없습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Эта резервная копия уже соответствует устройству. Изменения не внесены."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bản sao lưu này đã khớp với thiết bị. Không có thay đổi nào được thực hiện."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此備份已與裝置一致，未作任何更改。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此備份已與裝置一致，未作任何更改。"
+          }
+        }
+      }
+    },
     "Backup opened as a local document.": {
       "localizations": {
         "en": {

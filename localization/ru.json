@@ -213,6 +213,7 @@
   "Local changes saved. Export the plist to keep a copy.": "Локальные изменения сохранены. Экспортируйте plist, чтобы сохранить копию.",
   "Backup saved": "Резервная копия сохранена",
   "Backup restored and verified.": "Резервная копия восстановлена и проверена.",
+  "This backup already matches the device. No changes were made.": "Эта резервная копия уже соответствует устройству. Изменения не внесены.",
   "Backup opened as a local document.": "Резервная копия открыта как локальный документ.",
   "Manual backup": "Ручное резервное копирование",
   "Before editing": "Перед редактированием",

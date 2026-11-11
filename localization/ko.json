@@ -213,6 +213,7 @@
   "Local changes saved. Export the plist to keep a copy.": "로컬 변경 사항이 저장되었습니다. 사본을 보관하려면 plist를 내보내십시오.",
   "Backup saved": "백업 저장됨",
   "Backup restored and verified.": "백업이 복원되고 검증되었습니다.",
+  "This backup already matches the device. No changes were made.": "이 백업은 이미 기기와 일치합니다. 변경 사항이 없습니다.",
   "Backup opened as a local document.": "백업이 로컬 문서로 열렸습니다.",
   "Manual backup": "수동 백업",
   "Before editing": "편집 전",

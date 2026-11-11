@@ -241,6 +241,7 @@ Changes verified on device. Respring to refresh supported features.	本机更改
 Local changes saved. Export the plist to keep a copy.	本地更改已保存，请导出 plist 以保留副本。
 Backup saved	备份已保存
 Backup restored and verified.	备份已恢复并通过验证。
+This backup already matches the device. No changes were made.	此备份已与设备一致，未作任何更改。
 Backup opened as a local document.	已将备份打开为本地文稿。
 Manual backup	手动备份
 Before editing	编辑前备份
