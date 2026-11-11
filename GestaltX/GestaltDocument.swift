@@ -286,6 +286,9 @@ struct OriginalValues {
     var fields: [String: OriginalField] = [:]
     var cachedOptions: CachedOptionsOriginal?
     var wapi: WAPIOriginal?
+    // A failed legacy migration must not later use backups created after the
+    // failure as evidence of the original values for this layout.
+    var unavailableCacheOriginals: [String: Set<String>] = [:]
 }
 
 struct BackupRecord: Identifiable, Codable, Sendable {
@@ -426,9 +429,73 @@ actor GestaltFileStore {
         }
         let recoveredWAPI = wapi == nil ? try recoverOriginals(from: document).wapi : nil
         if let recoveredWAPI { wapi = recoveredWAPI }
-        let state = OriginalValues(fields: originals, cachedOptions: audio, wapi: wapi)
-        if recoveredAudio != nil || recoveredWAPI != nil { try saveOriginals(state, for: document) }
+        var unavailable: [String: Set<String>] = [:]
+        if let stored = plist["unavailableCacheOriginals"] as? [String: Any] {
+            for (key, value) in stored {
+                // Read the earlier single-UUID representation as a one-item set.
+                if let uuid = value as? String { unavailable[key] = [uuid] }
+                else if let uuids = value as? [String] { unavailable[key] = Set(uuids) }
+                else { throw GestaltFailure("Original values could not be read. No system changes were made.") }
+            }
+        }
+        let currentUUID = document.root["CacheUUID"] as? String ?? ""
+        let migrateAudio = audio.map { $0.layoutUUID != currentUUID } == true && !(unavailable["faceTimeAudio"]?.contains(currentUUID) ?? false)
+        let migrateWAPI = wapi.map { $0.layoutUUID != currentUUID } == true && !(unavailable["wapi"]?.contains(currentUUID) ?? false)
+        if migrateAudio || migrateWAPI {
+            let baseline = try recoverCacheBaseline(from: document)
+            if migrateAudio {
+                if let recovered = baseline.cachedOptions { audio = recovered }
+                else { unavailable["faceTimeAudio", default: []].insert(currentUUID) }
+            }
+            if migrateWAPI {
+                if let recovered = baseline.wapi { wapi = recovered }
+                else { unavailable["wapi", default: []].insert(currentUUID) }
+            }
+            // Preserve the complete legacy record before updating either its
+            // cache values or the fact that their original state is unavailable.
+            try archiveOriginals(data)
+        }
+        let state = OriginalValues(fields: originals, cachedOptions: audio, wapi: wapi, unavailableCacheOriginals: unavailable)
+        if recoveredAudio != nil || recoveredWAPI != nil || migrateAudio || migrateWAPI { try saveOriginals(state, for: document) }
         return state
+    }
+
+    private func matchesCacheGeneration(_ document: GestaltDocument, _ current: GestaltDocument) -> Bool {
+        for key in ["CacheUUID", "CacheVersion"] {
+            switch (document.root[key], current.root[key]) {
+            case (nil, nil): continue
+            case (let old?, let live?) where GestaltDocument.valuesEqual(old, live): continue
+            default: return false
+            }
+        }
+        switch (document.root["CacheData"], current.root["CacheData"]) {
+        case (nil, nil): return true
+        case (let old as Data, let live as Data): return old.count == live.count
+        default: return false
+        }
+    }
+
+    private func recoverCacheBaseline(from current: GestaltDocument) throws -> OriginalValues {
+        let records = try backups().filter {
+            $0.source == .device && $0.deviceID == deviceID && ["Before applying", "Before restoring"].contains($0.reason)
+        }.sorted { $0.date < $1.date }
+        for record in records {
+            // If an earlier payload cannot be verified, its layout and baseline
+            // are unknown. Do not guess from a later, potentially modified file.
+            guard let data = try? backupData(record), let document = try? GestaltDocument(data: data) else { return OriginalValues() }
+            guard document.matchesIdentity(current), matchesCacheGeneration(document, current) else { continue }
+            return OriginalValues(cachedOptions: try? CachedOptionsOriginal(document: document),
+                                  wapi: try? WAPIOriginal(document: document))
+        }
+        return OriginalValues()
+    }
+
+    private func archiveOriginals(_ data: Data) throws {
+        let url = backupDirectory.appendingPathComponent("OriginalValues-" + backupDigest(data) + ".plist")
+        do {
+            if !FileManager.default.fileExists(atPath: url.path) { try data.write(to: url, options: .atomic) }
+            guard try Data(contentsOf: url) == data else { throw GestaltFailure("Original values could not be saved and verified. No system write was started.") }
+        } catch { throw GestaltFailure("Original values could not be saved and verified. No system write was started.") }
     }
 
     private func recoverOriginals(from current: GestaltDocument) throws -> OriginalValues {
@@ -441,7 +508,7 @@ actor GestaltFileStore {
         var originals = OriginalValues()
         for record in records {
             let document = try GestaltDocument(data: backupData(record))
-            guard document.matchesIdentity(current) else { continue }
+            guard document.matchesIdentity(current), matchesCacheGeneration(document, current) else { continue }
             if let previous {
                 originals = DocumentSnapshot(data: Data(), document: previous, source: .device, name: "",
                                              originals: originals.fields, cachedOptionsOriginal: originals.cachedOptions, wapiOriginal: originals.wapi)
@@ -464,6 +531,9 @@ actor GestaltFileStore {
         var plist: [String: Any] = ["version": 1, "deviceID": deviceID, "identity": identity(of: document),
                                    "values": originals.fields.mapValues(\.plist)]
         do {
+            if !originals.unavailableCacheOriginals.isEmpty {
+                plist["unavailableCacheOriginals"] = originals.unavailableCacheOriginals.mapValues { $0.sorted() }
+            }
             if let audio = originals.cachedOptions { plist["faceTimeAudio"] = try PropertyListEncoder().encode(audio) }
             if let wapi = originals.wapi { plist["wapi"] = try PropertyListEncoder().encode(wapi) }
             let data = try PropertyListSerialization.data(fromPropertyList: plist, format: .binary, options: 0)
@@ -580,13 +650,16 @@ actor GestaltFileStore {
         return try withAccess {
             let current = try Data(contentsOf: deviceURL)
             guard current == expected.data else { throw GestaltFailure("MobileGestalt changed since it was loaded. Refresh before applying your edits.") }
-            try saveBackup(current, source: .device, reason: record == nil ? "Before applying" : "Before restoring")
             var baseline = expected
             let saved = try loadOriginals(for: expected.document)
+            // Resolve old history before creating today's pre-write backup, so
+            // this current (possibly already modified) state cannot migrate it.
+            try saveBackup(current, source: .device, reason: record == nil ? "Before applying" : "Before restoring")
             baseline.originals.merge(saved.fields) { _, saved in saved }
             if let audio = saved.cachedOptions { baseline.cachedOptionsOriginal = audio }
             if let wapi = saved.wapi { baseline.wapiOriginal = wapi }
             var originals = baseline.recordingOriginals(to: edited)
+            originals.unavailableCacheOriginals = saved.unavailableCacheOriginals
             // Explicitly removing a user-confirmed added field also corrects
             // old zero/one residues whose earlier origin was not recorded.
             for key in originallyAbsentKeys { originals.fields[key] = OriginalField(value: nil) }
