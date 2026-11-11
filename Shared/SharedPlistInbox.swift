@@ -283,7 +283,7 @@ struct SharedPlistInbox: Sendable {
             else if unlinkat(directory, child, 0) != 0 { throw fileError() }
         }
         guard unlinkat(parent, name, AT_REMOVEDIR) == 0 else { throw fileError() }
-
+    }
 
     private static func displayName(_ name: String) -> String {
         let leaf = (name as NSString).lastPathComponent.filter { !$0.isNewline && !$0.isASCIIControl }

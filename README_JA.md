@@ -21,7 +21,7 @@ iPhone と iPad 向けの MobileGestalt エディターです。開発者は [hu
 | デバイス | モデル名、起動/シャットダウン音、充電上限、タップしてスリープ解除、カメラコントロールの設定、アクションボタンの設定、衝突事故検出 SOS、Audio Mix、空間 FaceTime オーディオ |
 | iPad | Apple Pencil の設定、ステージマネージャの機能、iPad アプリの互換性 |
 | インテリジェンス | 独立した地域コードのオプション、Apple Intelligence の機能フラグ、オンデバイス Siri、Audio Intelligence、Personal Translator、写真のクリーンアップ、手書き合成 (Handwriting Synthesis)、常時待ち受けの Hey Siri、および中国本土モデルのデバイスで有効化を試みるための販売地域オプション |
-| 詳細 | Apple 社内向けの機能フラグ、内部ストレージ表示、内部設定バンドル、Security Research Device フラグ |
+| 詳細 | Apple 社内向けの機能フラグ、有効化時に個別の確認が必要なシステム全体の InternalBuild フラグ、内部設定バンドル、Security Research Device フラグ |
 | フィールドエディター | `CacheExtra` フィールドの読み取り、検索、追加、編集、削除。ローカル plist のインポート/エクスポート。String、Integer、Real、Boolean、Data、Date、Array、Dictionary の値に対応 |
 | 変更 | 自動読み取りと手動での再読み込み、変更前/変更後を確認できるステージング、検証付きの書き込み、プリセットごとの復元 |
 | バックアップ | デバイスの編集前に自動で初期バックアップを作成、書き込みのたびにバックアップ、元の値の記録。開く、エクスポート、復元、削除に対応 |
@@ -63,6 +63,7 @@ GestaltX は iOS の言語設定に従い、英語をデフォルトおよびフ
 | Русский — ロシア語 | `ru` |
 | فارسی — ペルシア語 | `fa` |
 | 한국어 — 韓国語 | `ko` |
+| Español — スペイン語 | `es` |
 
 ## クレジット
 

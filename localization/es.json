@@ -315,7 +315,6 @@
   "Canada": "Canadá",
   "Model Number": "Número de modelo",
   "A device restart may be required after changing the model number.": "Puede ser necesario reiniciar el dispositivo después de cambiar el número de modelo.",
-  "Listed values apply to iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.": "Los valores indicados solo aplican a iPhone 18 Pro y iPhone 18 Pro Max. Elegir un número de modelo que no coincida con tu hardware puede hacer que las herramientas de verificación reporten una discrepancia.",
   "A3472 — 18 Pro · United States": "A3472 — 18 Pro · Estados Unidos",
   "A3713 — 18 Pro · Canada / Japan": "A3713 — 18 Pro · Canadá / Japón",
   "A3714 — 18 Pro · Other regions": "A3714 — 18 Pro · Otras regiones",
@@ -358,5 +357,18 @@
   "Handwriting Synthesis": "Síntesis de escritura a mano",
   "Advertise the handwriting synthesis model capability.": "Anunciar la función del modelo de síntesis de escritura a mano.",
   "Always-Listening Hey Siri": "Escucha continua 'Oye Siri'",
-  "Advertise always-listening Hey Siri support.": "Anunciar soporte para escucha continua de 'Oye Siri'."
+  "Advertise always-listening Hey Siri support.": "Anunciar soporte para escucha continua de 'Oye Siri'.",
+  "Internal Build": "Compilación interna",
+  "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "Modifica el indicador InternalBuild de todo el sistema, no solo la información de almacenamiento. Los servicios del sistema pueden comportarse de forma diferente. Revertir restaura el valor original registrado.",
+  "Enable Internal Build?": "¿Activar la compilación interna?",
+  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Esto prepara un cambio del indicador InternalBuild de todo el sistema. Puede afectar a otros servicios del sistema además de la pantalla de almacenamiento. Puedes revisar el cambio antes de aplicarlo.",
+  "The original value belongs to a different cache layout. A matching backup is needed to restore it.": "El valor original pertenece a una estructura de caché diferente. Se necesita una copia de seguridad compatible para restaurarlo.",
+  "Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.": "Los campos de identidad del dispositivo no se pueden modificar en el plist del sistema. Abre un archivo local para editar estos campos.",
+  "This backup already matches the device. No changes were made.": "Esta copia de seguridad ya coincide con el dispositivo. No se ha realizado ningún cambio.",
+  "The device proof is temporarily unavailable. Unlock this device and try again.": "La prueba de pertenencia al dispositivo no está disponible temporalmente. Desbloquea este dispositivo e inténtalo de nuevo.",
+  "Listed values apply to iPhone Air, iPhone 18 Pro and iPhone 18 Pro Max only. Choosing a model number that does not match your hardware can make verification tools report a mismatch.": "Los valores indicados solo se aplican al iPhone Air, iPhone 18 Pro y iPhone 18 Pro Max. Elegir un número de modelo que no coincida con tu hardware puede hacer que las herramientas de verificación detecten una discrepancia.",
+  "A3260 — Air · United States / Canada": "A3260 — Air · Estados Unidos / Canadá",
+  "A3516 — Air · Japan": "A3516 — Air · Japón",
+  "A3517 — Air · Other regions": "A3517 — Air · Otras regiones",
+  "A3518 — Air · China mainland": "A3518 — Air · China continental"
 }

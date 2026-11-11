@@ -88,7 +88,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "WAPI 끄기"
+            "value": "WAPI 비활성화"
           }
         },
         "ru": {
@@ -146,7 +146,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원래 값 복원"
+            "value": "원본 복원"
           }
         },
         "ru": {
@@ -610,7 +610,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이해했습니다, 계속하기"
+            "value": "계속하기"
           }
         },
         "ru": {
@@ -726,7 +726,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt를 변경하면 시스템 불안정, 기능 누락 또는 무한 부팅이 발생할 수 있습니다. 기기 복구를 위해 초기화가 필요할 수 있습니다."
+            "value": "MobileGestalt를 변경하면 시스템 불안정, 기능 누락 또는 무한 재부팅이 발생할 수 있습니다. 기기 복구를 위해 복원이 필요할 수 있습니다."
           }
         },
         "ru": {
@@ -842,7 +842,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기능 플래그로 없는 하드웨어를 추가할 수는 없습니다. 일부 변경 사항은 기기 재시동이 필요합니다."
+            "value": "기능 플래그만으로 기기에 없는 하드웨어의 기능을 추가할 수는 없습니다. 일부 변경 사항은 기기를 재시동해야 적용됩니다."
           }
         },
         "ru": {
@@ -1480,7 +1480,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "재시동이 필요합니다. Apple Intelligence는 기기 및 지역에 따라서도 달라집니다."
+            "value": "재시동이 필요합니다. Apple Intelligence는 기기 모델 및 지역 제한의 영향을 받습니다."
           }
         },
         "ru": {
@@ -1538,7 +1538,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기를 재시동한 후 설정을 다시 여십시오. Apple Pencil 하드웨어 지원이 여전히 필요합니다."
+            "value": "기기를 재시동한 후 설정을 다시 여십시오. 하드웨어 차원의 Apple Pencil 지원은 여전히 필요합니다."
           }
         },
         "ru": {
@@ -1596,7 +1596,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "먼저 리스프링하십시오. 변경 사항이 나타나지 않으면 기기를 재시동하십시오."
+            "value": "먼저 리스프링을 실행하십시오. 변경 사항이 나타나지 않으면 기기를 재시동하십시오."
           }
         },
         "ru": {
@@ -1654,7 +1654,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기가 검증되었습니다. 일부 기능은 기기 재시동이 필요합니다."
+            "value": "쓰기 검증을 완료했습니다. 일부 기능은 기기를 재시동해야 적용됩니다."
           }
         },
         "ru": {
@@ -2118,7 +2118,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plist 가져오기"
+            "value": "plist 가져오기"
           }
         },
         "ru": {
@@ -2524,7 +2524,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기 작업 전에 매번 백업이 생성됩니다."
+            "value": "쓰기 작업 전에 항상 백업이 생성됩니다."
           }
         },
         "ru": {
@@ -3742,7 +3742,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "비활성화하면 기록된 원본 값이 복원됩니다. 원래 존재하지 않았던 것으로 확인된 필드에만 '추가된 필드 제거'를 사용하십시오."
+            "value": "비활성화를 선택하면 수정 전 기록된 원본 값으로 복원됩니다. '추가된 필드 제거' 옵션은 해당 필드가 본래 시스템에 존재하지 않았음을 확실히 아는 경우에만 사용하십시오."
           }
         },
         "ru": {
@@ -3800,7 +3800,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 값을 읽을 수 없습니다. 시스템이 변경되지 않았습니다."
+            "value": "보관된 원본 값을 읽어오는 데 실패했습니다. 안전을 위해 시스템 파일은 전혀 변경되지 않았습니다."
           }
         },
         "ru": {
@@ -3858,7 +3858,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 값 기록이 다른 기기의 것입니다."
+            "value": "복원하려는 원본 값 기록이 현재 연결된 기기가 아닌 다른 기기의 기록입니다."
           }
         },
         "ru": {
@@ -3916,7 +3916,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 값을 저장하고 검증할 수 없습니다. 시스템 쓰기 작업이 시작되지 않았습니다."
+            "value": "원본 값을 저장하고 검증하지 못했습니다. 시스템 쓰기 작업이 시작되지 않았습니다."
           }
         },
         "ru": {
@@ -3974,7 +3974,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "적용하기 전에 선택한 추가 필드를 제거해야 합니다."
+            "value": "선택한 추가 필드는 변경 사항을 적용하기 전에 제거해야 합니다."
           }
         },
         "ru": {
@@ -4015,6 +4015,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "不能更改系统 plist 中的设备身份字段。如需编辑这些字段，请打开本地文件。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los campos de identidad del dispositivo no se pueden modificar en el plist del sistema. Abre un archivo local para editar estos campos."
           }
         },
         "fa": {
@@ -4432,7 +4438,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "문자열 (String)"
+            "value": "문자열"
           }
         },
         "ru": {
@@ -4490,7 +4496,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "정수 (Integer)"
+            "value": "정수"
           }
         },
         "ru": {
@@ -4548,7 +4554,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "실수 (Real)"
+            "value": "실수"
           }
         },
         "ru": {
@@ -4606,7 +4612,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "부울 (Boolean)"
+            "value": "불리언"
           }
         },
         "ru": {
@@ -4664,7 +4670,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "데이터 (Data)"
+            "value": "데이터"
           }
         },
         "ru": {
@@ -4722,7 +4728,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "배열 (Array)"
+            "value": "배열"
           }
         },
         "ru": {
@@ -4780,7 +4786,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "딕셔너리 (Dictionary)"
+            "value": "딕셔너리"
           }
         },
         "ru": {
@@ -5244,7 +5250,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plist 내보내기"
+            "value": "plist 내보내기"
           }
         },
         "ru": {
@@ -5476,7 +5482,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plist 열기…"
+            "value": "plist 열기…"
           }
         },
         "ru": {
@@ -6404,7 +6410,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "시스템 캐시 접근 권한은 OS 버전 및 서명에 따라 다릅니다. 원본 프로젝트에서는 iOS 27의 SystemGroup 접근을 지원하며, iOS 26에서는 로컬 파일을 사용할 수 있습니다."
+            "value": "시스템 캐시 접근 권한은 OS 버전 및 앱 서명 상태에 따라 다릅니다. 원본 프로젝트에서는 iOS 27의 SystemGroup 접근을 지원하며, iOS 26에서는 로컬 파일을 사용할 수 있습니다."
           }
         },
         "ru": {
@@ -6520,7 +6526,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "레이아웃을 변경하면 상태 막대 및 키보드에 영향을 줄 수 있습니다. 백업을 보관하십시오."
+            "value": "레이아웃을 변경하면 상태 막대 및 키보드 배치에 영향을 줄 수 있습니다. 백업을 보관하십시오."
           }
         },
         "ru": {
@@ -6868,7 +6874,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "대체로 지역 코드만 변경하면 충분합니다. 판매 지역을 변경할 필요는 없습니다."
+            "value": "일반적으로 지역 코드만 변경해도 충분합니다. 판매 지역까지 변경할 필요는 없습니다."
           }
         },
         "ru": {
@@ -6926,7 +6932,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "* 이전에 판매 지역을 변경한 경우, 기기의 원래 판매 지역으로 복원하고 먼저 적용하십시오."
+            "value": "* 과거에 판매 지역 설정을 변경한 적이 있다면, 기능을 적용하기 전에 기기의 원래 판매 지역으로 복원하는 과정을 먼저 거치십시오."
           }
         },
         "ru": {
@@ -6984,7 +6990,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "판매 지역 접미사를 변경하면 기기 검증 도구에서 출고 시 정보와 불일치하는 것으로 표시될 수 있습니다."
+            "value": "판매 지역 접미사를 변경하면 기기 검증 도구에서 공장 출고 정보와 일치하지 않는다는 경고가 표시될 수 있습니다."
           }
         },
         "ru": {
@@ -7216,7 +7222,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "선택한 항목은 검토 후 적용할 때까지 임시 저장됩니다. 기능 플래그로 없는 하드웨어를 추가할 수는 없습니다."
+            "value": "선택한 항목은 검토 후 적용할 때까지 임시 저장됩니다. 기능 플래그만으로 기기에 없는 하드웨어를 추가할 수는 없습니다."
           }
         },
         "ru": {
@@ -7506,7 +7512,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "필드를 탐색하려면 도구에서 기기에 연결하거나 plist를 여십시오."
+            "value": "필드를 탐색하려면 도구 메뉴에서 기기에 연결하거나 plist를 여십시오."
           }
         },
         "ru": {
@@ -7622,7 +7628,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원시 시스템 필드입니다. 저장하기 전에 키와 타입을 검토하십시오."
+            "value": "원본 시스템 필드입니다. 저장하기 전에 키와 타입을 꼼꼼히 확인하십시오."
           }
         },
         "ru": {
@@ -7912,7 +7918,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "삭제 항목이 임시 저장되었습니다. 기기 파일은 적용한 후에만 변경됩니다."
+            "value": "삭제 대기 상태입니다. 기기 시스템 파일은 '변경 사항 적용'을 누른 후에만 변경됩니다."
           }
         },
         "ru": {
@@ -8202,7 +8208,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "array 또는 dict 태그를 포함한 XML plist 조각을 사용하십시오. 중첩된 데이터 및 숫자 타입이 보존됩니다."
+            "value": "array 또는 dict 태그를 포함한 XML plist 조각을 사용하십시오. 중첩된 데이터 및 숫자 타입이 그대로 보존됩니다."
           }
         },
         "ru": {
@@ -8260,7 +8266,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Data 값은 Base64 인코딩을 사용합니다."
+            "value": "데이터 값은 Base64 인코딩을 사용합니다."
           }
         },
         "ru": {
@@ -8550,7 +8556,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기 전에 백업이 생성됩니다. 기록된 결과는 다시 읽어 비교 검증됩니다."
+            "value": "쓰기 전에 백업이 생성됩니다. 기록된 결과는 다시 불러와 비교 검증됩니다."
           }
         },
         "ru": {
@@ -8608,7 +8614,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "GestaltX에 열린 파일이 수정됩니다. 사본을 보관하려면 내보내십시오. 시스템 파일은 변경되지 않습니다."
+            "value": "GestaltX에 열려 있는 파일만 수정합니다. 사본을 보관하려면 내보내기를 누르십시오. 시스템 파일은 변경되지 않습니다."
           }
         },
         "ru": {
@@ -8840,7 +8846,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 변경 사항들을 적용하시겠습니까?"
+            "value": "이 변경 사항을 적용하시겠습니까?"
           }
         },
         "ru": {
@@ -8898,7 +8904,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "잘못된 시스템 값은 기기 동작에 영향을 줄 수 있습니다. 검증된 백업이 유지됩니다. 리스프링은 자동으로 실행되지 않습니다."
+            "value": "잘못된 시스템 값을 입력하면 기기 동작에 문제가 생길 수 있습니다. 검증된 백업이 안전하게 유지되며 리스프링은 자동으로 실행되지 않습니다."
           }
         },
         "ru": {
@@ -8956,7 +8962,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "수정 사항을 저장하기 전에 현재 로컬 문서가 백업됩니다."
+            "value": "수정 사항을 저장하기 전에 현재 로컬 문서를 백업합니다."
           }
         },
         "ru": {
@@ -9246,7 +9252,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기 백업은 현재 설치된 앱에 연결되어 유지됩니다. 가져온 파일은 별도로 관리됩니다."
+            "value": "기기 백업은 현재 기기에 설치된 앱 내에 유지되며, 외부에서 가져온 파일의 백업은 별도로 관리됩니다."
           }
         },
         "ru": {
@@ -9304,7 +9310,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "안전망"
+            "value": "안전장치"
           }
         },
         "ru": {
@@ -9362,7 +9368,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기 작업 전에 생성된 백업이 여기에 표시됩니다. 언제든지 직접 백업을 생성할 수도 있습니다."
+            "value": "쓰기 작업 전에 생성된 백업이 이곳에 표시됩니다. 원할 때 언제든지 백업을 수동으로 만들 수도 있습니다."
           }
         },
         "ru": {
@@ -9710,7 +9716,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "초기 백업"
+            "value": "초기 상태 백업"
           }
         },
         "ru": {
@@ -9884,7 +9890,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 값이 복원되었습니다."
+            "value": "안전하게 원본 값으로 복원되었습니다."
           }
         },
         "ru": {
@@ -10000,7 +10006,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "현재 문서가 먼저 백업됩니다. 기기 복원은 쓰기 작업 후 검증됩니다."
+            "value": "복원하기 전 현재 상태의 문서를 먼저 백업합니다. 기기 복원은 쓰기 작업 후 정상적으로 적용되었는지 검증됩니다."
           }
         },
         "ru": {
@@ -10116,7 +10122,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "로컬 백업이 영구적으로 제거됩니다. 기기 파일은 변경되지 않습니다."
+            "value": "로컬 백업 파일이 영구적으로 삭제됩니다. 기기의 시스템 파일은 변경되지 않습니다."
           }
         },
         "ru": {
@@ -10348,7 +10354,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "NeoSpring이 SpringBoard 재시작을 시도합니다. 먼저 작업 내용을 저장하십시오. 모든 OS 빌드에서 작동하지는 않을 수 있습니다."
+            "value": "NeoSpring이 SpringBoard 재시작을 시도합니다. 진행 중인 작업 내용을 미리 저장하십시오. 사용하는 OS 빌드 버전에 따라 이 기능이 작동하지 않을 수 있습니다."
           }
         },
         "ru": {
@@ -10870,7 +10876,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "디스플레이 동작은 패널에 따라 다릅니다. 전력 소모 및 번인 위험이 증가할 수 있습니다."
+            "value": "디스플레이 동작은 탑재된 패널 종류에 따라 다릅니다. 전력 소모량이 증가하고 번인 위험이 커질 수 있습니다."
           }
         },
         "ru": {
@@ -10928,7 +10934,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 생동감"
+            "value": "상시표시형 디스플레이 색상 선명도"
           }
         },
         "ru": {
@@ -10986,7 +10992,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 렌더링 기능을 조정합니다."
+            "value": "상시표시형 디스플레이 렌더링 세부 기능을 조정합니다."
           }
         },
         "ru": {
@@ -11102,7 +11108,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26 이상에서 저성능 렌더링 기능을 사용합니다."
+            "value": "iOS 26 이상에서 저성능 렌더링 기능을 강제로 사용합니다."
           }
         },
         "ru": {
@@ -11218,7 +11224,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "전원 켬 및 끔 사운드 기능을 노출합니다."
+            "value": "전원을 켜고 끌 때 재생되는 사운드 설정 메뉴를 노출합니다."
           }
         },
         "ru": {
@@ -11334,7 +11340,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "충전 한도 설정을 표시합니다. 실제 충전 제어는 하드웨어에 따라 달라집니다."
+            "value": "충전 한도 최적화 설정을 표시합니다. 실제 충전 제어 여부는 기기 하드웨어에 따라 다릅니다."
           }
         },
         "ru": {
@@ -11450,7 +11456,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "해당 기능이 숨겨져 있는 기기에서 탭하여 깨우기를 표시합니다."
+            "value": "탭하여 깨우기 설정이 숨겨진 기기에서 해당 메뉴를 활성화합니다."
           }
         },
         "ru": {
@@ -11566,7 +11572,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "카메라 컨트롤 설정을 표시합니다. 물리적 버튼이 추가되지는 않습니다."
+            "value": "카메라 컨트롤 설정 메뉴를 표시합니다. 실제 물리적인 버튼이 기기에 추가되지는 않습니다."
           }
         },
         "ru": {
@@ -11798,7 +11804,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple Pencil 설정을 표시합니다. 하드웨어 지원이 여전히 필요합니다."
+            "value": "Apple Pencil 설정 메뉴를 표시합니다. 실제로 사용하려면 Apple Pencil 하드웨어를 지원하는 기기여야 합니다."
           }
         },
         "ru": {
@@ -11914,7 +11920,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "스테이지 매니저 지원을 표시합니다. 레이아웃 동작은 기기마다 다릅니다."
+            "value": "스테이지 매니저 지원을 활성화합니다. 화면 레이아웃 동작 방식은 기기 크기와 모델에 따라 다르게 나타납니다."
           }
         },
         "ru": {
@@ -12030,7 +12036,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iPhone에서 iPad 앱 호환성 유형을 허용합니다."
+            "value": "iPhone에서 iPad용 앱 호환성 모드를 활성화합니다."
           }
         },
         "ru": {
@@ -12146,7 +12152,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "생성형 모델 기능 플래그를 설정합니다. 실제 사용 가능 여부는 하드웨어, 지역 및 Apple 서비스에 따라 다릅니다."
+            "value": "생성형 모델 기능 플래그를 설정합니다. 실제 사용 가능 여부는 기기 하드웨어, 지역 및 Apple 서비스 지원 여부에 따라 달라집니다."
           }
         },
         "ru": {
@@ -12262,7 +12268,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "내부 메뉴를 표시합니다. 일부 시스템 서비스가 다르게 작동할 수 있습니다."
+            "value": "Apple의 내부 기능 관련 메뉴를 표시합니다. 이를 활성화하면 일부 시스템 서비스의 동작이 달라질 수 있습니다."
           }
         },
         "ru": {
@@ -12320,7 +12326,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "내부 저장 공간 뷰"
+            "value": "내부 저장 공간 보기"
           }
         },
         "ru": {
@@ -12378,7 +12384,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "내부 저장 공간 분류 항목을 표시합니다. iPad에서는 실험적 기능입니다."
+            "value": "내부 저장 공간의 세부 카테고리를 표시합니다. iPad에서는 실험적인 기능입니다."
           }
         },
         "ru": {
@@ -12436,7 +12442,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "보안 연구 기기"
+            "value": "보안 리서치 기기"
           }
         },
         "ru": {
@@ -12494,7 +12500,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "SRD 기능 플래그를 변경합니다. 기기가 실제 Apple SRD로 변환되지는 않습니다."
+            "value": "보안 리서치 기기 기능 플래그를 변경합니다. 설정한다고 해서 일반 기기가 실제 Apple 보안 리서치 기기로 변환되지는 않습니다."
           }
         },
         "ru": {
@@ -12900,7 +12906,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기에 연결하거나 plist를 여십시오."
+            "value": "기기에 연결하거나 plist 파일을 여십시오."
           }
         },
         "ru": {
@@ -12958,7 +12964,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기 접근 권한 확인 중…"
+            "value": "기기 시스템 파일 접근 권한을 확인하는 중…"
           }
         },
         "ru": {
@@ -13074,7 +13080,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기 접근 불가"
+            "value": "기기 시스템 파일 접근 불가"
           }
         },
         "ru": {
@@ -13190,7 +13196,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기에서 변경 사항 검증 완료"
+            "value": "기기에 적용된 변경 사항 검증 완료"
           }
         },
         "ru": {
@@ -13248,7 +13254,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "로컬 변경 사항 저장됨"
+            "value": "로컬 변경 사항 저장 완료"
           }
         },
         "ru": {
@@ -13306,7 +13312,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기에서 변경 사항이 검증되었습니다. 지원되는 기능을 새로고침하려면 리스프링하십시오."
+            "value": "기기에서 변경 사항이 검증되었습니다. 새로 지원되는 기능을 시스템에 반영하려면 리스프링을 실행하십시오."
           }
         },
         "ru": {
@@ -13364,7 +13370,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "로컬 변경 사항이 저장되었습니다. 사본을 보관하려면 plist를 내보내십시오."
+            "value": "로컬 문서에 변경 사항이 저장되었습니다. 사본을 안전하게 보관하려면 해당 plist를 내보내십시오."
           }
         },
         "ru": {
@@ -13422,7 +13428,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "백업 저장됨"
+            "value": "백업 저장 완료"
           }
         },
         "ru": {
@@ -13480,7 +13486,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "백업이 복원되고 검증되었습니다."
+            "value": "백업이 성공적으로 복원되고 검증되었습니다."
           }
         },
         "ru": {
@@ -13521,6 +13527,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "此备份已与设备一致，未作任何更改。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta copia de seguridad ya coincide con el dispositivo. No se ha realizado ningún cambio."
           }
         },
         "fa": {
@@ -13590,7 +13602,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "백업이 로컬 문서로 열렸습니다."
+            "value": "백업 파일이 로컬 문서 형태로 열렸습니다."
           }
         },
         "ru": {
@@ -13706,7 +13718,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "편집 전"
+            "value": "편집 전 백업"
           }
         },
         "ru": {
@@ -13764,7 +13776,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "적용 전"
+            "value": "적용 전 백업"
           }
         },
         "ru": {
@@ -13822,7 +13834,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "복원 전"
+            "value": "복원 전 백업"
           }
         },
         "ru": {
@@ -13996,7 +14008,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "부울(Boolean) 값에는 true 또는 false를 사용하십시오."
+            "value": "불리언 값은 true 또는 false만 입력하십시오."
           }
         },
         "ru": {
@@ -14054,7 +14066,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "유효한 Base64 데이터를 입력하십시오."
+            "value": "유효한 Base64 형식의 데이터를 입력하십시오."
           }
         },
         "ru": {
@@ -14112,7 +14124,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "XML plist 형식의 array 또는 dictionary 조각을 입력하십시오."
+            "value": "XML plist 형식의 배열 또는 딕셔너리 조각을 입력하십시오."
           }
         },
         "ru": {
@@ -14170,7 +14182,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "CacheExtra 딕셔너리가 포함된 MobileGestalt plist를 선택하십시오."
+            "value": "반드시 CacheExtra 딕셔너리가 포함된 MobileGestalt plist 파일을 선택하십시오."
           }
         },
         "ru": {
@@ -14228,7 +14240,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "편집된 문서가 유효한 프로퍼티 리스트가 아닙니다."
+            "value": "편집이 완료된 문서가 유효한 plist 형식이 아닙니다."
           }
         },
         "ru": {
@@ -14286,7 +14298,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt 접근이 거부되었습니다. OS 버전 및 App Group 서명을 확인하십시오."
+            "value": "MobileGestalt 파일 접근이 거부되었습니다. 사용 중인 OS 버전 및 App Group 서명 상태를 확인하십시오."
           }
         },
         "ru": {
@@ -14344,7 +14356,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "백업을 검증할 수 없습니다. 시스템 쓰기 작업이 시작되지 않았습니다."
+            "value": "백업 파일의 무결성을 검증할 수 없어 시스템 쓰기 작업이 시작되지 않았습니다."
           }
         },
         "ru": {
@@ -14402,7 +14414,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 백업은 현재 기기의 백업이 아닙니다. 대신 로컬 파일로 여십시오."
+            "value": "이 백업은 현재 연결된 기기의 파일이 아닙니다. 이 기기에 복원하는 대신 로컬 파일로 열어 내용을 확인하십시오."
           }
         },
         "ru": {
@@ -14460,7 +14472,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "로드된 이후 MobileGestalt 내용이 변경되었습니다. 수정을 적용하기 전에 새로고침하십시오."
+            "value": "최초 로드 시점 이후 백그라운드에서 MobileGestalt 내용이 변경되었습니다. 변경 사항을 적용하기 전에 최신 데이터를 다시 읽어 오십시오."
           }
         },
         "ru": {
@@ -14518,7 +14530,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기록된 데이터가 다시 읽어들인 데이터와 일치하지 않습니다."
+            "value": "기록된 데이터와 다시 읽어온 값이 일치하지 않습니다."
           }
         },
         "ru": {
@@ -14576,7 +14588,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 파일을 복원할 수 없습니다."
+            "value": "알 수 없는 오류로 인해 원본 파일을 복원할 수 없습니다."
           }
         },
         "ru": {
@@ -14634,7 +14646,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기 검증 및 복구에 모두 실패했습니다. 백업을 보관하고 기기 파일을 복구한 후 다시 시도하십시오."
+            "value": "쓰기 검증 및 원상 복구 시도가 모두 실패했습니다. 작업 중이던 백업을 안전하게 보관하고, 기기 시스템 파일을 정상 상태로 복구한 뒤 다시 시도하십시오."
           }
         },
         "ru": {
@@ -14692,7 +14704,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "쓰기에 실패했습니다. 이전 파일이 복원되고 검증되었습니다."
+            "value": "쓰기 작업에 실패했습니다. 이전 파일이 복원되고 검증되었습니다."
           }
         },
         "ru": {
@@ -14750,7 +14762,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "시뮬레이터에서는 기기 접근을 사용할 수 없습니다. GestaltX를 둘러보려면 plist를 여십시오."
+            "value": "Xcode 시뮬레이터에서는 실제 기기 접근이 제한됩니다. GestaltX 인터페이스를 둘러보려면 로컬 plist를 여십시오."
           }
         },
         "ru": {
@@ -14808,7 +14820,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "서명된 앱에 사용할 수 있는 App Group이 없습니다. App Group 기능을 활성화하고 다시 서명하십시오."
+            "value": "앱 서명 시 구성된 App Group이 유효하지 않습니다. 개발자 계정에서 App Group 기능을 활성화하고 올바르게 다시 서명하십시오."
           }
         },
         "ru": {
@@ -14866,7 +14878,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "16MB 미만의 plist 파일을 선택하십시오."
+            "value": "파일 크기가 16MB 미만인 plist만 선택하십시오."
           }
         },
         "ru": {
@@ -14982,7 +14994,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "먼저 문서를 로드하십시오."
+            "value": "편집할 문서를 먼저 로드하십시오."
           }
         },
         "ru": {
@@ -15040,7 +15052,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "해당 키가 이미 존재합니다. 대신 기존 필드를 편집하십시오."
+            "value": "해당 키가 문서에 이미 존재합니다. 새 필드를 추가하는 대신 기존 필드의 값을 수정하십시오."
           }
         },
         "ru": {
@@ -15098,7 +15110,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "적용하기 전에 모델명을 입력하십시오."
+            "value": "기기에 적용하기 전에 모델명을 입력하십시오."
           }
         },
         "ru": {
@@ -15156,7 +15168,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "더 넓어진 가능성."
+            "value": "가능성을 확장하다."
           }
         },
         "ru": {
@@ -15562,7 +15574,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "최초의 WebKit 리스프링 방식"
+            "value": "기존 WebKit 리스프링 방식 구현"
           }
         },
         "ru": {
@@ -15620,7 +15632,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Swift로 구현된 리스프링 방식"
+            "value": "Swift 언어로 재구현된 리스프링 기술"
           }
         },
         "ru": {
@@ -15678,7 +15690,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "NeoSpring 프로젝트 및 리스프링 연구"
+            "value": "NeoSpring 프로젝트 및 리스프링 메커니즘 연구"
           }
         },
         "ru": {
@@ -15736,7 +15748,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "GPL 라이선스 리스프링 적용"
+            "value": "GPL 라이선스를 기반으로 적용된 리스프링 어댑테이션"
           }
         },
         "ru": {
@@ -15794,7 +15806,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt 키 연구"
+            "value": "MobileGestalt 주요 키 구조 연구"
           }
         },
         "ru": {
@@ -15852,7 +15864,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt 프리셋 연구"
+            "value": "MobileGestalt 기능 프리셋 연구"
           }
         },
         "ru": {
@@ -15910,7 +15922,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt 워크플로우 참조"
+            "value": "MobileGestalt 편집 워크플로우 참고 자료"
           }
         },
         "ru": {
@@ -16084,7 +16096,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "GestaltX는 독립 소프트웨어입니다. Apple 또는 크레딧에 명시된 프로젝트들과 제휴되어 있지 않습니다."
+            "value": "GestaltX는 개인이 개발한 독립 소프트웨어입니다. Apple 공식 소프트웨어가 아니며, 크레딧에 명시된 다른 오픈소스 프로젝트들과도 직접적인 제휴 관계가 없습니다."
           }
         },
         "ru": {
@@ -16200,7 +16212,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "사용 가능한 경로 및 MobileGestalt 프리셋은 기기 및 OS 빌드에 따라 다릅니다."
+            "value": "수정 가능한 시스템 경로 및 사용 가능한 MobileGestalt 프리셋 목록은 기기 종류와 OS 빌드 버전에 따라 다르게 표시됩니다."
           }
         },
         "ru": {
@@ -16258,7 +16270,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "원본 프로젝트 호환성 확인"
+            "value": "원본 프로젝트 호환성 안내 읽기"
           }
         },
         "ru": {
@@ -16316,7 +16328,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "MobileGestalt 접근"
+            "value": "MobileGestalt 시스템 파일 접근"
           }
         },
         "ru": {
@@ -16374,7 +16386,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 27: 기기에서 접근 권한을 확인합니다."
+            "value": "iOS 27: 기기 내에서 권한을 자체적으로 확인하여 접근합니다."
           }
         },
         "ru": {
@@ -16432,7 +16444,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26: 원본 프로젝트에서 SystemGroup 접근을 지원하지 않습니다. 로컬 plist 편집이 가능합니다."
+            "value": "iOS 26: 원본 프로젝트에서 SystemGroup 접근 권한을 지원하지 않으므로 기기 직접 수정은 제한되며, 로컬 plist 편집만 사용할 수 있습니다."
           }
         },
         "ru": {
@@ -16490,7 +16502,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "올바르게 프로비저닝된 App Group이 필요합니다. 열 수 있는 모든 문서에 대해 내보내기 및 백업이 가능합니다."
+            "value": "올바르게 프로비저닝 프로파일이 설정된 App Group이 반드시 필요합니다. 정상적으로 열린 문서는 내보내기 및 백업 기능이 지원됩니다."
           }
         },
         "ru": {
@@ -16606,7 +16618,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "NeoSpring은 WebKit을 사용하여 SpringBoard 새로고침을 시도합니다. 효과는 OS 빌드에 따라 다릅니다. 일부 MobileGestalt 변경 사항은 수동으로 기기를 재시동해야 할 수도 있습니다."
+            "value": "NeoSpring은 WebKit를 활용하여 SpringBoard 새로고침(리스프링)을 시도합니다. 이 방식의 성공 여부는 OS 빌드에 따라 다를 수 있으며, 일부 MobileGestalt 변경 사항은 리스프링만으로 반영되지 않아 기기를 수동으로 재시동해야 할 수도 있습니다."
           }
         },
         "ru": {
@@ -16664,7 +16676,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "라이선스 텍스트를 불러올 수 없습니다."
+            "value": "라이선스 텍스트 문서를 불러올 수 없습니다."
           }
         },
         "ru": {
@@ -16722,7 +16734,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "리스프링이 완료되지 않았습니다."
+            "value": "리스프링 작업이 정상적으로 완료되지 않았습니다."
           }
         },
         "ru": {
@@ -16780,7 +16792,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "SpringBoard 새로고침 중…"
+            "value": "SpringBoard 시스템을 새로고침하는 중…"
           }
         },
         "ru": {
@@ -16838,7 +16850,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 OS 빌드는 해당 방식을 지원하지 않을 수 있습니다. 이 화면을 닫고 나중에 수동으로 재시동할 수 있습니다."
+            "value": "현재 사용 중인 OS 빌드에서는 이 리스프링 방식을 지원하지 않을 수 있습니다. 이 화면을 닫고 나중에 전원 버튼을 이용해 기기를 수동으로 재시동하십시오."
           }
         },
         "ru": {
@@ -16896,7 +16908,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기가 잠시 잠금 화면으로 돌아갈 수 있습니다."
+            "value": "진행 중 기기 화면이 잠시 잠금 화면으로 돌아갈 수 있습니다."
           }
         },
         "ru": {
@@ -16954,7 +16966,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "캐시 레이아웃 또는 값이 이 프리셋과 일치하지 않습니다."
+            "value": "현재 기기의 캐시 레이아웃이나 값이 선택한 프리셋의 조건과 일치하지 않습니다."
           }
         },
         "ru": {
@@ -16995,6 +17007,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "原值属于不同的缓存布局，需要匹配的备份才能恢复。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El valor original pertenece a una estructura de caché diferente. Se necesita una copia de seguridad compatible para restaurarlo."
           }
         },
         "fa": {
@@ -17064,7 +17082,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 프리셋은 관련 없는 캐시 바이트를 변경합니다."
+            "value": "이 프리셋은 관련 없는 시스템 캐시 바이트를 변경합니다."
           }
         },
         "ru": {
@@ -17122,7 +17140,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 기기의 MobileGestalt 캐시 레이아웃을 파악할 수 없습니다."
+            "value": "이 기기에 적용된 MobileGestalt 캐시 파일의 레이아웃 구조를 파악할 수 없습니다."
           }
         },
         "ru": {
@@ -17180,7 +17198,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plist 가져오는 중…"
+            "value": "선택한 plist 파일을 가져오는 중…"
           }
         },
         "ru": {
@@ -17238,7 +17256,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "한 번에 하나의 MobileGestalt plist 파일만 공유하십시오."
+            "value": "MobileGestalt plist 파일은 한 번에 하나씩만 공유하여 가져올 수 있습니다."
           }
         },
         "ru": {
@@ -17296,7 +17314,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "GestaltX와 해당 공유 확장 프로그램(Share Extension)을 동일한 App Group으로 서명한 후 다시 시도하십시오."
+            "value": "공유 기능을 정상적으로 사용하려면 GestaltX 앱 본체와 Share Extension이 정확히 동일한 App Group으로 서명되어야 합니다. 다시 서명한 후 시도하십시오."
           }
         },
         "ru": {
@@ -17354,7 +17372,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "공유된 plist를 읽을 수 없습니다. 다시 공유해 주십시오."
+            "value": "외부에서 공유된 plist 파일을 정상적으로 읽어 들일 수 없습니다. 파일 앱에서 다시 한 번 공유해 주십시오."
           }
         },
         "ru": {
@@ -17412,7 +17430,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "공유된 plist가 대기 중입니다. 현재 변경 사항을 저장하거나 취소한 후 가져오십시오."
+            "value": "외부에서 공유된 plist 파일이 대기열에 있습니다. 현재 앱에서 작업 중이던 변경 사항을 먼저 저장하거나 취소한 후에 가져오기를 진행하십시오."
           }
         },
         "ru": {
@@ -17470,7 +17488,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "다른 plist를 열기 전에 현재 변경 사항을 저장하거나 취소하십시오."
+            "value": "충돌을 방지하기 위해, 다른 plist 파일을 새로 열기 전에 현재 열려 있는 문서의 변경 사항을 저장하거나 취소하십시오."
           }
         },
         "ru": {
@@ -17586,7 +17604,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "plist 가져오기를 확인하려면 GestaltX를 여십시오."
+            "value": "plist 파일 가져오기 작업을 최종적으로 확인하고 승인하려면 GestaltX 앱을 실행하십시오."
           }
         },
         "ru": {
@@ -17644,7 +17662,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 기기의 식별 정보를 확인할 수 없습니다. 이 기기에서 MobileGestalt를 읽은 다음 다시 공유해 보십시오."
+            "value": "이 기기의 식별 정보를 교차 검증할 수 없습니다. 이 기기에서 먼저 MobileGestalt를 성공적으로 읽어들인 다음 다시 공유를 시도해 보십시오."
           }
         },
         "ru": {
@@ -17702,7 +17720,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 plist는 다른 기기의 것이므로 가져올 수 없습니다."
+            "value": "공유된 plist 파일의 식별자가 현재 기기와 일치하지 않아 가져올 수 없습니다."
           }
         },
         "ru": {
@@ -17760,7 +17778,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 plist에는 소유권을 확인할 수 있는 기기 식별자가 충분하지 않습니다."
+            "value": "공유된 plist 파일 내에 해당 기기의 소유권을 검증할 수 있는 필수 기기 식별자가 부족합니다."
           }
         },
         "ru": {
@@ -17934,7 +17952,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "도구에서 MobileGestalt를 읽거나, 이 기기의 plist를 GestaltX로 공유하십시오."
+            "value": "도구 탭에서 기기의 MobileGestalt를 직접 읽어 들이거나, 파일 앱에서 이 기기의 plist 파일을 찾아 GestaltX로 공유하십시오."
           }
         },
         "ru": {
@@ -17992,7 +18010,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 plist는 이 기기용으로 검증되었습니다. 가져오시겠습니까?"
+            "value": "이 plist 파일은 현재 기기용으로 무결성이 검증되었습니다. 파일 편집을 위해 가져오시겠습니까?"
           }
         },
         "ru": {
@@ -18050,7 +18068,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 plist의 기기 증명을 이 기기에서 검증할 수 없습니다."
+            "value": "이 plist 파일 내의 기기 고유 증명 데이터를 현재 기기에서 정상적으로 검증할 수 없습니다."
           }
         },
         "ru": {
@@ -18091,6 +18109,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设备凭证暂时不可用。请解锁此设备后重试。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La prueba de pertenencia al dispositivo no está disponible temporalmente. Desbloquea este dispositivo e inténtalo de nuevo."
           }
         },
         "fa": {
@@ -18160,7 +18184,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 plist는 다른 시스템 캐시 레이아웃을 사용하므로 복원할 수 없습니다."
+            "value": "이 plist 파일은 현재 기기 시스템과 다른 방식의 캐시 레이아웃 구조를 사용하므로 안전하게 복원할 수 없습니다."
           }
         },
         "ru": {
@@ -18218,7 +18242,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "가져온 Plist 복원"
+            "value": "가져온 plist 복원"
           }
         },
         "ru": {
@@ -18276,7 +18300,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "복원하기 전에 현재 기기 파일이 백업됩니다. 완료 후 기기를 재시동하십시오."
+            "value": "복원을 시작하기 전 만약을 대비해 현재 기기 파일이 백업됩니다. 복원이 완료되면 반드시 기기를 재시동하십시오."
           }
         },
         "ru": {
@@ -18334,7 +18358,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "키와 값을 편집하거나 검증된 백업을 복원하려면 이 기기의 plist를 GestaltX에 공유하십시오. 기기 고유 증명을 유지하려면 먼저 GestaltX에서 사본을 내보내십시오."
+            "value": "이 기기의 plist를 GestaltX 앱에 공유하면 내부 키와 값을 편집하거나, 이전에 검증해 둔 백업 파일을 시스템에 복원할 수 있습니다. 기기 고유 증명을 안전하게 유지하려면 편집 전 먼저 GestaltX에서 원본 사본을 내보내 두는 것이 좋습니다."
           }
         },
         "ru": {
@@ -18508,7 +18532,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "모델 번호를 변경한 후 기기를 재시동해야 할 수 있습니다."
+            "value": "모델 번호를 변경한 후 시스템에 완전히 반영되려면 기기를 재시동해야 할 수 있습니다."
           }
         },
         "ru": {
@@ -18554,7 +18578,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los valores indicados solo aplican a iPhone 18 Pro y iPhone 18 Pro Max. Elegir un número de modelo que no coincida con tu hardware puede hacer que las herramientas de verificación reporten una discrepancia."
+            "value": "Los valores indicados solo se aplican al iPhone Air, iPhone 18 Pro y iPhone 18 Pro Max. Elegir un número de modelo que no coincida con tu hardware puede hacer que las herramientas de verificación detecten una discrepancia."
           }
         },
         "fa": {
@@ -18609,6 +18633,12 @@
             "value": "A3260 — Air · 美国／加拿大"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3260 — Air · Estados Unidos / Canadá"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18659,6 +18689,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3516 — Air · 日本"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3516 — Air · Japón"
           }
         },
         "fa": {
@@ -18713,6 +18749,12 @@
             "value": "A3517 — Air · 其他地区"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3517 — Air · Otras regiones"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -18763,6 +18805,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A3518 — Air · 中国大陆"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A3518 — Air · China continental"
           }
         },
         "fa": {
@@ -19296,7 +19344,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "artwork 필드가 사전 형식이 아닙니다. 이 프리셋을 사용하기 전에 MG Control에서 수정하십시오."
+            "value": "artwork 필드가 유효한 딕셔너리 구조가 아닙니다. 이 프리셋 항목들을 사용하기 전에 MG Control 메뉴에서 해당 필드를 먼저 수정하십시오."
           }
         },
         "ru": {
@@ -19354,7 +19402,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "고휘도 상시 표시"
+            "value": "고휘도 상시표시형 디스플레이"
           }
         },
         "ru": {
@@ -19412,7 +19460,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 표시가 더 높은 밝기에 도달하도록 허용합니다."
+            "value": "상시표시형 디스플레이가 더 높은 밝기에 도달하도록 제한을 해제합니다."
           }
         },
         "ru": {
@@ -19470,7 +19518,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 표시 플립북"
+            "value": "상시표시형 디스플레이 플립북"
           }
         },
         "ru": {
@@ -19528,7 +19576,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "잠금 화면에서 AOD 플립북 위젯을 활성화합니다."
+            "value": "잠금 화면에 상시표시형 디스플레이 플립북 위젯 기능이 렌더링되도록 활성화합니다."
           }
         },
         "ru": {
@@ -19586,7 +19634,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "AOD 플립북 개수"
+            "value": "상시표시형 디스플레이 플립북 개수"
           }
         },
         "ru": {
@@ -19644,7 +19692,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "허용되는 AOD 플립북 항목 수를 설정합니다. 실험적 기능이며 허용 범위는 빌드에 따라 다릅니다."
+            "value": "허용되는 상시표시형 디스플레이 플립북 항목의 최대 개수를 설정합니다. 실험적인 기능이며, 안정적으로 작동하는 허용 범위는 시스템 빌드에 따라 달라집니다."
           }
         },
         "ru": {
@@ -19702,7 +19750,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "배경화면 시차 효과 끄기"
+            "value": "배경화면 시차 효과 비활성화"
           }
         },
         "ru": {
@@ -19760,7 +19808,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "기기 움직임에 따라 배경화면이 움직이지 않게 합니다."
+            "value": "기기를 기울이거나 움직일 때 배경화면이 입체적으로 따라 움직이는 시차 효과를 정지시킵니다."
           }
         },
         "ru": {
@@ -19876,7 +19924,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진에 실제 HDR 렌더링을 활성화합니다."
+            "value": "사진 앱에서 사진을 볼 때 실제 HDR 렌더링을 활성화합니다."
           }
         },
         "ru": {
@@ -19992,7 +20040,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "PWM 디스플레이 지원을 알립니다. 실제 밝기 조절 동작은 패널에 따라 다릅니다."
+            "value": "시스템에 PWM 디스플레이 지원 여부를 선언합니다. 이 기능을 켜더라도 실제 디스플레이 밝기 조절 동작은 탑재된 패널의 물리적 특성을 따릅니다."
           }
         },
         "ru": {
@@ -20108,7 +20156,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "DisplayPort 출력 지원을 알립니다. 호환 하드웨어는 여전히 필요합니다."
+            "value": "시스템에 DisplayPort 출력 지원 여부를 선언합니다. 외부 디스플레이로 영상을 전송하려면 호환되는 케이블 및 하드웨어가 여전히 필요합니다."
           }
         },
         "ru": {
@@ -20166,7 +20214,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "충돌 SOS"
+            "value": "충돌 감지"
           }
         },
         "ru": {
@@ -20224,7 +20272,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "긴급 구조 요청 설정에 충돌 감지를 표시합니다. 하드웨어 지원은 여전히 필요합니다."
+            "value": "긴급 구조 요청 설정 메뉴 내에 충돌 감지 항목을 표시합니다. 실제 충돌 감지에는 호환되는 하드웨어가 필요합니다."
           }
         },
         "ru": {
@@ -20340,7 +20388,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "지원되는 미디어에 오디오 믹스 기능을 활성화합니다."
+            "value": "호환되는 미디어 소스에 대해 오디오 믹스 기능을 활성화합니다."
           }
         },
         "ru": {
@@ -20398,7 +20446,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime 공간 오디오"
+            "value": "FaceTime 공간 음향"
           }
         },
         "ru": {
@@ -20456,7 +20504,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "FaceTime에 공간 오디오 재생을 활성화합니다."
+            "value": "FaceTime 통화 중 공간 음향 렌더링 재생을 활성화합니다."
           }
         },
         "ru": {
@@ -20572,7 +20620,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple 내부 설정 번들을 노출합니다. 일부 시스템 서비스가 다르게 동작할 수 있습니다."
+            "value": "Apple 내부 설정 번들을 표시합니다. 일부 시스템 서비스 동작이 달라질 수 있습니다."
           }
         },
         "ru": {
@@ -20688,7 +20736,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "온디바이스 Siri 이해 지원을 알립니다. 사용 가능 여부는 하드웨어와 지역에 따라 다릅니다."
+            "value": "온디바이스 Siri 이해 기능 지원 여부를 시스템에 선언합니다. 지원 여부는 하드웨어 및 지역에 따라 다릅니다."
           }
         },
         "ru": {
@@ -20804,7 +20852,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 27 오디오 인텔리전스 기능을 알립니다."
+            "value": "iOS 27에서 추가된 오디오 인텔리전스 기능 지원 여부를 시스템에 선언합니다."
           }
         },
         "ru": {
@@ -20920,7 +20968,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "개인 번역기 기능을 알립니다."
+            "value": "개인 번역기 기능 지원 여부를 시스템에 선언합니다."
           }
         },
         "ru": {
@@ -20978,7 +21026,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진 정리(Clean Up)"
+            "value": "사진 클린업"
           }
         },
         "ru": {
@@ -21036,7 +21084,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "사진 인페인팅(Clean Up) 기능을 알립니다."
+            "value": "사진 앱의 클린업 기능 지원 여부를 시스템에 선언합니다."
           }
         },
         "ru": {
@@ -21094,7 +21142,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "필기 합성"
+            "value": "손글씨 합성"
           }
         },
         "ru": {
@@ -21152,7 +21200,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "필기 합성 모델 기능을 알립니다."
+            "value": "손글씨 합성 모델 기능 지원 여부를 시스템에 선언합니다."
           }
         },
         "ru": {
@@ -21210,7 +21258,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 대기 Hey Siri"
+            "value": "항상 'Siri' 듣기"
           }
         },
         "ru": {
@@ -21268,7 +21316,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "상시 대기 Hey Siri 지원을 알립니다."
+            "value": "항상 'Siri' 감지 기능 지원 여부를 시스템에 선언합니다."
           }
         },
         "ru": {
@@ -21309,6 +21357,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "内部构建"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compilación interna"
           }
         },
         "fa": {
@@ -21363,6 +21417,12 @@
             "value": "修改系统全局的 InternalBuild 标记，并非仅调整存储信息。系统服务的行为可能发生变化。“还原”会恢复已记录的原始值。"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifica el indicador InternalBuild de todo el sistema, no solo la información de almacenamiento. Los servicios del sistema pueden comportarse de forma diferente. Revertir restaura el valor original registrado."
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -21415,6 +21475,12 @@
             "value": "启用内部构建？"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Activar la compilación interna?"
+          }
+        },
         "fa": {
           "stringUnit": {
             "state": "translated",
@@ -21465,6 +21531,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "这会暂存系统全局的 InternalBuild 标记变更。它可能影响存储页面以外的系统服务。你可以在应用前检查这项变更。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto prepara un cambio del indicador InternalBuild de todo el sistema. Puede afectar a otros servicios del sistema además de la pantalla de almacenamiento. Puedes revisar el cambio antes de aplicarlo."
           }
         },
         "fa": {

@@ -705,7 +705,6 @@ actor GestaltFileStore {
                 eventSink("Restore: the device already matches this plist")
                 return expected
             }
-            try saveBackup(current, source: .device, reason: record == nil ? "Before applying" : "Before restoring")
             var baseline = expected
             let saved = try loadOriginals(for: expected.document)
             // Resolve old history before creating today's pre-write backup, so
