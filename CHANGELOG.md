@@ -2,6 +2,59 @@
 
 English | [简体中文](CHANGELOG_ZH-CN.md)
 
+## [1.0.5] - 2026-11-11
+
+Build `11111140`.
+
+### Added
+
+- Spanish localization, bringing the app to nine supported locales.
+- iPhone Air model presets and a Japanese README.
+
+### Changed
+
+- About now lists the supported OS as iOS / iPadOS 27.x. Installation remains
+  available on 26.x, where on-device MobileGestalt access is marked unsupported.
+- Updated Korean translations, corrected mixed-language text in Traditional
+  Chinese and other locales, and renamed the Chinese Photos Clean Up preset
+  to “照片消除”.
+- Corrected the Internal Build label and added confirmation before enabling
+  this system-wide flag.
+
+### Fixed
+
+- Device access preserves existing App Group cache contents.
+- Reverting Dynamic Island restores its layout together with its capability
+  flag, without discarding unrelated staged artwork changes.
+- Original-value recovery now checks the cache generation and layout, keeps
+  unavailable originals distinct from missing fields, and avoids repeatedly
+  reading old backup history.
+- Restoring an unchanged backup skips unnecessary device writes. Failed backup
+  deletions remain retryable, and local backup replacement clears inherited
+  device-ownership status.
+- Exports of verified device backups carry device-bound proof. Temporary
+  export files are removed after sharing or cancellation.
+- Direct file imports are captured before confirmation is deferred, and
+  coordinated reads run off the main thread. Temporary provider failures or
+  one inaccessible App Group no longer block other queued imports.
+- Shared import handling checks container boundaries, rejects symlink paths,
+  bounds filename metadata, and cleans abandoned files without interrupting
+  active writers.
+- Device identity changes are rejected before system writes. Duplicate cache
+  descriptors are validated, and unchanged NaN values compare consistently.
+
+### Download and signing
+
+- Some users report incomplete downloads with Safari on iOS 27. If an IPA is
+  reported as damaged or cannot be extracted, download it again; it may take
+  several attempts. Try another browser if the issue persists. This has not
+  been confirmed as a Safari or iOS defect.
+- Re-sign with a certificate and profile containing at least one usable App
+  Group. Keep the share extension and configure a common App Group for both
+  the app and extension.
+
+**Full Changelog**: https://github.com/huamidev/GestaltX/compare/v1.0.4...v1.0.5
+
 ## [1.0.4] - 2026-11-10
 
 Build `11101436`.
@@ -82,4 +135,5 @@ Build `11101436`.
 
 **Full Changelog**: https://github.com/huamidev/GestaltX/compare/v1.0.3...v1.0.4
 
+[1.0.5]: https://github.com/huamidev/GestaltX/releases/tag/v1.0.5
 [1.0.4]: https://github.com/huamidev/GestaltX/releases/tag/v1.0.4

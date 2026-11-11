@@ -4,7 +4,7 @@
 
 <h1 align="center">GestaltX</h1>
 
-[![Version](https://img.shields.io/badge/version-1.0.4-blue)](https://github.com/huamidev/GestaltX)
+[![Version](https://img.shields.io/badge/version-1.0.5-blue)](https://github.com/huamidev/GestaltX)
 [![Platform](https://img.shields.io/badge/iOS-27.x-black?logo=apple)](#互換性)
 [![SwiftUI](https://img.shields.io/badge/Swift-SwiftUI-orange?logo=swift)](https://github.com/huamidev/GestaltX)
 [![License](https://img.shields.io/badge/license-GPLv3-blue)](LICENSE)
@@ -40,6 +40,13 @@ iPhone と iPad 向けの MobileGestalt エディターです。開発者は [hu
 **iOS / iPadOS 27.x** に対応しています。**iOS / iPadOS 26.x では、オンデバイスでの MobileGestalt へのアクセスには対応していません。** [worse_query](https://github.com/forcequitOS/worse_query) を利用しています。SystemGroup へのアクセスには iOS 27 が必要で、利用できる機能はデバイスと OS によって異なります。ローカルの plist の編集にも対応しています。
 
 署名には、使用可能な App Group を少なくとも 1 つ含む証明書とプロビジョニングプロファイルが必要です。アプリとそれに埋め込まれた共有拡張機能は、少なくとも 1 つの **共通の App Group** で署名し、再署名の際も拡張機能を残してください。どちらのプロセスも、実際に署名された App Group を実行時に検出します。配布されている IPA には、これらのエンタイトルメントを埋め込んだ ad-hoc 署名が施されているため、SideStore や AltStore が再署名時にそれらを検出できます。開発者証明書では署名されていません。
+
+## ダウンロード
+
+IPA は [Releases](https://github.com/huamidev/GestaltX/releases/latest) からダウンロードしてください。
+iOS 27 の Safari でダウンロードが不完全になるという報告があります。
+破損や解凍エラーが表示された場合は、数回ダウンロードし直してください。
+改善しない場合は別のブラウザをお試しください。原因はまだ確認されていません。
 
 ## plist をインポートする
 
