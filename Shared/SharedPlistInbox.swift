@@ -16,6 +16,7 @@ struct SharedPlistEntry: Codable, Identifiable, Sendable {
 
 struct SharedPlistInbox: Sendable {
     static let maximumByteCount = 16 * 1024 * 1024
+    private static let maximumMetadataByteCount = 4096
     let directory: URL
     private let container: URL
     private let namespace: String
@@ -104,16 +105,17 @@ struct SharedPlistInbox: Sendable {
         guard let parent = try openDirectory(create: true) else { throw Self.invalidQueue }
         defer { close(parent) }
         let id = UUID()
-        let leaf = (name as NSString).lastPathComponent.filter { !$0.isNewline && !$0.isASCIIControl }
-        let entry = SharedPlistEntry(id: id, name: leaf.isEmpty ? "MobileGestalt.plist" : String(leaf.prefix(200)),
+        let entry = SharedPlistEntry(id: id, name: Self.displayName(name),
                                     created: Date(), byteCount: data.count)
+        let metadata = try JSONEncoder().encode(entry)
+        guard metadata.count <= Self.maximumMetadataByteCount else { throw Self.invalidQueue }
         let staging = "." + id.uuidString + ".pending"
         do {
             guard mkdirat(parent, staging, 0o700) == 0 else { throw Self.fileError() }
             let stagingDirectory = try Self.openChild(staging, in: parent)
             defer { close(stagingDirectory) }
             try Self.write(data, named: "document.plist", in: stagingDirectory)
-            try Self.write(JSONEncoder().encode(entry), named: "entry.json", in: stagingDirectory)
+            try Self.write(metadata, named: "entry.json", in: stagingDirectory)
             // Publish only complete pairs. The main app ignores hidden staging folders.
             guard renameat(parent, staging, parent, id.uuidString) == 0 else { throw Self.fileError() }
         } catch {
@@ -130,7 +132,7 @@ struct SharedPlistInbox: Sendable {
                 guard let id = UUID(uuidString: name),
                       let child = try? Self.openChild(name, in: parent) else { return nil }
                 defer { close(child) }
-                guard let bytes = try? Self.readLimited("entry.json", in: child, limit: 4096),
+                guard let bytes = try? Self.readLimited("entry.json", in: child, limit: Self.maximumMetadataByteCount),
                       let entry = try? JSONDecoder().decode(SharedPlistEntry.self, from: bytes), entry.id == id,
                       (0...Self.maximumByteCount).contains(entry.byteCount) else { return nil }
                 return entry
@@ -239,6 +241,22 @@ struct SharedPlistInbox: Sendable {
             else if unlinkat(directory, child, 0) != 0 { throw fileError() }
         }
         guard unlinkat(parent, name, AT_REMOVEDIR) == 0 else { throw fileError() }
+
+
+    private static func displayName(_ name: String) -> String {
+        let leaf = (name as NSString).lastPathComponent.filter { !$0.isNewline && !$0.isASCIIControl }
+        var result = ""
+        var byteCount = 0
+        // A Character may contain many UTF-8 bytes, so a character count alone
+        // cannot keep entry.json within the reader's limit. Leave room for JSON
+        // escaping and the remaining metadata, without splitting a grapheme.
+        for character in leaf.prefix(200) {
+            let count = String(character).utf8.count
+            guard count <= 1024 - byteCount else { break }
+            result.append(character)
+            byteCount += count
+        }
+        return result.isEmpty ? "MobileGestalt.plist" : result
     }
 }
 
