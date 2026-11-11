@@ -365,5 +365,6 @@
   "Internal Build": "Внутренняя сборка",
   "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "Изменяет системный флаг InternalBuild, а не только сведения о хранилище. Поведение системных служб может измениться. Возврат восстанавливает записанное исходное значение.",
   "Enable Internal Build?": "Включить внутреннюю сборку?",
-  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Изменение системного флага InternalBuild будет подготовлено. Оно может затронуть службы за пределами экрана хранилища. Перед применением можно проверить изменение."
+  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Изменение системного флага InternalBuild будет подготовлено. Оно может затронуть службы за пределами экрана хранилища. Перед применением можно проверить изменение.",
+  "The device proof is temporarily unavailable. Unlock this device and try again.": "Подтверждение устройства временно недоступно. Разблокируйте устройство и повторите попытку."
 }

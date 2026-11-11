@@ -365,5 +365,6 @@
   "Internal Build": "Bản dựng nội bộ",
   "Changes the system-wide InternalBuild flag, not just storage information. System services may behave differently. Revert restores the recorded original value.": "Thay đổi cờ InternalBuild trên toàn hệ thống, không chỉ thông tin bộ nhớ. Hoạt động của các dịch vụ hệ thống có thể thay đổi. Hoàn nguyên sẽ khôi phục giá trị gốc đã ghi lại.",
   "Enable Internal Build?": "Bật bản dựng nội bộ?",
-  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Thao tác này đưa thay đổi cờ InternalBuild toàn hệ thống vào danh sách chờ. Nó có thể ảnh hưởng đến các dịch vụ ngoài màn hình bộ nhớ. Bạn có thể xem lại thay đổi trước khi áp dụng."
+  "This stages the system-wide InternalBuild flag. It can affect system services beyond the storage screen. You can review the change before applying it.": "Thao tác này đưa thay đổi cờ InternalBuild toàn hệ thống vào danh sách chờ. Nó có thể ảnh hưởng đến các dịch vụ ngoài màn hình bộ nhớ. Bạn có thể xem lại thay đổi trước khi áp dụng.",
+  "The device proof is temporarily unavailable. Unlock this device and try again.": "Bằng chứng thiết bị tạm thời không khả dụng. Hãy mở khóa thiết bị này rồi thử lại."
 }

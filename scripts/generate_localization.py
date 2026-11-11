@@ -320,6 +320,7 @@ MG Control	MG 控制
 Read MobileGestalt in Tools, or share this device's plist to GestaltX.	在工具中读取 MobileGestalt，或将本机 plist 分享到 GestaltX。
 This plist has been verified for this device. Import it?	已核验此 plist 属于本机，是否导入？
 This plist's device proof could not be verified on this device.	无法在本机验证此 plist 的设备凭证。
+The device proof is temporarily unavailable. Unlock this device and try again.	设备凭证暂时不可用。请解锁此设备后重试。
 This plist uses a different system cache layout and cannot be restored.	此 plist 的系统缓存布局与本机不符，无法恢复。
 Restore Imported Plist	恢复导入的 plist
 The current device file will be backed up before restoring. Restart the device afterward.	恢复前会备份当前设备文件，完成后请重启设备。
