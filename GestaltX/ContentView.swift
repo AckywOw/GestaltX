@@ -830,6 +830,15 @@ struct BackupsView: View {
 
 struct SessionLogView: View {
     @EnvironmentObject private var model: GestaltManager
+    @State private var export: TemporaryExport?
+
+    private func shareLog() {
+        let text = model.logs.joined(separator: "\n") + "\n"
+        guard !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        let name = "GestaltX-session-\(Int(Date.now.timeIntervalSince1970)).log"
+        export = try? TemporaryExport(data: Data(text.utf8), name: name)
+    }
+
     var body: some View {
         ScrollView {
             Text(model.logs.isEmpty ? L("No activity yet.") : model.logs.joined(separator: "\n"))
@@ -838,7 +847,17 @@ struct SessionLogView: View {
                 .environment(\.layoutDirection, .leftToRight)
         }
         .navigationTitle(L("Session Log"))
-        .toolbar { Button(L("Clear")) { model.clearLog() } }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { shareLog() } label: { Image(systemName: "square.and.arrow.up") }
+                    .disabled(model.logs.isEmpty)
+                    .accessibilityLabel(L("Share Log"))
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(L("Clear")) { model.clearLog() }
+            }
+        }
+        .sheet(item: $export) { ShareSheet(export: $0) }
     }
 }
 

@@ -14,6 +14,76 @@
 #include <unistd.h>
 #include <dlfcn.h>
 #include <dirent.h>
+#include <string.h>
+#include <stdarg.h>
+
+static void GXAccessLog(NSString *format, ...) NS_FORMAT_FUNCTION(1, 2);
+static void GXAccessLog(NSString *format, ...) {
+    va_list arguments;
+    va_start(arguments, format);
+    NSString *message = [[NSString alloc] initWithFormat:format arguments:arguments];
+    va_end(arguments);
+    NSLog(@"[GXAccess] %@", message);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"GestaltX.worse_query.log"
+                                                      object:nil userInfo:@{@"message": message}];
+}
+
+// Snapshot of a container path's identity xattr for diagnostics. Called only at
+// decision points (never inside the fsgetpath hot loop) to keep log volume low.
+static NSString *GXContainerDiagnostic(NSString *path) {
+    if (!path) return @"container=<nil>";
+    NSMutableString *out = [NSMutableString stringWithString:@"container="];
+    struct stat st;
+    if (lstat(path.fileSystemRepresentation, &st)) {
+        [out appendFormat:@"lstat errno=%d (%s)", errno, strerror(errno)];
+        return out;
+    }
+    [out appendFormat:@"ino=%llu mode=%o", (unsigned long long)st.st_ino, st.st_mode & 07777];
+    ssize_t size = listxattr(path.fileSystemRepresentation, NULL, 0, XATTR_NOFOLLOW);
+    if (size < 0) {
+        [out appendFormat:@" listxattr errno=%d (%s)", errno, strerror(errno)];
+    } else {
+        [out appendString:@" xattrs=["];
+        if (size > 0) {
+            char names[2048] = {0};
+            ssize_t read = listxattr(path.fileSystemRepresentation, names, sizeof(names)-1, XATTR_NOFOLLOW);
+            if (read > 0) {
+                BOOL first = YES;
+                char *cursor = names;
+                ssize_t remaining = read;
+                while (remaining > 0) {
+                    size_t len = strlen(cursor);
+                    [out appendFormat:@"%@%s", first ? @"" : @", ", cursor];
+                    first = NO;
+                    cursor += len + 1;
+                    remaining -= (ssize_t)(len + 1);
+                }
+            } else {
+                [out appendFormat:@"read errno=%d (%s)", errno, strerror(errno)];
+            }
+        }
+        [out appendString:@"]"];
+    }
+    const char *keys[] = { "com.apple.containermanager.identity", "com.apple.containermanager.identifier" };
+    for (NSUInteger i = 0; i < sizeof(keys) / sizeof(keys[0]); i++) {
+        char attribute[1024] = {0};
+        ssize_t length = getxattr(path.fileSystemRepresentation, keys[i],
+                                 attribute, sizeof(attribute)-1, 0, XATTR_NOFOLLOW);
+        if (length > 0) {
+            NSString *value = [[NSString alloc] initWithBytes:attribute length:(size_t)length encoding:NSUTF8StringEncoding];
+            if (value) {
+                [out appendFormat:@" %s=%@", keys[i], value];
+            } else {
+                NSMutableString *hex = [NSMutableString string];
+                for (ssize_t b = 0; b < length && b < 64; b++) [hex appendFormat:@"%02x", (unsigned char)attribute[b]];
+                [out appendFormat:@" %s=<%zd bytes hex:%@>", keys[i], length, hex];
+            }
+        } else {
+            [out appendFormat:@" %s errno=%d (%s)", keys[i], errno, strerror(errno)];
+        }
+    }
+    return out;
+}
 
 @interface NSObject (GXCustomizationWorkspace)
 + (id)defaultWorkspace;
@@ -35,11 +105,18 @@ static NSArray<NSString *> *GXAllowedApplications(void) {
     return @[@"com.apple.PosterBoard"];
 }
 static NSString *GXContainerIdentity(NSString *path) {
-    char attribute[1024] = {0};
-    ssize_t length = getxattr(path.fileSystemRepresentation, "com.apple.containermanager.identifier",
-                             attribute, sizeof(attribute)-1, 0, XATTR_NOFOLLOW);
-    return length > 0 ? [[NSString alloc] initWithBytes:attribute length:strnlen(attribute,(size_t)length)
-                                              encoding:NSUTF8StringEncoding] : nil;
+    // iOS 26/27 renamed this xattr from `.identifier` to `.identity`.
+    const char *keys[] = { "com.apple.containermanager.identity", "com.apple.containermanager.identifier" };
+    for (NSUInteger i = 0; i < sizeof(keys) / sizeof(keys[0]); i++) {
+        char attribute[1024] = {0};
+        ssize_t length = getxattr(path.fileSystemRepresentation, keys[i],
+                                 attribute, sizeof(attribute)-1, 0, XATTR_NOFOLLOW);
+        if (length > 0) {
+            return [[NSString alloc] initWithBytes:attribute length:strnlen(attribute,(size_t)length)
+                                          encoding:NSUTF8StringEncoding];
+        }
+    }
+    return nil;
 }
 static BOOL GXApplicationPath(NSString *path) {
     NSString *prefix = @"/private/var/mobile/Containers/Data/Application/";
@@ -202,28 +279,45 @@ static void GXDiscoverLaunchPaths(void) {
 }
 + (NSDictionary<NSString *,id> *)verifyLaunchApplication:(NSDictionary<NSString *,id> *)metadata {
     NSString *identifier=metadata[@"identifier"],*path=metadata[@"container"];
-    if(!GXLaunchIdentifier(identifier))return @{@"available":@NO,@"retryable":@NO};
+    if(!GXLaunchIdentifier(identifier)){GXAccessLog(@"verifyLaunch: invalid identifier '%@'",identifier);return @{@"available":@NO,@"retryable":@NO};}
     BOOL own=[identifier isEqualToString:NSBundle.mainBundle.bundleIdentifier];
     if(own)path=NSHomeDirectory();
-    if(!GXApplicationPath(path))return @{@"available":@NO,@"retryable":@YES};
+    if(!GXApplicationPath(path)){GXAccessLog(@"verifyLaunch[%@]: invalid container path '%@'",identifier,path?:@"<nil>");return @{@"available":@NO,@"retryable":@YES};}
     int64_t handle=own?-1:[self acquirePath:path];
-    if(!own&&handle<0)return @{@"available":@NO,@"retryable":@YES};
+    if(!own&&handle<0){GXAccessLog(@"verifyLaunch[%@]: acquirePath failed handle=%lld — %@",identifier,(long long)handle,GXContainerDiagnostic(path));return @{@"available":@NO,@"retryable":@YES};}
     @try {
         struct stat info;
-        if(lstat(path.fileSystemRepresentation,&info))return @{@"available":@NO,@"retryable":@(errno!=ENOENT),@"missing":@(errno==ENOENT)};
-        if(!own&&![GXContainerIdentity(path)isEqualToString:identifier])return @{@"available":@NO,@"retryable":@YES};
+        if(lstat(path.fileSystemRepresentation,&info)){
+            GXAccessLog(@"verifyLaunch[%@]: lstat failed errno=%d (%s) path=%@",identifier,errno,strerror(errno),path);
+            return @{@"available":@NO,@"retryable":@(errno!=ENOENT),@"missing":@(errno==ENOENT)};
+        }
+        NSString *actual=GXContainerIdentity(path);
+        if(!own&&![actual isEqualToString:identifier]){
+            GXAccessLog(@"verifyLaunch[%@]: identity mismatch actual=%@ — %@",identifier,actual?:@"<nil>",GXContainerDiagnostic(path));
+            return @{@"available":@NO,@"retryable":@YES};
+        }
         [NSUserDefaults.standardUserDefaults setObject:path forKey:[@"GestaltX.launch.container." stringByAppendingString:identifier]];
-        return @{@"available":@(GXHasLaunchImages(path,identifier)),@"retryable":@NO};
+        BOOL available=GXHasLaunchImages(path,identifier);
+        GXAccessLog(@"verifyLaunch[%@]: available=%d",identifier,available);
+        return @{@"available":@(available),@"retryable":@NO};
     }@finally{if(handle>=0)worse_query_release(handle);}
 }
 + (NSString *)launchContainerForIdentifier:(NSString *)identifier {
-    if(!GXLaunchIdentifier(identifier))return nil;
+    if(!GXLaunchIdentifier(identifier)){GXAccessLog(@"launchContainer: invalid identifier '%@'",identifier);return nil;}
     if([identifier isEqualToString:NSBundle.mainBundle.bundleIdentifier])return NSHomeDirectory();
-    NSString *path=[NSUserDefaults.standardUserDefaults stringForKey:[@"GestaltX.launch.container." stringByAppendingString:identifier]];
-    if(!GXApplicationPath(path))return nil;
+    NSString *key=[@"GestaltX.launch.container." stringByAppendingString:identifier];
+    NSString *path=[NSUserDefaults.standardUserDefaults stringForKey:key];
+    if(!GXApplicationPath(path)){
+        GXAccessLog(@"launchContainer[%@]: no cached container (key=%@)",identifier,key);
+        return nil;
+    }
     int64_t handle=[self acquirePath:path];
-    BOOL matches=handle>=0 && [GXContainerIdentity(path)isEqualToString:identifier];
+    NSString *actual=GXContainerIdentity(path);
     if(handle>=0)worse_query_release(handle);
+    BOOL matches=handle>=0 && [actual isEqualToString:identifier];
+    if(!matches){
+        GXAccessLog(@"launchContainer[%@]: failure handle=%lld actual=%@ — %@",identifier,(long long)handle,actual?:@"<nil>",GXContainerDiagnostic(path));
+    }
     return matches?path:nil;
 }
 + (NSArray<NSDictionary<NSString *,NSString *> *> *)launchApplications {
@@ -314,19 +408,32 @@ static void GXDiscoverLaunchPaths(void) {
             int64_t h = [self acquirePath:cached];
             NSString *actual = GXContainerIdentity(cached);
             if (h >= 0) worse_query_release(h);
+            GXAccessLog(@"container[%@]: cached=%@ handle=%lld actual=%@",identifier,cached,(long long)h,actual?:@"<nil>");
             if ([actual isEqualToString:identifier]) return cached;
+            GXAccessLog(@"container[%@]: cached identity mismatch — %@",identifier,GXContainerDiagnostic(cached));
+        } else {
+            GXAccessLog(@"container[%@]: no cached container, running fsgetpath scan",identifier);
         }
         [defaults removeObjectForKey:key];
         struct statfs volume;
-        if (statfs("/private/var/mobile/Containers/Data/Application", &volume)) return nil;
+        if (statfs("/private/var/mobile/Containers/Data/Application", &volume)) {
+            GXAccessLog(@"container[%@]: statfs failed errno=%d (%s)",identifier,errno,strerror(errno));
+            return nil;
+        }
         NSString *probe = [NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString];
         int fd = open(probe.fileSystemRepresentation,O_CREAT|O_EXCL|O_WRONLY|O_NOFOLLOW|O_CLOEXEC,0600);
-        if (fd < 0) return nil;
+        if (fd < 0) {
+            GXAccessLog(@"container[%@]: probe create failed errno=%d (%s)",identifier,errno,strerror(errno));
+            return nil;
+        }
         struct stat own; struct statfs ownVolume;
         BOOL valid = fstat(fd,&own) == 0 && fstatfs(fd,&ownVolume) == 0 &&
                      memcmp(&volume.f_fsid,&ownVolume.f_fsid,sizeof(fsid_t)) == 0;
         close(fd); unlink(probe.fileSystemRepresentation);
-        if (!valid || (uint64_t)own.st_ino > UINT64_MAX-100000) return nil;
+        if (!valid || (uint64_t)own.st_ino > UINT64_MAX-100000) {
+            GXAccessLog(@"container[%@]: probe invalid (valid=%d ino=%llu)",identifier,valid,(unsigned long long)own.st_ino);
+            return nil;
+        }
         uint64_t upper = (uint64_t)own.st_ino + 100000;
         NSDate *deadline = [NSDate dateWithTimeIntervalSinceNow:45];
         NSMutableDictionary<NSString *,NSString *> *found = NSMutableDictionary.new;
@@ -347,6 +454,7 @@ static void GXDiscoverLaunchPaths(void) {
                 if (found[identifier]) return found[identifier];
             }
         }
+        GXAccessLog(@"container[%@]: scan finished (up to ino=%llu, found=%@)",identifier,(unsigned long long)upper,found.allKeys);
         return nil;
     }
 }

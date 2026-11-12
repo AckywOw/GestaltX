@@ -94,11 +94,43 @@ enum CustomizationFiles {
 }
 
 enum CustomizationArchive {
+    static func log(_ text: String) {
+        NotificationCenter.default.post(name: Notification.Name("GestaltX.worse_query.log"), object: nil,
+                                        userInfo: ["message": text])
+    }
+
+    private static func archiveErrorName(_ error: Error) -> String {
+        let ns = error as NSError
+        if let archiveError = error as? Archive.ArchiveError {
+            let hint: String
+            switch archiveError {
+            case .unreadableArchive: hint = "文件损坏或无法读取"
+            case .invalidCRC32: hint = "校验和不匹配，包已损坏"
+            case .missingEndOfCentralDirectoryRecord: hint = "不是有效的 ZIP 包，或下载不完整/已截断"
+            case .uncontainedSymlink: hint = "包含指向外部的符号链接"
+            default: hint = "ZIP 结构错误"
+            }
+            return "\(archiveError)（\(hint)，code \(ns.code)）"
+        }
+        if let failure = error as? CustomizationFailure {
+            return failure.errorDescription ?? failure.key
+        }
+        return "code \(ns.code): \(ns.localizedDescription)"
+    }
+
     static func extract(_ source: URL, into root: URL) throws {
+        let size = (try? source.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? -1
+        log("Wallpaper import: 打开 \(source.lastPathComponent)（\(size) bytes）")
         guard try source.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? Int.max <= CustomizationFiles.maximumFile else {
             throw CustomizationFailure("The archive is invalid or exceeds the size limit.")
         }
-        let archive = try Archive(url: source, accessMode: .read)
+        let archive: Archive
+        do {
+            archive = try Archive(url: source, accessMode: .read)
+        } catch {
+            log("Wallpaper import: 打开 ZIP 失败 — \(archiveErrorName(error))")
+            throw error
+        }
         var seen = Set<String>(), expected: UInt64 = 0, count = 0
         for entry in archive {
             count += 1
@@ -141,9 +173,14 @@ enum CustomizationArchive {
                 guard crc == entry.checksum, UInt64(extracted) == entry.uncompressedSize else {
                     throw CustomizationFailure("The archive is invalid or exceeds the size limit.")
                 }
-            } catch { try? handle.close(); throw error }
+            } catch {
+                try? handle.close()
+                log("Wallpaper import: 解压条目 '\(path)' 失败 — \(archiveErrorName(error))")
+                throw error
+            }
         }
         successful = true
+        log("Wallpaper import: 完成（共解压 \(total) bytes）")
     }
 }
 
