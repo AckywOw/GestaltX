@@ -28,9 +28,9 @@ Applied	已应用
 Customization	个性化
 Import Wallpaper	导入壁纸
 No Wallpapers	暂无壁纸
-Only wallpapers added by this pack will be removed.	仅移除此包添加的壁纸。
+This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.	只从 GestaltX 删除导入包，已应用的壁纸会保留。
 Open Wallpaper Gallery	打开壁纸图库
-Remove this wallpaper pack?	删除这个壁纸包？
+Delete the imported wallpaper pack?	删除导入的壁纸包？
 Some files could not be restored. The backup has been kept.	部分文件未能恢复，备份已保留。
 System Settings	系统设置
 The app could not be opened. Open it manually.	未能打开应用，请手动打开。

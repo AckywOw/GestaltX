@@ -38,12 +38,42 @@ actor CustomizationStore {
         }.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
     }
     private func loadPack(_ id: UUID) throws -> WallpaperPack {
-        let pack = try PropertyListDecoder().decode(WallpaperPack.self, from: Data(contentsOf: manifest(id)))
+        try decodePack(Data(contentsOf: manifest(id)), id: id)
+    }
+    private func decodePack(_ data: Data, id: UUID) throws -> WallpaperPack {
+        let pack = try PropertyListDecoder().decode(WallpaperPack.self, from: data)
         guard pack.id == id else { throw CustomizationFailure("The archive contains unsafe paths or links.") }
         return pack
     }
     private func savePack(_ pack: WallpaperPack) throws {
         try CustomizationFiles.saveVerified(pack, to: manifest(pack.id))
+    }
+    private func installationRecordsURL(_ id: UUID) throws -> URL {
+        try CustomizationFiles.checked("WallpaperInstallations/\(id.uuidString).plist", in: storage, missing: true)
+    }
+    private func installationRecords(_ id: UUID) throws -> [Data] {
+        let url = try installationRecordsURL(id)
+        guard fm.fileExists(atPath: url.path) else { return [] }
+        let records = try PropertyListDecoder().decode([Data].self, from: CustomizationFiles.read(url))
+        for record in records { _ = try decodePack(record, id: id) }
+        return records
+    }
+    func deleteImportedWallpaper(_ id: UUID) throws {
+        let directory = try CustomizationFiles.checked("Wallpapers/\(id.uuidString)", in: storage, missing: true)
+        guard fm.fileExists(atPath: directory.path) else { return }
+        let data = try CustomizationFiles.read(CustomizationFiles.checked("Pack.plist", in: directory))
+        let pack = try decodePack(data, id: id)
+        if !pack.installations.isEmpty || pack.installedDevice != nil {
+            var records = try installationRecords(id)
+            if !records.contains(data) {
+                // Keep complete manifests, including unknown fields and interrupted installations.
+                // Multiple snapshots retain ownership if a share receipt reimports the same UUID.
+                records.append(data)
+                try CustomizationFiles.saveVerified(records, to: installationRecordsURL(id))
+            }
+        }
+        try fm.removeItem(at: directory)
+        log("Wallpapers: deleted the imported pack; applied wallpapers and installation records were kept.")
     }
     func importWallpaper(_ source: URL, id: UUID = UUID()) throws -> [WallpaperPack] {
         // Retrying a durable share receipt after interruption must not duplicate
@@ -169,22 +199,45 @@ actor CustomizationStore {
         try writer.replace([path: data], expected: [path: before])
     }
     func removeWallpaper(_ id: UUID) throws -> [WallpaperPack] {
-        var pack = try loadPack(id)
-        if !pack.installations.isEmpty {
+        let directory = try CustomizationFiles.checked("Wallpapers/\(id.uuidString)", in: storage, missing: true)
+        let hasImport = fm.fileExists(atPath: directory.path)
+        let imported = hasImport ? try loadPack(id) : nil
+        var packs = try installationRecords(id).map { try decodePack($0, id: id) }
+        if let imported { packs.append(imported) }
+        guard !packs.isEmpty else { throw CocoaError(.fileReadNoSuchFile) }
+        var installations: [WallpaperInstallation] = []
+        for pack in packs where !pack.installations.isEmpty {
             guard pack.installedDevice == device else { throw CustomizationFailure("The files changed. Read again before applying.") }
+            for entry in pack.installations {
+                if let index = installations.firstIndex(where: { $0.relative == entry.relative }) {
+                    guard installations[index].files == entry.files else {
+                        throw CustomizationFailure("This wallpaper was changed outside GestaltX. It was not removed.")
+                    }
+                    installations[index].committed = installations[index].committed || entry.committed
+                } else {
+                    installations.append(entry)
+                }
+            }
+        }
+        if !installations.isEmpty {
             try access("com.apple.PosterBoard") { root in
                 // Validate every installed folder before deleting the first one.
-                for entry in pack.installations {
+                for entry in installations {
                     let url = try installationURL(entry.relative, root: root)
                     if fm.fileExists(atPath: url.path), try CustomizationFiles.tree(url) != entry.files, entry.committed {
                         throw CustomizationFailure("This wallpaper was changed outside GestaltX. It was not removed.")
                     }
                 }
-                for entry in pack.installations { try removeInstallation(entry, root: root) }
-                pack.installations = []; try savePack(pack)
+                for entry in installations { try removeInstallation(entry, root: root) }
             }
         }
-        try fm.removeItem(at: folder(id))
+        if var pack = imported {
+            pack.installations = []
+            try savePack(pack)
+        }
+        let recordsURL = try installationRecordsURL(id)
+        if fm.fileExists(atPath: recordsURL.path) { try fm.removeItem(at: recordsURL) }
+        if hasImport { try fm.removeItem(at: directory) }
         log("Wallpapers: removed only this pack's tracked additions.")
         return try listWallpapers()
     }

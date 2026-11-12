@@ -49,6 +49,13 @@ final class CustomizationModel: ObservableObject {
     func removeWallpaper(_ pack: WallpaperPack) async {
         await run { packs = try await store.removeWallpaper(pack.id); previews.removeValue(forKey: pack.id) }
     }
+    func deleteImportedWallpaper(_ pack: WallpaperPack) async {
+        await run {
+            try await store.deleteImportedWallpaper(pack.id)
+            packs.removeAll { $0.id == pack.id }
+            previews.removeValue(forKey: pack.id)
+        }
+    }
     func open(_ identifier: String) {
         guard GXCustomizationAccess.openApplication(identifier) else {
             message = L("The app could not be opened. Open it manually."); return
@@ -156,10 +163,10 @@ struct WallpapersView: View {
             Button(L("Cancel"), role: .cancel) { pendingApply = nil }
             Button(L("Apply")) { if let pack = pendingApply { Task { await model.applyWallpaper(pack) } }; pendingApply = nil }
         } message: { Text(L("This adds new wallpapers without replacing your existing ones.")) }
-        .alert(L("Remove this wallpaper pack?"), isPresented: Binding(get: { pendingDelete != nil }, set: { if !$0 { pendingDelete = nil } })) {
+        .alert(L("Delete the imported wallpaper pack?"), isPresented: Binding(get: { pendingDelete != nil }, set: { if !$0 { pendingDelete = nil } })) {
             Button(L("Cancel"), role: .cancel) { pendingDelete = nil }
-            Button(L("Delete"), role: .destructive) { if let pack = pendingDelete { Task { await model.removeWallpaper(pack) } }; pendingDelete = nil }
-        } message: { Text(L("Only wallpapers added by this pack will be removed.")) }
+            Button(L("Delete"), role: .destructive) { if let pack = pendingDelete { Task { await model.deleteImportedWallpaper(pack) } }; pendingDelete = nil }
+        } message: { Text(L("This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.")) }
         .alert(L("GestaltX"), isPresented: Binding(get: { model.message != nil }, set: { if !$0 { model.message = nil } })) {
             Button(L("OK"), role: .cancel) { model.message = nil }
         } message: { Text(model.message ?? "") }
