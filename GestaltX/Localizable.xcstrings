@@ -1665,66 +1665,66 @@
         }
       }
     },
-    "Only wallpapers added by this pack will be removed.": {
+    "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Only wallpapers added by this pack will be removed."
+            "value": "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "仅移除此包添加的壁纸。"
+            "value": "只从 GestaltX 删除导入包，已应用的壁纸会保留。"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Solo se eliminarán los fondos añadidos por este paquete."
+            "value": "Solo se eliminará el paquete importado de GestaltX. Los fondos aplicados se conservarán."
           }
         },
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "فقط تصاویر زمینه‌ای که این بسته اضافه کرده حذف می‌شوند."
+            "value": "فقط بستهٔ واردشده از GestaltX حذف می‌شود. تصاویر زمینهٔ اعمال‌شده باقی می‌مانند."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "このパックで追加した壁紙のみ削除します。"
+            "value": "GestaltXから読み込んだパックのみ削除します。適用済みの壁紙は保持されます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 팩으로 추가한 배경화면만 제거합니다."
+            "value": "GestaltX에서 가져온 팩만 삭제합니다. 적용된 배경화면은 유지됩니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Будут удалены только обои, добавленные этим набором."
+            "value": "Набор будет удалён только из GestaltX. Применённые обои сохранятся."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Chỉ xóa các hình nền do gói này thêm vào."
+            "value": "Chỉ xóa gói đã nhập khỏi GestaltX. Các hình nền đã áp dụng sẽ được giữ lại."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "只會移除此套件新增的背景圖片。"
+            "value": "只會從 GestaltX 刪除匯入套件，已套用的背景圖片會保留。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "只會移除此套件新增的背景圖片。"
+            "value": "只從 GestaltX 刪除匯入套件，已套用的背景圖片會保留。"
           }
         }
       }
@@ -1793,66 +1793,66 @@
         }
       }
     },
-    "Remove this wallpaper pack?": {
+    "Delete the imported wallpaper pack?": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Remove this wallpaper pack?"
+            "value": "Delete the imported wallpaper pack?"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "删除这个壁纸包？"
+            "value": "删除导入的壁纸包？"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Eliminar este paquete de fondos?"
+            "value": "¿Eliminar el paquete de fondos importado?"
           }
         },
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "این بسته تصویر زمینه حذف شود؟"
+            "value": "بستهٔ تصویر زمینهٔ واردشده حذف شود؟"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "この壁紙パックを削除しますか？"
+            "value": "読み込んだ壁紙パックを削除しますか？"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이 배경화면 팩을 삭제할까요?"
+            "value": "가져온 배경화면 팩을 삭제할까요?"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Удалить этот набор обоев?"
+            "value": "Удалить импортированный набор обоев?"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Xóa gói hình nền này?"
+            "value": "Xóa gói hình nền đã nhập?"
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "要刪除此背景圖片套件嗎？"
+            "value": "刪除匯入的背景圖片套件？"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "要刪除此背景圖片套件嗎？"
+            "value": "刪除匯入的背景圖片套件？"
           }
         }
       }
