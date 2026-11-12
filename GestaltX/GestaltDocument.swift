@@ -178,15 +178,19 @@ struct GestaltDocument: @unchecked Sendable {
         guard kind == PlistValueKind.detect(b) else { return false }
         switch kind {
         case .dictionary:
-            guard let left = a as? [String: Any], let right = b as? [String: Any], Set(left.keys) == Set(right.keys) else { return false }
+            guard let left = a as? [String: Any], let right = b as? [String: Any], left.count == right.count else { return false }
+            // Equal counts plus a successful lookup for every left key prove
+            // the key sets match, without allocating two temporary Sets.
             return left.allSatisfy { key, value in right[key].map { valuesEqual(value, $0) } ?? false }
         case .array:
             guard let left = a as? [Any], let right = b as? [Any], left.count == right.count else { return false }
             return zip(left, right).allSatisfy { valuesEqual($0.0, $0.1) }
         case .integer:
             // int64Value wraps unsigned values above Int64.max (for example,
-            // UInt64.max becomes -1), hiding edits and readback corruption.
-            return (a as? NSNumber)?.stringValue == (b as? NSNumber)?.stringValue
+            // UInt64.max becomes -1). Compare the full numeric values without
+            // allocating two decimal strings for every integer in the plist.
+            guard let left = a as? NSNumber, let right = b as? NSNumber else { return false }
+            return left.compare(right) == .orderedSame
         case .real:
             guard let left = (a as? NSNumber)?.doubleValue,
                   let right = (b as? NSNumber)?.doubleValue else { return false }
