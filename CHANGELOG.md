@@ -2,6 +2,14 @@
 
 English | [简体中文](CHANGELOG_ZH-CN.md)
 
+## [1.0.7] - 2026-11-13
+
+Build `11130112`.
+
+### Fixed
+
+- Fix container discovery on iOS 27.3 so wallpaper and App Launch Images can locate their containers again.
+
 ## [1.0.6] - 2026-11-12
 
 Build `11122300`.
