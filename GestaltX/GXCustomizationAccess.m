@@ -105,16 +105,29 @@ static NSArray<NSString *> *GXAllowedApplications(void) {
     return @[@"com.apple.PosterBoard"];
 }
 static NSString *GXContainerIdentity(NSString *path) {
-    // iOS 26/27 renamed this xattr from `.identifier` to `.identity`.
+    // iOS 26/27 renamed this xattr from `.identifier` to `.identity`, and the
+    // new value is a "key: value" document whose `identifier:` line holds the
+    // owning bundle ID (see tester log 0101). The legacy `.identifier` value is
+    // the bundle ID directly.
     const char *keys[] = { "com.apple.containermanager.identity", "com.apple.containermanager.identifier" };
     for (NSUInteger i = 0; i < sizeof(keys) / sizeof(keys[0]); i++) {
-        char attribute[1024] = {0};
+        char attribute[4096] = {0};
         ssize_t length = getxattr(path.fileSystemRepresentation, keys[i],
-                                 attribute, sizeof(attribute)-1, 0, XATTR_NOFOLLOW);
-        if (length > 0) {
-            return [[NSString alloc] initWithBytes:attribute length:strnlen(attribute,(size_t)length)
-                                          encoding:NSUTF8StringEncoding];
+                                  attribute, sizeof(attribute)-1, 0, XATTR_NOFOLLOW);
+        if (length <= 0) continue;
+        NSString *value = [[NSString alloc] initWithBytes:attribute length:strnlen(attribute,(size_t)length)
+                                                  encoding:NSUTF8StringEncoding];
+        if (!value.length) continue;
+        NSCharacterSet *trim = NSCharacterSet.whitespaceAndNewlineCharacterSet;
+        for (NSString *line in [value componentsSeparatedByString:@"\n"]) {
+            NSString *trimmed = [line stringByTrimmingCharactersInSet:trim];
+            if ([trimmed hasPrefix:@"identifier:"]) {
+                NSString *identifier = [[trimmed substringFromIndex:11] stringByTrimmingCharactersInSet:trim];
+                if (identifier.length) return identifier;
+            }
         }
+        // Legacy flat value: the xattr itself is the bundle ID.
+        return value;
     }
     return nil;
 }
