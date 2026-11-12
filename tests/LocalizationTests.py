@@ -29,7 +29,7 @@ CAPABILITY_KEYS = (
     "Internal Settings Bundle",
     "Expose Apple's internal settings bundle. Some system services may behave differently.",
     "On-Device Siri",
-    "Advertise on-device Siri understanding. Availability depends on hardware and region.",
+    "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.",
     "Audio Intelligence",
     "Advertise the iOS 27 audio intelligence capability.",
     "Personal Translator",

@@ -346,7 +346,7 @@
   "Internal Settings Bundle": "Paquete de ajustes internos",
   "Expose Apple's internal settings bundle. Some system services may behave differently.": "Exponer el paquete de ajustes internos de Apple. Algunos servicios del sistema pueden comportarse de manera diferente.",
   "On-Device Siri": "Siri en el dispositivo",
-  "Advertise on-device Siri understanding. Availability depends on hardware and region.": "Anunciar procesamiento de Siri en el dispositivo. La disponibilidad depende del hardware y la región.",
+  "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.": "Siri usa un tipo de capacidad específico del dispositivo. Cambiarlo puede afectar a la interfaz de Siri de Apple Intelligence. Mantén el valor actual o restaura el original registrado.",
   "Audio Intelligence": "Inteligencia de audio",
   "Advertise the iOS 27 audio intelligence capability.": "Anunciar la función de inteligencia de audio de iOS 27.",
   "Personal Translator": "Traductor personal",

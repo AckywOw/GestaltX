@@ -37,6 +37,10 @@ struct Capability: Identifiable {
     /// Per-key values for presets that are not a plain Boolean 1, such as the
     /// parallax switch (0) or the AOD flipbook count.
     var values: [String: Any]? = nil
+    var availableChoices: [PresetChoice] {
+        // Preserve the device-specific Siri capability type and allow recovery from older overrides.
+        id == "siriOnDevice" ? [.keep, .disable, .removeAdded] : PresetChoice.allCases
+    }
     var requiresEnableConfirmation: Bool { id == "storage" }
     var effectHint: String {
         switch id {
@@ -53,7 +57,7 @@ struct Capability: Identifiable {
     }
     var enabled: Any { id == "ipadApps" ? [1, 2] : NSNumber(value: 1) }
     func apply(_ choice: PresetChoice, to document: inout GestaltDocument, restoringFrom snapshot: DocumentSnapshot) {
-        guard choice != .keep else { return }
+        guard choice != .keep, availableChoices.contains(choice) else { return }
         for key in keys {
             switch choice {
             case .keep: break
@@ -100,7 +104,7 @@ struct Capability: Identifiable {
         .init(id: "stageManager", category: .ipad, title: "Stage Manager", detail: "Expose Stage Manager support. Layout behavior varies by device.", keys: ["qeaj75wk3HF4DwQ8qbIi7g"], caution: true),
         .init(id: "ipadApps", category: .ipad, title: "iPad App Compatibility", detail: "Allow iPad app compatibility types on iPhone.", keys: ["9MZ5AdH43csAUajl/dU+IQ"]),
         .init(id: "ai", category: .intelligence, title: "Apple Intelligence Capability", detail: "Set the generative models capability. Availability also depends on hardware, region and Apple services.", keys: ["A62OafQ85EJAiiqKn4agtg"]),
-        .init(id: "siriOnDevice", category: .intelligence, title: "On-Device Siri", detail: "Advertise on-device Siri understanding. Availability depends on hardware and region.", keys: ["K/R1GfGfCkXvEhaPS2Vrng"], caution: true),
+        .init(id: "siriOnDevice", category: .intelligence, title: "On-Device Siri", detail: "Siri uses a device-specific capability type. Changing it may affect the Apple Intelligence Siri interface. Keep the current value or restore the recorded original.", keys: ["K/R1GfGfCkXvEhaPS2Vrng"], caution: true),
         .init(id: "audioIntelligence", category: .intelligence, title: "Audio Intelligence", detail: "Advertise the iOS 27 audio intelligence capability.", keys: ["rb2tKZxlj0Gm2tBmUQSLqQ"], caution: true),
         .init(id: "personalTranslator", category: .intelligence, title: "Personal Translator", detail: "Advertise the personal translator capability.", keys: ["M1n2sAqf33NAOgZRGxQYBA"], caution: true),
         .init(id: "photosCleanUp", category: .intelligence, title: "Photos Clean Up", detail: "Advertise the photos inpainting (Clean Up) capability.", keys: ["XNCjqOupLM/S8fNyxRNQTA"], caution: true),

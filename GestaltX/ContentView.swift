@@ -399,7 +399,11 @@ struct CategoryView: View {
                             if capability.id == "dynamicIsland" && $0 != .keep { model.subtype = 0 }
                         }
                     )) {
-                        ForEach(PresetChoice.allCases) { Text(L($0.title)).tag($0) }
+                        ForEach(capability.availableChoices) { choice in
+                            let title = capability.id == "siriOnDevice" && choice == .disable
+                                ? "Restore Original" : choice.title
+                            Text(L(title)).tag(choice)
+                        }
                     } label: {
                         HStack(spacing: 6) {
                             Text(L(capability.title))
@@ -409,7 +413,7 @@ struct CategoryView: View {
                             }
                         }
                     }.pickerStyle(.menu)
-                    if capability.requiresEnableConfirmation {
+                    if capability.requiresEnableConfirmation || capability.id == "siriOnDevice" {
                         Text(L(capability.detail)).font(.caption).foregroundStyle(.secondary)
                     }
                     HStack(alignment: .firstTextBaseline) {
