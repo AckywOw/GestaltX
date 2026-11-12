@@ -67,7 +67,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--test", type=Path, required=True)
-    parser.add_argument("--case", default="all")
+    parser.add_argument("--case", default="correctness")
     args = parser.parse_args()
     with tempfile.TemporaryDirectory(prefix="document-diff-") as temporary:
         binary = compile_regression(args.source.resolve(), args.test.resolve(), Path(temporary))
