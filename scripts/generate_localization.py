@@ -445,6 +445,7 @@ System settings could not be verified after writing.	写入后无法验证系统
 Some settings could not be restored automatically. Read them again and use Revert.	部分设置未能自动恢复，请重新读取并使用“还原”。
 These system settings are not accessible on this device.	当前设备无法访问这些系统设置。
 Lock screen text updated.	锁屏文字已更新。
+Share Log	分享日志
 '''
 entries = {}
 for line in TRANSLATIONS.strip().splitlines():
