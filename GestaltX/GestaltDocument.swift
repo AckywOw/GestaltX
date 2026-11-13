@@ -398,6 +398,7 @@ actor GestaltFileStore {
             .filter { $0.pathExtension == "json" }
             .compactMap { url -> BackupRecord? in
                 guard let record = try? JSONDecoder().decode(BackupRecord.self, from: Data(contentsOf: url)),
+                      UUID(uuidString: url.deletingPathExtension().lastPathComponent) == record.id,
                       FileManager.default.fileExists(atPath: backupDirectory.appendingPathComponent(record.filename).path) else { return nil }
                 return record
             }.sorted { $0.date > $1.date }
