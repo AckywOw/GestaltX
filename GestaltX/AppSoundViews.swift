@@ -407,11 +407,18 @@ private struct AppSoundEditor: View {
         .task { await model.select(entry, app: app) }
         .onChange(of: presenting, initial: true) { _, value in customizations.setPresenting(value, owner: presentationOwner) }
         .onDisappear { model.stop(); if !importsAudio { customizations.setPresenting(false, owner: presentationOwner) } }
-        .fileImporter(isPresented: $importsAudio, allowedContentTypes: [.audio]) { result in
-            switch result {
-            case .success(let url): Task { await model.choose(url) }
-            case .failure(let error): if (error as NSError).code != CocoaError.userCancelled.rawValue { model.message = error.localizedDescription }
+        .sheet(isPresented: $importsAudio) {
+            CustomizationFilePicker(allowedTypes: [.item]) { result in
+                importsAudio = false
+                switch result {
+                case .success(let url): Task { await model.choose(url) }
+                case .failure(let error):
+                    if (error as NSError).code != CocoaError.userCancelled.rawValue {
+                        model.message = error.localizedDescription
+                    }
+                }
             }
+            .ignoresSafeArea()
         }
         .alert(L("Apply these changes?"), isPresented: $confirmsApply) {
             Button(L("Cancel"), role: .cancel) {}
@@ -467,11 +474,18 @@ private struct AppSoundCapturedEditor: View {
         .toolbar { ToolbarItem(placement: .topBarTrailing) { if model.busy { ProgressView() } } }
         .onChange(of: presenting, initial: true) { _, value in customizations.setPresenting(value, owner: presentationOwner) }
         .onDisappear { model.stop(); if !importsAudio { customizations.setPresenting(false, owner: presentationOwner) } }
-        .fileImporter(isPresented: $importsAudio, allowedContentTypes: [.audio]) { result in
-            switch result {
-            case .success(let url): Task { await model.chooseNamed(url, name: clue.identityFilename) }
-            case .failure(let error): if (error as NSError).code != CocoaError.userCancelled.rawValue { model.message = error.localizedDescription }
+        .sheet(isPresented: $importsAudio) {
+            CustomizationFilePicker(allowedTypes: [.item]) { result in
+                importsAudio = false
+                switch result {
+                case .success(let url): Task { await model.chooseNamed(url, name: clue.identityFilename) }
+                case .failure(let error):
+                    if (error as NSError).code != CocoaError.userCancelled.rawValue {
+                        model.message = error.localizedDescription
+                    }
+                }
             }
+            .ignoresSafeArea()
         }
         .alert(L("Apply these changes?"), isPresented: $confirmsCreate) {
             Button(L("Cancel"), role: .cancel) {}
