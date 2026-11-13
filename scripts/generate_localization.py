@@ -520,6 +520,8 @@ If GestaltX is useful to you, a GitHub star helps a lot.	如果它对你有帮�
 Star on GitHub	去 GitHub 点 Star
 Maybe Later	以后再说
 Don't Ask Again	不再提醒
+Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.	无法连接设备控制台。请打开 LocalDevVPN，等它连接成功后重试。
+If this stays here, open LocalDevVPN and wait for it to finish connecting.	如果一直停在这里，请打开 LocalDevVPN，等它连接完成。
 '''
 entries = {}
 for line in TRANSLATIONS.strip().splitlines():

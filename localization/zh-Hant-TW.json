@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "如果它對你有幫助，歡迎到 GitHub 按個 Star 支持一下。",
   "Star on GitHub": "到 GitHub 按 Star",
   "Maybe Later": "稍後再說",
-  "Don't Ask Again": "不再提醒"
+  "Don't Ask Again": "不再提醒",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "無法連線至裝置主控台。請開啟 LocalDevVPN，等它連線成功後再試。",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "如果一直停在這裡，請開啟 LocalDevVPN，等它連線完成。"
 }

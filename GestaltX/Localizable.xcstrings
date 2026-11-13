@@ -33152,6 +33152,134 @@
           }
         }
       }
+    },
+    "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法连接设备控制台。请打开 LocalDevVPN，等它连接成功后重试。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se puede conectar con la consola del dispositivo. Abre LocalDevVPN, espera a que conecte y vuelve a intentarlo."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اتصال به کنسول دستگاه ممکن نیست. LocalDevVPN را باز کنید، منتظر اتصال بمانید و دوباره تلاش کنید."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスコンソールに接続できません。LocalDevVPN を開いて接続を待ち、もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기기 콘솔에 연결할 수 없습니다. LocalDevVPN을 열고 연결될 때까지 기다린 후 다시 시도하세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удаётся подключиться к консоли устройства. Откройте LocalDevVPN, дождитесь подключения и повторите попытку."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không thể kết nối với bảng điều khiển thiết bị. Hãy mở LocalDevVPN, đợi kết nối rồi thử lại."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法連線至裝置主控台。請開啟 LocalDevVPN，等它連線成功後再試。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法連線至裝置主控台。請開啟 LocalDevVPN，等它連線成功後再試。"
+          }
+        }
+      }
+    },
+    "If this stays here, open LocalDevVPN and wait for it to finish connecting.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If this stays here, open LocalDevVPN and wait for it to finish connecting."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果一直停在这里，请打开 LocalDevVPN，等它连接完成。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si se queda aquí, abre LocalDevVPN y espera a que termine de conectar."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اگر همین‌جا ماند، LocalDevVPN را باز کنید و منتظر تکمیل اتصال بمانید."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ここから進まない場合は、LocalDevVPN を開いて接続が完了するまで待ってください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "여기서 멈춰 있으면 LocalDevVPN을 열고 연결이 완료될 때까지 기다리세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Если экран не меняется, откройте LocalDevVPN и дождитесь завершения подключения."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nếu màn hình đứng ở đây, hãy mở LocalDevVPN và đợi kết nối hoàn tất."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果一直停在這裡，請開啟 LocalDevVPN，等它連線完成。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果一直停在這裡，請開啟 LocalDevVPN，等它連線完成。"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

@@ -43,7 +43,12 @@ struct NotificationCaptureView: View {
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active, case .paired = connection.state {
-                Task { _ = await connection.checkVPN(showProgress: false) }
+                Task {
+                    let host = await connection.checkVPN(showProgress: false)
+                    if capture.state == .connecting, host == nil {
+                        capture.abortConnecting(L("Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again."))
+                    }
+                }
             }
         }
         .alert(L("GestaltX"), isPresented: Binding(get: { connection.message != nil }, set: { if !$0 { connection.message = nil } })) {
@@ -98,6 +103,13 @@ struct NotificationCaptureView: View {
             switch capture.state {
             case .connecting:
                 HStack { ProgressView(); Text(L("Connecting…")) }
+                Text(L("If this stays here, open LocalDevVPN and wait for it to finish connecting."))
+                    .font(.footnote).foregroundStyle(.secondary)
+                if connection.vpnState == .unavailable {
+                    Button { connection.openLocalDevVPN() } label: {
+                        Label(L("Open LocalDevVPN"), systemImage: "arrow.up.forward.app")
+                    }
+                }
                 Button(role: .cancel) { capture.stop() } label: { Text(L("Stop Capture")) }
             case .capturing:
                 HStack { ProgressView(); Text(L("Capturing…")) }

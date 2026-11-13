@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "Nếu GestaltX hữu ích với bạn, một ngôi sao trên GitHub sẽ giúp ích rất nhiều.",
   "Star on GitHub": "Gắn sao trên GitHub",
   "Maybe Later": "Để sau",
-  "Don't Ask Again": "Không hỏi lại"
+  "Don't Ask Again": "Không hỏi lại",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "Không thể kết nối với bảng điều khiển thiết bị. Hãy mở LocalDevVPN, đợi kết nối rồi thử lại.",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "Nếu màn hình đứng ở đây, hãy mở LocalDevVPN và đợi kết nối hoàn tất."
 }

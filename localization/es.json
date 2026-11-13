@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "Si GestaltX te resulta útil, una estrella en GitHub ayuda mucho.",
   "Star on GitHub": "Dar una estrella en GitHub",
   "Maybe Later": "Más tarde",
-  "Don't Ask Again": "No volver a preguntar"
+  "Don't Ask Again": "No volver a preguntar",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "No se puede conectar con la consola del dispositivo. Abre LocalDevVPN, espera a que conecte y vuelve a intentarlo.",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "Si se queda aquí, abre LocalDevVPN y espera a que termine de conectar."
 }

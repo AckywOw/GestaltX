@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "役に立っているなら、GitHub でスターを付けていただけると助かります。",
   "Star on GitHub": "GitHub でスターを付ける",
   "Maybe Later": "あとで",
-  "Don't Ask Again": "今後表示しない"
+  "Don't Ask Again": "今後表示しない",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "デバイスコンソールに接続できません。LocalDevVPN を開いて接続を待ち、もう一度お試しください。",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "ここから進まない場合は、LocalDevVPN を開いて接続が完了するまで待ってください。"
 }

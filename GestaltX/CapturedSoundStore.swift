@@ -12,6 +12,12 @@ enum CapturedSoundEvent: Sendable {
 /// location, timestamp) — never the raw console text, notification body, pairing
 /// code, or absolute private container paths. Deduplicates per (bundle, file).
 actor CapturedSoundStore {
+    /// One actor per process so capture writes emit events to every listener
+    /// (the audio library subscribes while the capture sheet is open).
+    static let shared = CapturedSoundStore(
+        storage: DeviceConsolePaths.capturedSounds,
+        device: DeviceConsolePaths.deviceIdentifier)
+
     struct Limits: Sendable {
         var maxCount = 2048
         var maxFilenameLength = 255

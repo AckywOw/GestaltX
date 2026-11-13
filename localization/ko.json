@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "유용하게 쓰고 계시다면 GitHub에서 스타를 눌러 주세요.",
   "Star on GitHub": "GitHub에서 스타 누르기",
   "Maybe Later": "나중에",
-  "Don't Ask Again": "다시 묻지 않기"
+  "Don't Ask Again": "다시 묻지 않기",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "기기 콘솔에 연결할 수 없습니다. LocalDevVPN을 열고 연결될 때까지 기다린 후 다시 시도하세요.",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "여기서 멈춰 있으면 LocalDevVPN을 열고 연결이 완료될 때까지 기다리세요."
 }

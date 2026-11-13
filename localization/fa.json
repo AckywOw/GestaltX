@@ -516,5 +516,7 @@
   "If GestaltX is useful to you, a GitHub star helps a lot.": "اگر GestaltX برایتان مفید است، یک ستاره در GitHub کمک زیادی می‌کند.",
   "Star on GitHub": "ستاره دادن در GitHub",
   "Maybe Later": "بعداً",
-  "Don't Ask Again": "دیگر نپرس"
+  "Don't Ask Again": "دیگر نپرس",
+  "Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again.": "اتصال به کنسول دستگاه ممکن نیست. LocalDevVPN را باز کنید، منتظر اتصال بمانید و دوباره تلاش کنید.",
+  "If this stays here, open LocalDevVPN and wait for it to finish connecting.": "اگر همین‌جا ماند، LocalDevVPN را باز کنید و منتظر تکمیل اتصال بمانید."
 }

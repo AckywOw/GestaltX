@@ -85,10 +85,11 @@ final class NotificationSoundCaptureModel: ObservableObject {
     @Published private(set) var capturedSounds: [CapturedNotificationSound] = []
     @Published var message: String?
 
-    let store = CapturedSoundStore(storage: DeviceConsolePaths.capturedSounds, device: DeviceConsolePaths.deviceIdentifier)
+    let store = CapturedSoundStore.shared
     private lazy var sink = CaptureSink(store: store)
     private var task: Task<Void, Never>?
     private let keepAlive = AudioKeepAlive()
+    private var watchdog: Task<Void, Never>?
 
     var isRunning: Bool { state == .connecting || state == .capturing }
     var capturedAppCount: Int { Set(capturedSounds.map(\.bundleID)).count }
@@ -126,6 +127,13 @@ final class NotificationSoundCaptureModel: ObservableObject {
 
         DeviceConsole.shared.setTargetHosts(LoopbackRoute.candidateHosts(userConfigured: loopbackHost.isEmpty ? [] : [loopbackHost]))
 
+        watchdog?.cancel()
+        watchdog = Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .seconds(8))
+            guard !Task.isCancelled, let self, self.state == .connecting else { return }
+            self.abortConnecting(L("Cannot reach the device console. Open LocalDevVPN, wait for it to connect, then try again."))
+        }
+
         let sink = self.sink
         task = Task {
             do {
@@ -151,14 +159,26 @@ final class NotificationSoundCaptureModel: ObservableObject {
     }
 
     func stop() {
+        watchdog?.cancel(); watchdog = nil
         DeviceConsole.shared.cancelCurrent()
         task?.cancel()
     }
 
+    func abortConnecting(_ text: String) {
+        watchdog?.cancel(); watchdog = nil
+        DeviceConsole.shared.cancelCurrent()
+        task?.cancel()
+        keepAlive.stop()
+        state = .failed(text)
+        message = text
+    }
+
     private func finish(_ newState: CaptureState) async {
+        watchdog?.cancel(); watchdog = nil
         await withCheckedContinuation { (c: CheckedContinuation<Void, Never>) in
             sink.end { c.resume() }
         }
+        if case .failed = state, newState == .stopped { task = nil; keepAlive.stop(); return }
         state = newState
         task = nil
         keepAlive.stop()

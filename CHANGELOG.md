@@ -2,6 +2,14 @@
 
 English | [简体中文](CHANGELOG_ZH-CN.md)
 
+## [1.1.1] - 2026-11-14
+
+Build `11140102`.
+
+### Fixed
+
+- Bug fixed.
+
 ## [1.1.0] - 2026-11-14
 
 Build `11140101`.
