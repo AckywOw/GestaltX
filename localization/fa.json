@@ -2,8 +2,8 @@
   "Siri AI Mode": "حالت هوش مصنوعی Siri",
   "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "SiriMode را بدون جعل سخت‌افزار روی 2 تنظیم می‌کند. آزمایشی است؛ بارگیری منابع و دسترسی تضمین نمی‌شود.",
   "Restore Hardware Identity": "بازیابی هویت سخت‌افزار",
-  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "فقط محصول، برد، CPU و شماره مدل اصلی را از این پشتیبان بازیابی می‌کند. تنظیمات هوش مصنوعی و منطقه حفظ می‌شوند. سپس دستگاه را راه‌اندازی مجدد کنید و Face ID و دیکته را آزمایش کنید.",
-  "A verified original hardware backup matching this device and cache is required.": "یک پشتیبان تأییدشده از سخت‌افزار اصلی که با این دستگاه و حافظه نهان مطابقت داشته باشد لازم است.",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "فقط محصول، برد، CPU و شماره مدل اصلی را از این پشتیبان بازیابی کنید. تنظیمات هوش مصنوعی و منطقه حفظ می‌شوند. پس از آن دستگاه را راه‌اندازی مجدد کرده و Face ID و دیکته را آزمایش کنید.",
+  "A verified original hardware backup matching this device and cache is required.": "به یک پشتیبان اصلی سخت‌افزار تأییدشده که با این دستگاه و کش مطابقت دارد نیاز است.",
   "Special Thanks": "سپاس ویژه",
   "Supported": "پشتیبانی می‌شود",
   "Unsupported": "پشتیبانی نمی‌شود",
@@ -435,5 +435,6 @@
   "This image could not be used. Choose another image.": "این تصویر قابل استفاده نیست. تصویر دیگری انتخاب کنید.",
   "Save Current Launch Image": "ذخیره تصویر آغاز فعلی",
   "Allow GestaltX to add photos in Settings, then try again.": "در تنظیمات اجازه افزودن عکس را به GestaltX بدهید و دوباره امتحان کنید.",
-  "The launch image was saved to Photos.": "تصویر آغاز در عکس‌ها ذخیره شد."
+  "The launch image was saved to Photos.": "تصویر آغاز در عکس‌ها ذخیره شد.",
+  "Share Log": "اشتراک‌گذاری گزارش"
 }

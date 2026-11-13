@@ -1,8 +1,8 @@
 {
   "Siri AI Mode": "Режим ИИ Siri",
   "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "Устанавливает SiriMode в 2 без подмены оборудования. Экспериментальная функция; загрузка ресурсов и доступность не гарантируются.",
-  "Restore Hardware Identity": "Восстановить идентификацию оборудования",
-  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Восстанавливает только исходные продукт, плату, CPU и номер модели из этой копии. Настройки ИИ и региона сохраняются. Затем перезагрузите устройство и проверьте Face ID и диктовку.",
+  "Restore Hardware Identity": "Восстановить идентичность оборудования",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Восстановить из этой резервной копии только исходные продукт, плату, CPU и номер модели. Настройки ИИ и региона сохраняются. После этого перезагрузите устройство и проверьте Face ID и диктовку.",
   "A verified original hardware backup matching this device and cache is required.": "Требуется проверенная исходная резервная копия оборудования, соответствующая этому устройству и кэшу.",
   "Special Thanks": "Особая благодарность",
   "Supported": "Поддерживается",
@@ -435,5 +435,6 @@
   "This image could not be used. Choose another image.": "Не удалось использовать это изображение. Выберите другое.",
   "Save Current Launch Image": "Сохранить текущее изображение запуска",
   "Allow GestaltX to add photos in Settings, then try again.": "Разрешите GestaltX добавлять фото в Настройках и повторите попытку.",
-  "The launch image was saved to Photos.": "Изображение запуска сохранено в Фото."
+  "The launch image was saved to Photos.": "Изображение запуска сохранено в Фото.",
+  "Share Log": "Поделиться журналом"
 }

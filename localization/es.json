@@ -1,9 +1,9 @@
 {
   "Siri AI Mode": "Modo IA de Siri",
   "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "Establece SiriMode en 2 sin falsear el hardware. Experimental; no se garantizan las descargas de recursos ni la disponibilidad.",
-  "Restore Hardware Identity": "Restaurar identidad del hardware",
-  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Restaura solo el producto, la placa, la CPU y el número de modelo originales de esta copia. Conserva los ajustes de IA y región. Después, reinicia y prueba Face ID y el dictado.",
-  "A verified original hardware backup matching this device and cache is required.": "Se necesita una copia original verificada del hardware que coincida con este dispositivo y su caché.",
+  "Restore Hardware Identity": "Restaurar identidad de hardware",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Restaura solo el producto, la placa, la CPU y el número de modelo originales de esta copia. Los ajustes de IA y región se conservan. Reinicia y prueba Face ID y el dictado después.",
+  "A verified original hardware backup matching this device and cache is required.": "Se necesita una copia de seguridad original del hardware verificada y compatible con este dispositivo y caché.",
   "WAPI": "WAPI",
   "Disable WAPI": "Desactivar WAPI",
   "Restore Original": "Restaurar original",
@@ -435,5 +435,6 @@
   "This image could not be used. Choose another image.": "No se puede usar esta imagen. Elige otra.",
   "Save Current Launch Image": "Guardar imagen de inicio actual",
   "Allow GestaltX to add photos in Settings, then try again.": "Permite a GestaltX añadir fotos en Ajustes e inténtalo de nuevo.",
-  "The launch image was saved to Photos.": "La imagen de inicio se ha guardado en Fotos."
+  "The launch image was saved to Photos.": "La imagen de inicio se ha guardado en Fotos.",
+  "Share Log": "Compartir registro"
 }

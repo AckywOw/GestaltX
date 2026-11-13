@@ -1,6 +1,326 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "Siri AI Mode": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI Mode"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI 模式"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo IA de Siri"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حالت هوش مصنوعی Siri"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI モード"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI 모드"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Режим ИИ Siri"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chế độ AI của Siri"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI 模式"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri AI 模式"
+          }
+        }
+      }
+    },
+    "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 SiriMode 设为 2，不伪装硬件。此功能为实验性质，不保证资源下载或功能可用。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Establece SiriMode en 2 sin falsear el hardware. Experimental; no se garantizan las descargas de recursos ni la disponibilidad."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SiriMode را بدون جعل سخت‌افزار روی 2 تنظیم می‌کند. آزمایشی است؛ بارگیری منابع و دسترسی تضمین نمی‌شود."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェアを偽装せずに SiriMode を 2 に設定します。実験的機能であり、リソースのダウンロードや利用は保証されません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "하드웨어를 위장하지 않고 SiriMode를 2로 설정합니다. 실험적 기능이며 리소스 다운로드와 사용 가능 여부는 보장되지 않습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Устанавливает SiriMode в 2 без подмены оборудования. Экспериментальная функция; загрузка ресурсов и доступность не гарантируются."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đặt SiriMode thành 2 mà không giả mạo phần cứng. Đây là tính năng thử nghiệm; không đảm bảo tải tài nguyên hay khả năng sử dụng."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將 SiriMode 設為 2，不偽裝硬件。此功能屬實驗性質，不保證資源下載或功能可用。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將 SiriMode 設為 2，不偽裝硬體。此功能為實驗性質，不保證資源下載或功能可用。"
+          }
+        }
+      }
+    },
+    "Restore Hardware Identity": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore Hardware Identity"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "恢复硬件身份"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar identidad de hardware"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بازیابی هویت سخت‌افزار"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェア ID を復元"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "하드웨어 ID 복원"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Восстановить идентичность оборудования"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Khôi phục danh tính phần cứng"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還原硬體身分"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還原硬體身分"
+          }
+        }
+      }
+    },
+    "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅从此备份恢复原始产品标识、板号、CPU 和监管型号，保留 AI 与地区设置。随后请完整重启并测试 Face ID 与听写。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaura solo el producto, la placa, la CPU y el número de modelo originales de esta copia. Los ajustes de IA y región se conservan. Reinicia y prueba Face ID y el dictado después."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فقط محصول، برد، CPU و شماره مدل اصلی را از این پشتیبان بازیابی کنید. تنظیمات هوش مصنوعی و منطقه حفظ می‌شوند. پس از آن دستگاه را راه‌اندازی مجدد کرده و Face ID و دیکته را آزمایش کنید."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このバックアップから元の製品・ボード・CPU・モデル番号のみを復元します。AI と地域の設定は保持されます。再起動後に Face ID と音声入力をお試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 백업에서 원래 제품, 보드, CPU 및 모델 번호만 복원합니다. AI 및 지역 설정은 유지됩니다. 재시동 후 Face ID와 받아쓰기를 테스트하세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Восстановить из этой резервной копии только исходные продукт, плату, CPU и номер модели. Настройки ИИ и региона сохраняются. После этого перезагрузите устройство и проверьте Face ID и диктовку."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chỉ khôi phục sản phẩm, bo mạch, CPU và số model gốc từ bản sao lưu này. Cài đặt AI và khu vực được giữ nguyên. Khởi động lại và kiểm tra Face ID cùng tính năng đọc chính tả sau đó."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "僅從此備份還原原始產品、主機板、CPU 與型號。AI 與地區設定會保留。完成後請重新啟動並測試 Face ID 與聽寫。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "僅從此備份還原原始產品、主機板、CPU 與型號。AI 與地區設定會保留。完成後請重新啟動並測試 Face ID 與聽寫。"
+          }
+        }
+      }
+    },
+    "A verified original hardware backup matching this device and cache is required.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A verified original hardware backup matching this device and cache is required."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要经过验证且与当前设备和缓存匹配的原始硬件备份。"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se necesita una copia de seguridad original del hardware verificada y compatible con este dispositivo y caché."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "به یک پشتیبان اصلی سخت‌افزار تأییدشده که با این دستگاه و کش مطابقت دارد نیاز است."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このデバイスとキャッシュに一致する、検証済みの元のハードウェアバックアップが必要です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 기기 및 캐시와 일치하는 검증된 원본 하드웨어 백업이 필요합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Требуется проверенная исходная резервная копия оборудования, соответствующая этому устройству и кэшу."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cần bản sao lưu phần cứng gốc đã xác minh, khớp với thiết bị và bộ nhớ đệm này."
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要一份與目前裝置和快取相符且已驗證的原始硬體備份。"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要一份與目前裝置和快取相符且已驗證的原始硬體備份。"
+          }
+        }
+      }
+    },
     "Save Current Launch Image": {
       "localizations": {
         "en": {
@@ -27645,6 +27965,70 @@
           "stringUnit": {
             "state": "translated",
             "value": "鎖定畫面文字已更新。"
+          }
+        }
+      }
+    },
+    "Share Log": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share Log"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享日志"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir registro"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اشتراک‌گذاری گزارش"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログを共有"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로그 공유"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поделиться журналом"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chia sẻ nhật ký"
+          }
+        },
+        "zh-Hant-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享日誌"
+          }
+        },
+        "zh-Hant-TW": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享日誌"
           }
         }
       }

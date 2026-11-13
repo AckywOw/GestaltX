@@ -1,9 +1,9 @@
 {
   "Siri AI Mode": "Siri AI 모드",
   "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "하드웨어를 위장하지 않고 SiriMode를 2로 설정합니다. 실험적 기능이며 리소스 다운로드와 사용 가능 여부는 보장되지 않습니다.",
-  "Restore Hardware Identity": "하드웨어 식별 정보 복원",
-  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "이 백업에서 원래 제품, 보드, CPU 및 모델 번호만 복원합니다. AI 및 지역 설정은 유지됩니다. 이후 재시동하고 Face ID와 받아쓰기를 테스트하세요.",
-  "A verified original hardware backup matching this device and cache is required.": "이 기기와 캐시에 일치하는 검증된 원래 하드웨어 백업이 필요합니다.",
+  "Restore Hardware Identity": "하드웨어 ID 복원",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "이 백업에서 원래 제품, 보드, CPU 및 모델 번호만 복원합니다. AI 및 지역 설정은 유지됩니다. 재시동 후 Face ID와 받아쓰기를 테스트하세요.",
+  "A verified original hardware backup matching this device and cache is required.": "이 기기 및 캐시와 일치하는 검증된 원본 하드웨어 백업이 필요합니다.",
   "Special Thanks": "감사의 글",
   "Supported": "지원됨",
   "Unsupported": "지원되지 않음",
@@ -435,5 +435,6 @@
   "This image could not be used. Choose another image.": "이 이미지를 사용할 수 없습니다. 다른 이미지를 선택하세요.",
   "Save Current Launch Image": "현재 시작 이미지 저장",
   "Allow GestaltX to add photos in Settings, then try again.": "설정에서 GestaltX의 사진 추가를 허용한 후 다시 시도하세요.",
-  "The launch image was saved to Photos.": "시작 이미지를 사진에 저장했습니다."
+  "The launch image was saved to Photos.": "시작 이미지를 사진에 저장했습니다.",
+  "Share Log": "로그 공유"
 }

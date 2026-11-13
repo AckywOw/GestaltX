@@ -1,9 +1,9 @@
 {
   "Siri AI Mode": "Siri AI モード",
   "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "ハードウェアを偽装せずに SiriMode を 2 に設定します。実験的機能であり、リソースのダウンロードや利用は保証されません。",
-  "Restore Hardware Identity": "ハードウェア識別情報を復元",
-  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "このバックアップから元の製品、基板、CPU、モデル番号のみを復元します。AI と地域の設定は保持されます。その後、再起動して Face ID と音声入力をテストしてください。",
-  "A verified original hardware backup matching this device and cache is required.": "このデバイスとキャッシュに一致する、検証済みの元のハードウェア情報のバックアップが必要です。",
+  "Restore Hardware Identity": "ハードウェア ID を復元",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "このバックアップから元の製品・ボード・CPU・モデル番号のみを復元します。AI と地域の設定は保持されます。再起動後に Face ID と音声入力をお試しください。",
+  "A verified original hardware backup matching this device and cache is required.": "このデバイスとキャッシュに一致する、検証済みの元のハードウェアバックアップが必要です。",
   "WAPI": "WAPI",
   "Disable WAPI": "WAPIを無効化",
   "Restore Original": "元に戻す",
@@ -435,5 +435,6 @@
   "Your lock screen text": "ロック画面のテキストを入力",
   "Save Current Launch Image": "現在の起動画面を保存",
   "Allow GestaltX to add photos in Settings, then try again.": "「設定」でGestaltXによる写真の追加を許可してから、もう一度お試しください。",
-  "The launch image was saved to Photos.": "起動画面を「写真」に保存しました。"
+  "The launch image was saved to Photos.": "起動画面を「写真」に保存しました。",
+  "Share Log": "ログを共有"
 }
