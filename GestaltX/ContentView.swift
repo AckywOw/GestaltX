@@ -408,6 +408,7 @@ struct CategoryView: View {
     let category: CapabilityCategory
     @EnvironmentObject private var model: GestaltManager
     @State private var asksInternalBuild = false
+    @State private var asksHardwareRestore = false
     var body: some View {
         Form {
             if category == .display {
@@ -439,6 +440,14 @@ struct CategoryView: View {
                 }.disabled(model.artworkEditingError != nil)
             }
             if category == .intelligence {
+                if model.snapshot?.source == .local && model.snapshot?.ownershipVerified == true {
+                    Section {
+                        Button(L("Restore Hardware Identity"), role: .destructive) { asksHardwareRestore = true }
+                            .disabled(model.changeCount > 0)
+                    } footer: {
+                        Text(L("Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward."))
+                    }
+                }
                 Section {
                     Picker(L("Region Code"), selection: $model.regionCodeID) {
                         ForEach(RegionPreset.all) { Text(L($0.title)).tag($0.id) }
@@ -504,7 +513,7 @@ struct CategoryView: View {
                             }
                         }
                     }.pickerStyle(.menu)
-                    if capability.requiresEnableConfirmation || capability.id == "siriOnDevice" {
+                    if capability.requiresEnableConfirmation || capability.id == "siriOnDevice" || capability.id == "siriAIMode" {
                         Text(L(capability.detail)).font(.caption).foregroundStyle(.secondary)
                     }
                     HStack(alignment: .firstTextBaseline) {
@@ -533,6 +542,12 @@ struct CategoryView: View {
             }
         }
         .navigationTitle(L(category.rawValue)).disabled(model.isBusy)
+        .alert(L("Restore Hardware Identity"), isPresented: $asksHardwareRestore) {
+            Button(L("Cancel"), role: .cancel) {}
+            Button(L("Restore"), role: .destructive) { Task { await model.restoreHardwareIdentity() } }
+        } message: {
+            Text(L("Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward."))
+        }
         .alert(L("Enable Internal Build?"), isPresented: $asksInternalBuild) {
             Button(L("Cancel"), role: .cancel) {}
             Button(L("Enable"), role: .destructive) {
@@ -779,6 +794,7 @@ struct BackupsView: View {
     @EnvironmentObject private var model: GestaltManager
     @State private var restores: BackupRecord?
     @State private var deletes: BackupRecord?
+    @State private var hardwareRestore: BackupRecord?
     var body: some View {
         List {
             Section {
@@ -812,6 +828,11 @@ struct BackupsView: View {
                             Button(L("Restore")) { restores = record }
                                 .disabled(model.changeCount > 0 || !model.hasDocument || (model.sourceIsDevice && record.source != .device))
                         }.font(.subheadline).buttonStyle(.borderless).padding(.top, 6)
+                        if record.source == .device && record.sha256 != nil {
+                            Button(L("Restore Hardware Identity")) { hardwareRestore = record }
+                                .font(.subheadline).buttonStyle(.borderless)
+                                .disabled(model.changeCount > 0 || !model.sourceIsDevice)
+                        }
                     }.padding(.vertical, 6)
                 }.swipeActions(allowsFullSwipe: false) { Button(L("Delete")) { deletes = record }.tint(.red) }
             }
@@ -828,6 +849,15 @@ struct BackupsView: View {
             Button(L("Cancel"), role: .cancel) { deletes = nil }
             Button(L("Delete"), role: .destructive) { if let record = deletes { Task { await model.deleteBackup(record) } }; deletes = nil }
         } message: { Text(L("This removes the local backup permanently. It does not change the device file.")) }
+        .alert(L("Restore Hardware Identity"), isPresented: Binding(get: { hardwareRestore != nil }, set: { if !$0 { hardwareRestore = nil } })) {
+            Button(L("Cancel"), role: .cancel) { hardwareRestore = nil }
+            Button(L("Restore"), role: .destructive) {
+                if let record = hardwareRestore { Task { await model.restoreHardwareIdentity(from: record) } }
+                hardwareRestore = nil
+            }
+        } message: {
+            Text(L("Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward."))
+        }
     }
 }
 

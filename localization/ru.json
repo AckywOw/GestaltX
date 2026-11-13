@@ -1,4 +1,9 @@
 {
+  "Siri AI Mode": "Режим ИИ Siri",
+  "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "Устанавливает SiriMode в 2 без подмены оборудования. Экспериментальная функция; загрузка ресурсов и доступность не гарантируются.",
+  "Restore Hardware Identity": "Восстановить идентификацию оборудования",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Восстанавливает только исходные продукт, плату, CPU и номер модели из этой копии. Настройки ИИ и региона сохраняются. Затем перезагрузите устройство и проверьте Face ID и диктовку.",
+  "A verified original hardware backup matching this device and cache is required.": "Требуется проверенная исходная резервная копия оборудования, соответствующая этому устройству и кэшу.",
   "Special Thanks": "Особая благодарность",
   "Supported": "Поддерживается",
   "Unsupported": "Не поддерживается",
