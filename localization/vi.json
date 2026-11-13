@@ -511,5 +511,10 @@
   "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Chỉ khôi phục sản phẩm, bo mạch, CPU và số model gốc từ bản sao lưu này. Cài đặt AI và khu vực được giữ nguyên. Khởi động lại và kiểm tra Face ID cùng tính năng đọc chính tả sau đó.",
   "A verified original hardware backup matching this device and cache is required.": "Cần bản sao lưu phần cứng gốc đã xác minh, khớp với thiết bị và bộ nhớ đệm này.",
   "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": "Chỉ xóa gói đã nhập khỏi GestaltX. Các hình nền đã áp dụng sẽ được giữ lại.",
-  "Delete the imported wallpaper pack?": "Xóa gói hình nền đã nhập?"
+  "Delete the imported wallpaper pack?": "Xóa gói hình nền đã nhập?",
+  "Enjoying GestaltX?": "Bạn thấy GestaltX hữu ích chứ?",
+  "If GestaltX is useful to you, a GitHub star helps a lot.": "Nếu GestaltX hữu ích với bạn, một ngôi sao trên GitHub sẽ giúp ích rất nhiều.",
+  "Star on GitHub": "Gắn sao trên GitHub",
+  "Maybe Later": "Để sau",
+  "Don't Ask Again": "Không hỏi lại"
 }

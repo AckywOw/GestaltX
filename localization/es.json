@@ -511,5 +511,10 @@
   "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Restaura solo el producto, la placa, la CPU y el número de modelo originales de esta copia. Los ajustes de IA y región se conservan. Reinicia y prueba Face ID y el dictado después.",
   "A verified original hardware backup matching this device and cache is required.": "Se necesita una copia de seguridad original del hardware verificada y compatible con este dispositivo y caché.",
   "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": "Solo se eliminará el paquete importado de GestaltX. Los fondos aplicados se conservarán.",
-  "Delete the imported wallpaper pack?": "¿Eliminar el paquete de fondos importado?"
+  "Delete the imported wallpaper pack?": "¿Eliminar el paquete de fondos importado?",
+  "Enjoying GestaltX?": "¿Te gusta GestaltX?",
+  "If GestaltX is useful to you, a GitHub star helps a lot.": "Si GestaltX te resulta útil, una estrella en GitHub ayuda mucho.",
+  "Star on GitHub": "Dar una estrella en GitHub",
+  "Maybe Later": "Más tarde",
+  "Don't Ask Again": "No volver a preguntar"
 }

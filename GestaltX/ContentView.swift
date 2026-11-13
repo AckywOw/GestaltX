@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject private var systemSettings = SystemSettingsModel()
     @StateObject private var customizations = CustomizationModel()
     @StateObject private var launchCatalog = LaunchArtworkCatalogModel()
+    @ObservedObject private var starPrompt = StarPromptController.shared
     @Environment(\.scenePhase) private var scenePhase
     @State private var importOffer: PlistImportOffer?
     @State private var showsImportConfirmation = false
@@ -56,6 +57,9 @@ struct ContentView: View {
         #endif
         .sheet(isPresented: Binding(get: { !acceptedWelcome && !isPreviewSession }, set: { _ in })) {
             WelcomeView { acceptedWelcome = true }
+        }
+        .sheet(isPresented: $starPrompt.isPresented, onDismiss: { starPrompt.sheetDismissed() }) {
+            StarPromptView(controller: starPrompt)
         }
         .sheet(item: $sharesFile, onDismiss: {
             activeExport?.cleanUp()
@@ -184,11 +188,15 @@ struct ContentView: View {
             if acceptedWelcome && !isPreviewSession { await launchCatalog.migrateBackups() }
         }
         .onChange(of: acceptedWelcome) { _, accepted in
-            if accepted && !isPreviewSession { Task { await autoRead(); showShareNoticeIfNeeded() } }
+            if accepted && !isPreviewSession {
+                Task { await autoRead(); showShareNoticeIfNeeded() }
+                starPrompt.startIfEligible()
+            }
         }
         .task {
             guard !didStart else { return }
             didStart = true
+            if acceptedWelcome && !isPreviewSession { starPrompt.startIfEligible() }
             await model.reloadBackups()
             #if targetEnvironment(simulator)
             let arguments = ProcessInfo.processInfo.arguments

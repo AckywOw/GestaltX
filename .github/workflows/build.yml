@@ -60,7 +60,15 @@ jobs:
           git fetch --depth=1 origin "$DEFAULT_BRANCH"
           git checkout FETCH_HEAD -- .github/scripts/build-ipa.sh
 
+      - name: Restore native device console
+        id: gxconsole-cache
+        uses: actions/cache@v4
+        with:
+          path: Native/DeviceConsole/build/GXDeviceConsole.xcframework
+          key: gxconsole-${{ runner.os }}-${{ hashFiles('Native/DeviceConsole/build-xcframework.sh', 'Native/DeviceConsole/Cargo.toml', 'Native/DeviceConsole/Cargo.lock', 'Native/DeviceConsole/src/**', 'Native/DeviceConsole/vendor/**') }}
+
       - name: Build native device console
+        if: steps.gxconsole-cache.outputs.cache-hit != 'true'
         run: |
           rustup target add aarch64-apple-ios aarch64-apple-ios-sim
           command -v nasm >/dev/null || brew install nasm

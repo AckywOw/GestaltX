@@ -515,6 +515,11 @@ Restore only the original product, board, CPU and model number from this backup.
 A verified original hardware backup matching this device and cache is required.	需要经过验证且与当前设备和缓存匹配的原始硬件备份。
 This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.	只从 GestaltX 删除导入包，已应用的壁纸会保留。
 Delete the imported wallpaper pack?	删除导入的壁纸包？
+Enjoying GestaltX?	喜欢 GestaltX 吗？
+If GestaltX is useful to you, a GitHub star helps a lot.	如果它对你有帮助，去 GitHub 点个 Star 支持一下。
+Star on GitHub	去 GitHub 点 Star
+Maybe Later	以后再说
+Don't Ask Again	不再提醒
 '''
 entries = {}
 for line in TRANSLATIONS.strip().splitlines():

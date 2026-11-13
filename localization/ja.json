@@ -511,5 +511,10 @@
   "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "このバックアップから元の製品・ボード・CPU・モデル番号のみを復元します。AI と地域の設定は保持されます。再起動後に Face ID と音声入力をお試しください。",
   "A verified original hardware backup matching this device and cache is required.": "このデバイスとキャッシュに一致する、検証済みの元のハードウェアバックアップが必要です。",
   "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": "GestaltXから読み込んだパックのみ削除します。適用済みの壁紙は保持されます。",
-  "Delete the imported wallpaper pack?": "読み込んだ壁紙パックを削除しますか？"
+  "Delete the imported wallpaper pack?": "読み込んだ壁紙パックを削除しますか？",
+  "Enjoying GestaltX?": "GestaltX はお役に立っていますか？",
+  "If GestaltX is useful to you, a GitHub star helps a lot.": "役に立っているなら、GitHub でスターを付けていただけると助かります。",
+  "Star on GitHub": "GitHub でスターを付ける",
+  "Maybe Later": "あとで",
+  "Don't Ask Again": "今後表示しない"
 }

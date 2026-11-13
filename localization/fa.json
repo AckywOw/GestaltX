@@ -511,5 +511,10 @@
   "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "فقط محصول، برد، CPU و شماره مدل اصلی را از این پشتیبان بازیابی کنید. تنظیمات هوش مصنوعی و منطقه حفظ می‌شوند. پس از آن دستگاه را راه‌اندازی مجدد کرده و Face ID و دیکته را آزمایش کنید.",
   "A verified original hardware backup matching this device and cache is required.": "به یک پشتیبان اصلی سخت‌افزار تأییدشده که با این دستگاه و کش مطابقت دارد نیاز است.",
   "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": "فقط بستهٔ واردشده از GestaltX حذف می‌شود. تصاویر زمینهٔ اعمال‌شده باقی می‌مانند.",
-  "Delete the imported wallpaper pack?": "بستهٔ تصویر زمینهٔ واردشده حذف شود؟"
+  "Delete the imported wallpaper pack?": "بستهٔ تصویر زمینهٔ واردشده حذف شود؟",
+  "Enjoying GestaltX?": "از GestaltX راضی هستید؟",
+  "If GestaltX is useful to you, a GitHub star helps a lot.": "اگر GestaltX برایتان مفید است، یک ستاره در GitHub کمک زیادی می‌کند.",
+  "Star on GitHub": "ستاره دادن در GitHub",
+  "Maybe Later": "بعداً",
+  "Don't Ask Again": "دیگر نپرس"
 }

@@ -511,5 +511,10 @@
   "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "僅從此備份還原原始產品、主機板、CPU 與型號。AI 與地區設定會保留。完成後請重新啟動並測試 Face ID 與聽寫。",
   "A verified original hardware backup matching this device and cache is required.": "需要一份與目前裝置和快取相符且已驗證的原始硬體備份。",
   "This only deletes the imported pack from GestaltX. Applied wallpapers will be kept.": "只從 GestaltX 刪除匯入套件，已套用的背景圖片會保留。",
-  "Delete the imported wallpaper pack?": "刪除匯入的背景圖片套件？"
+  "Delete the imported wallpaper pack?": "刪除匯入的背景圖片套件？",
+  "Enjoying GestaltX?": "喜歡 GestaltX 嗎？",
+  "If GestaltX is useful to you, a GitHub star helps a lot.": "如果它對你有幫助，歡迎到 GitHub 按個 Star 支持一下。",
+  "Star on GitHub": "到 GitHub 按 Star",
+  "Maybe Later": "稍後再說",
+  "Don't Ask Again": "不再提醒"
 }
