@@ -473,7 +473,7 @@
 					"$(inherited)",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestaltprobe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestultx;
 				PRODUCT_NAME = GestaltX;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -522,7 +522,7 @@
 					"$(inherited)",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestaltprobe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestultx;
 				PRODUCT_NAME = GestaltX;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -559,7 +559,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.8;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestaltprobe.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestultx.ShareExtension;
 				PRODUCT_NAME = GestaltXShare;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
@@ -592,7 +592,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.8;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestaltprobe.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.gestultx.ShareExtension;
 				PRODUCT_NAME = GestaltXShare;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
