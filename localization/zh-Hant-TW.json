@@ -1,4 +1,9 @@
 {
+  "Siri AI Mode": "Siri AI 模式",
+  "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "將 SiriMode 設為 2，不偽裝硬體。此功能為實驗性質，不保證資源下載或功能可用。",
+  "Restore Hardware Identity": "回復硬體身分",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "僅從此備份回復原始產品識別碼、板號、CPU 和監管型號，保留 AI 與地區設定。隨後請完整重新啟動並測試 Face ID 與聽寫。",
+  "A verified original hardware backup matching this device and cache is required.": "需要經過驗證且與目前裝置和快取相符的原始硬體備份。",
   "Special Thanks": "特別感謝",
   "Supported": "支援",
   "Unsupported": "不支援",

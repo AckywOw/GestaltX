@@ -1,4 +1,9 @@
 {
+  "Siri AI Mode": "حالت هوش مصنوعی Siri",
+  "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "SiriMode را بدون جعل سخت‌افزار روی 2 تنظیم می‌کند. آزمایشی است؛ بارگیری منابع و دسترسی تضمین نمی‌شود.",
+  "Restore Hardware Identity": "بازیابی هویت سخت‌افزار",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "فقط محصول، برد، CPU و شماره مدل اصلی را از این پشتیبان بازیابی می‌کند. تنظیمات هوش مصنوعی و منطقه حفظ می‌شوند. سپس دستگاه را راه‌اندازی مجدد کنید و Face ID و دیکته را آزمایش کنید.",
+  "A verified original hardware backup matching this device and cache is required.": "یک پشتیبان تأییدشده از سخت‌افزار اصلی که با این دستگاه و حافظه نهان مطابقت داشته باشد لازم است.",
   "Special Thanks": "سپاس ویژه",
   "Supported": "پشتیبانی می‌شود",
   "Unsupported": "پشتیبانی نمی‌شود",

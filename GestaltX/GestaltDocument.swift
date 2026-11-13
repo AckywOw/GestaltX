@@ -94,6 +94,10 @@ enum GestaltKeys {
     static let legacyRegionInfo = "yK+xavymRGZ3xWc1tb8XDg"
     static let productType = "h9jDsbgj7xIVeIQ8S3/X3Q"
     static let modelNumber = "97JDvERpVwO+GHtthIh7hA"
+    static let hardwareModel = "oYicEKzVTz4/CxxE05pEgQ"
+    static let cpu = "5pYKlGnYYBzGvAlIU8RjEQ"
+    static let siriMode = "a3n5T9sFtlyQ74NEp9ESxg"
+    static let hardwareIdentity = [productType, hardwareModel, cpu, modelNumber]
 }
 
 struct GestaltDocument: @unchecked Sendable {
@@ -669,8 +673,67 @@ actor GestaltFileStore {
         return current
     }
 
+    func restoreHardwareIdentity(from record: BackupRecord, expected: DocumentSnapshot,
+                                 physicalProduct: String, physicalBoard: String) throws -> DocumentSnapshot {
+        guard record.source == .device, record.deviceID == deviceID, record.sha256 != nil else {
+            throw GestaltFailure("A verified original hardware backup matching this device and cache is required.")
+        }
+        let original = try GestaltDocument(data: backupData(record))
+        return try restoreHardwareIdentity(from: original, expected: expected,
+                                          physicalProduct: physicalProduct, physicalBoard: physicalBoard)
+    }
+
+    func restoreHardwareIdentity(from imported: DocumentSnapshot, expected: DocumentSnapshot,
+                                 physicalProduct: String, physicalBoard: String) throws -> DocumentSnapshot {
+        guard imported.source == .local, imported.ownershipVerified else {
+            throw GestaltFailure("This plist's device proof could not be verified on this device.")
+        }
+        return try restoreHardwareIdentity(from: imported.document, expected: expected,
+                                          physicalProduct: physicalProduct, physicalBoard: physicalBoard)
+    }
+
+    private func restoreHardwareIdentity(from original: GestaltDocument, expected: DocumentSnapshot,
+                                        physicalProduct: String, physicalBoard: String) throws -> DocumentSnapshot {
+        // Kernel identity and an ownership-verified backup are independent of the spoofed cache.
+        guard expected.source == .device, !physicalProduct.isEmpty, !physicalBoard.isEmpty,
+              original.extra[GestaltKeys.productType] as? String == physicalProduct,
+              (original.extra[GestaltKeys.hardwareModel] as? String)?.lowercased() == physicalBoard.lowercased(),
+              let cpu = Self.olderDeviceCPU(for: physicalProduct),
+              original.extra[GestaltKeys.cpu] as? String == cpu,
+              GestaltKeys.hardwareIdentity.allSatisfy({ (original.extra[$0] as? String)?.isEmpty == false }),
+              original.preservesDeviceIdentity(of: expected.document),
+              let originalCache = original.root["CacheData"] as? Data,
+              originalCache == expected.document.root["CacheData"] as? Data else {
+            throw GestaltFailure("A verified original hardware backup matching this device and cache is required.")
+        }
+        try validateRestoreLayout(original, against: expected.document)
+        var edited = expected.document
+        for key in GestaltKeys.hardwareIdentity { edited.set(original.extra[key], for: key) }
+        if edited.matches(expected.document) {
+            return try withAccess {
+                _ = try currentData(matching: expected)
+                eventSink("Hardware restore: original hardware identity already matches")
+                return expected
+            }
+        }
+        eventSink("Hardware restore: preserving AI, Siri, region and unrelated settings")
+        return try commit(edited, expected: expected, recordingRestoredHardware: true)
+    }
+
+    private static func olderDeviceCPU(for product: String) -> String? {
+        // iPhone 11 through iPhone 15/15 Plus, cross-checked with libirecovery.
+        switch product {
+        case "iPhone12,1", "iPhone12,3", "iPhone12,5", "iPhone12,8": "t8030"
+        case "iPhone13,1", "iPhone13,2", "iPhone13,3", "iPhone13,4": "t8101"
+        case "iPhone14,2", "iPhone14,3", "iPhone14,4", "iPhone14,5",
+             "iPhone14,6", "iPhone14,7", "iPhone14,8": "t8110"
+        case "iPhone15,2", "iPhone15,3", "iPhone15,4", "iPhone15,5": "t8120"
+        default: nil
+        }
+    }
+
     func commit(_ edited: GestaltDocument, expected: DocumentSnapshot, restoring record: BackupRecord? = nil,
-                originallyAbsentKeys: Set<String> = []) throws -> DocumentSnapshot {
+                originallyAbsentKeys: Set<String> = [], recordingRestoredHardware: Bool = false) throws -> DocumentSnapshot {
         guard expected.source != .device || edited.preservesDeviceIdentity(of: expected.document) else {
             throw GestaltFailure("Device identity fields cannot be changed in the system plist. Open a local file to edit these fields.")
         }
@@ -714,6 +777,13 @@ actor GestaltFileStore {
             if let audio = saved.cachedOptions { baseline.cachedOptionsOriginal = audio }
             if let wapi = saved.wapi { baseline.wapiOriginal = wapi }
             var originals = baseline.recordingOriginals(to: edited)
+            if recordingRestoredHardware {
+                // An external spoof may predate our history. Future Revert actions
+                // must use the verified real hardware, not that first spoofed read.
+                for key in GestaltKeys.hardwareIdentity {
+                    originals.fields[key] = OriginalField(value: edited.extra[key])
+                }
+            }
             originals.unavailableCacheOriginals = saved.unavailableCacheOriginals
             // Explicitly removing a user-confirmed added field also corrects
             // old zero/one residues whose earlier origin was not recorded.

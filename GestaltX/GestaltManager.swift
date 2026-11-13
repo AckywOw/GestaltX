@@ -504,6 +504,39 @@ final class GestaltManager: ObservableObject {
     func reloadBackups() async {
         do { backups = try await files.backups() } catch { failed(error) }
     }
+    func restoreHardwareIdentity(from record: BackupRecord? = nil) async {
+        guard !isBusy, let before = snapshot else { return }
+        guard changeCount == 0 else {
+            failed(GestaltFailure("Save or discard your current changes before opening another plist."))
+            return
+        }
+        isBusy = true
+        defer { isBusy = false }
+        do {
+            let physical = GXCopyPhysicalHardwareIdentity()
+            guard let product = physical["hw.machine"], let board = physical["hw.model"] else {
+                throw GestaltFailure("This device's identity could not be verified. Read MobileGestalt on this device and try sharing again.")
+            }
+            let live: DocumentSnapshot
+            let result: DocumentSnapshot
+            if let record {
+                live = before
+                result = try await files.restoreHardwareIdentity(from: record, expected: live,
+                                                                 physicalProduct: product, physicalBoard: board)
+            } else {
+                live = try await files.loadDevice()
+                result = try await files.restoreHardwareIdentity(from: before, expected: live,
+                                                                 physicalProduct: product, physicalBoard: board)
+            }
+            logChanges(from: live.document, to: result.document, prefix: "[restore-hardware] ")
+            let changed = !result.document.matches(live.document)
+            accept(result)
+            needsRespring = needsRespring || changed
+            message = L(changed ? "Backup restored and verified." : "This backup already matches the device. No changes were made.")
+                + " " + L("Some changes require a device restart.")
+            await reloadBackups()
+        } catch { failed(error); await reloadBackups() }
+    }
     func restore(_ record: BackupRecord) async {
         guard !isBusy, let snapshot else { return }
         guard changeCount == 0 else {

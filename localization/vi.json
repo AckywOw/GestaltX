@@ -1,4 +1,9 @@
 {
+  "Siri AI Mode": "Chế độ AI của Siri",
+  "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "Đặt SiriMode thành 2 mà không giả mạo phần cứng. Đây là tính năng thử nghiệm; không đảm bảo tải tài nguyên hay khả năng sử dụng.",
+  "Restore Hardware Identity": "Khôi phục danh tính phần cứng",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "Chỉ khôi phục sản phẩm, bo mạch, CPU và số model gốc từ bản sao lưu này. Giữ nguyên cài đặt AI và khu vực. Sau đó khởi động lại và kiểm tra Face ID cùng tính năng đọc chính tả.",
+  "A verified original hardware backup matching this device and cache is required.": "Cần bản sao lưu phần cứng gốc đã được xác minh, khớp với thiết bị và bộ nhớ đệm này.",
   "Special Thanks": "Đặc biệt cảm ơn",
   "Supported": "Được hỗ trợ",
   "Unsupported": "Không được hỗ trợ",

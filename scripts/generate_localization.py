@@ -2,6 +2,11 @@ from pathlib import Path
 import json
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATIONS = '''
+Siri AI Mode	Siri AI 模式
+Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.	将 SiriMode 设为 2，不伪装硬件。此功能为实验性质，不保证资源下载或功能可用。
+Restore Hardware Identity	恢复硬件身份
+Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.	仅从此备份恢复原始产品标识、板号、CPU 和监管型号，保留 AI 与地区设置。随后请完整重启并测试 Face ID 与听写。
+A verified original hardware backup matching this device and cache is required.	需要经过验证且与当前设备和缓存匹配的原始硬件备份。
 Save Current Launch Image	保存当前启动图
 Allow GestaltX to add photos in Settings, then try again.	请在“设置”中允许 GestaltX 添加照片，然后重试。
 The launch image was saved to Photos.	启动图已保存到相册。

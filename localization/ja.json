@@ -1,4 +1,9 @@
 {
+  "Siri AI Mode": "Siri AI モード",
+  "Set SiriMode to 2 without spoofing hardware. Experimental; resource downloads and availability are not guaranteed.": "ハードウェアを偽装せずに SiriMode を 2 に設定します。実験的機能であり、リソースのダウンロードや利用は保証されません。",
+  "Restore Hardware Identity": "ハードウェア識別情報を復元",
+  "Restore only the original product, board, CPU and model number from this backup. AI and region settings are kept. Restart and test Face ID and dictation afterward.": "このバックアップから元の製品、基板、CPU、モデル番号のみを復元します。AI と地域の設定は保持されます。その後、再起動して Face ID と音声入力をテストしてください。",
+  "A verified original hardware backup matching this device and cache is required.": "このデバイスとキャッシュに一致する、検証済みの元のハードウェア情報のバックアップが必要です。",
   "WAPI": "WAPI",
   "Disable WAPI": "WAPIを無効化",
   "Restore Original": "元に戻す",
