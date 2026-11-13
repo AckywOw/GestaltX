@@ -5,29 +5,6 @@ import Combine
 import UIKit
 #endif
 
-/// Advertises the RPPairing host over Bonjour (NetService), so no multicast
-/// entitlement is needed; the Rust side only binds the TCP listener.
-final class BonjourAdvertiser: NSObject, NetServiceDelegate {
-    static let serviceType = "_remotepairing-pairable-host._tcp."
-    private var service: NetService?
-
-    func publish(name: String, port: Int, txt: [String: String]) {
-        stop()
-        let service = NetService(domain: "local.", type: Self.serviceType, name: name, port: Int32(port))
-        service.delegate = self
-        var records: [String: Data] = [:]
-        for (k, v) in txt { records[k] = Data(v.utf8) }
-        service.setTXTRecord(NetService.data(fromTXTRecord: records))
-        service.publish()
-        self.service = service
-    }
-
-    func stop() {
-        service?.stop()
-        service = nil
-    }
-}
-
 @MainActor
 final class DeviceConnectionModel: ObservableObject {
     enum State: Equatable {
@@ -54,12 +31,13 @@ final class DeviceConnectionModel: ObservableObject {
     @Published var loopbackHost: String = ""
 
     private let store = DevicePairingStore(directory: DeviceConsolePaths.pairing, device: DeviceConsolePaths.deviceIdentifier)
-    private let advertiser = BonjourAdvertiser()
+    private let advertiser = PairableHostAdvertiser()
     private var pairingTask: Task<Void, Never>?
     private var backgroundTaskActive = false
     private var screenWasKeptAwake = false
     private var legacyBackgroundTask: UIBackgroundTaskIdentifier = .invalid
     private var vpnCheckTask: Task<String?, Never>?
+    private let keepAlive = AudioKeepAlive()
 
     var consoleAvailable: Bool { DeviceConsole.shared.isAvailable }
 
@@ -93,6 +71,10 @@ final class DeviceConnectionModel: ObservableObject {
         PairingNotifier.clear()
         askForNotificationPermission()
         keepScreenAwake()
+        // The continued-processing task can be unavailable after side-load
+        // re-signing. Keep the pairing host resident while the user is in
+        // Settings with the same audio background mode used by capture.
+        keepAlive.start()
 
         // The user has to leave the app for Settings. Without a continued
         // processing task iOS suspends us and the Bonjour host disappears;
@@ -109,6 +91,10 @@ final class DeviceConnectionModel: ObservableObject {
 
         pairingTask = Task {
             let outPath = await store.pairingDirectory().appendingPathComponent("gestaltx_pairing.plist").path
+            // A failed/aborted attempt can leave an unreadable native pairing
+            // file behind. Without a stored record, discard it so the next
+            // handshake starts from a clean identity.
+            if record == nil { try? FileManager.default.removeItem(atPath: outPath) }
             let altIRK = await store.savedHostAltIRKHex()
             do {
                 let outcome = try await DeviceConsole.shared.runPairing(
@@ -116,7 +102,7 @@ final class DeviceConnectionModel: ObservableObject {
                     outPath: outPath, altIRKHex: altIRK,
                     ready: { [weak self] serviceID, port, txt in
                         Task { @MainActor in
-                            self?.advertiser.publish(name: serviceID, port: Int(port), txt: txt)
+                            self?.advertiser.publish(port: port, serviceID: serviceID, txt: txt)
                             DeviceConsoleBackgroundTask.shared.update(
                                 subtitle: L("Privacy & Security → Developer Mode"),
                                 fraction: 0.2)
@@ -262,6 +248,7 @@ final class DeviceConnectionModel: ObservableObject {
             backgroundTaskActive = false
         }
         PairingNotifier.clear()
+        keepAlive.stop()
         #if canImport(UIKit)
         if legacyBackgroundTask != .invalid {
             UIApplication.shared.endBackgroundTask(legacyBackgroundTask)

@@ -2,6 +2,14 @@
 
 English | [简体中文](CHANGELOG_ZH-CN.md)
 
+## [1.0.9] - 2026-11-14
+
+Build `11140100`.
+
+### Fixed
+
+- Fix pairing failure in side-loaded release builds.
+
 ## [1.0.8] - 2026-11-13
 
 Build `11132300`.
