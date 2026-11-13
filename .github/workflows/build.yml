@@ -60,6 +60,13 @@ jobs:
           git fetch --depth=1 origin "$DEFAULT_BRANCH"
           git checkout FETCH_HEAD -- .github/scripts/build-ipa.sh
 
+      - name: Build native device console
+        run: |
+          rustup target add aarch64-apple-ios aarch64-apple-ios-sim
+          command -v nasm >/dev/null || brew install nasm
+          cd Native/DeviceConsole
+          ./build-xcframework.sh
+
       - name: Build IPA
         id: build
         run: |

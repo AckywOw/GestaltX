@@ -180,6 +180,9 @@ struct ContentView: View {
                 Task { await resumeSharedImports() }
             }
         }
+        .task(id: acceptedWelcome) {
+            if acceptedWelcome && !isPreviewSession { await launchCatalog.migrateBackups() }
+        }
         .onChange(of: acceptedWelcome) { _, accepted in
             if accepted && !isPreviewSession { Task { await autoRead(); showShareNoticeIfNeeded() } }
         }
@@ -347,6 +350,11 @@ struct ContentView: View {
                     Label(L(model.isBusy ? "Reading…" : model.hasDocument ? "Read Again" : "Read MobileGestalt"), systemImage: "arrow.clockwise")
                 }.disabled(model.isBusy || model.changeCount > 0)
             }
+            Section(L("Device Pairing")) {
+                NavigationLink { DeviceConnectionView() } label: {
+                    Label(L("Pairing & Device Connection"), systemImage: "link.badge.plus")
+                }
+            }
             Section("MobileGestalt") {
                 ForEach(CapabilityCategory.allCases) { category in
                     NavigationLink { CategoryView(category: category) } label: {
@@ -365,6 +373,9 @@ struct ContentView: View {
                 NavigationLink { LaunchArtworkApplicationsView(customizations: customizations, catalog: launchCatalog) } label: {
                     Label(L("App Launch Images"), systemImage: "app.badge")
                 }
+                NavigationLink { AppSoundApplicationsView(customizations: customizations) } label: {
+                    Label(L("App Audio Library"), systemImage: "bell.badge")
+                }.disabled(model.isBusy)
             }
             Section(L("Actions")) {
                 if model.snapshot?.source == .local && model.snapshot?.ownershipVerified == true {
